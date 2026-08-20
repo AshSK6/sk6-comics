@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My Comic</title>
+  <title>SK6 — Comics</title>
 
   <style>
     * {
@@ -19,59 +19,76 @@
     }
 
     header {
-      padding: 30px 20px;
       text-align: center;
+      padding: 60px 20px 40px;
       background: #181818;
     }
 
     h1 {
+      font-size: 56px;
       margin: 0;
-      font-size: 32px;
+      letter-spacing: 6px;
     }
 
-    .subtitle {
-      margin-top: 8px;
-      color: #aaa;
+    header p {
+      color: #999;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+
+    .comics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
 
     .comic {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+      background: #1c1c1c;
+      border-radius: 10px;
+      padding: 25px;
       text-align: center;
     }
 
-    .comic img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto 30px;
+    .comic h3 {
+      font-size: 24px;
+      margin-top: 0;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
+    .comic p {
+      color: #aaa;
+      line-height: 1.5;
     }
 
-    button {
+    .comic a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
       background: white;
       color: #111;
-      border: none;
-      padding: 12px 22px;
+      text-decoration: none;
       border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
+      font-weight: bold;
     }
 
-    button:hover {
+    .comic a:hover {
       opacity: 0.8;
     }
 
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       color: #666;
     }
   </style>
@@ -80,25 +97,47 @@
 <body>
 
   <header>
-    <h1>MY COMIC</h1>
-    <div class="subtitle">Read the comic online</div>
+    <h1>SK6</h1>
+    <p>Independent comics & stories</p>
   </header>
 
-  <main class="comic">
+  <main>
 
-    <h2>Chapter 1</h2>
+    <h2>OUR COMICS</h2>
 
-    <p>Your comic will appear here.</p>
+    <div class="comics">
 
-    <div class="buttons">
-      <button>Previous</button>
-      <button>Next</button>
+      <div class="comic">
+        <h3>9mm Girls</h3>
+        <p>
+          A story about guns, girls, cars and questionable life choices.
+        </p>
+
+        <a href="9mm-girls/">READ</a>
+      </div>
+
+      <div class="comic">
+        <h3>Freaky 1/2</h3>
+        <p>
+          Another strange little universe from SK6.
+        </p>
+
+        <a href="freaky-1-2/">READ</a>
+      </div>
+
+      <div class="comic">
+        <h3>More Coming Soon</h3>
+        <p>
+          More comics and stories from SK6.
+        </p>
+      </div>
+
     </div>
 
   </main>
 
   <footer>
-    © 2026 My Comic
+    © 2026 SK6
   </footer>
 
 </body>
