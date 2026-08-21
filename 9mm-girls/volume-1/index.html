@@ -13,98 +13,55 @@
 
     body {
       margin: 0;
-      background: #080808;
-      color: white;
+      background: #111;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: block;
+      padding: 25px;
+      background: #181818;
+      color: #aaa;
+      text-decoration: none;
       font-family: Arial, sans-serif;
     }
 
-    header {
-      padding: 25px 20px;
-      text-align: center;
-      background: #151515;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    header a {
-      color: #999;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 8px;
-    }
-
-    .reader {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px 10px 60px;
-    }
-
-    .page {
-      width: 100%;
-      display: block;
-      margin: 0 auto 15px;
-    }
-
-    .placeholder {
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 60px 20px;
-      text-align: center;
-      background: #181818;
-      color: #888;
-      border-radius: 8px;
-    }
-
-    .navigation {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .navigation a {
-      background: white;
-      color: #111;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      color: #555;
-      padding: 30px;
+    .back:hover {
+      color: white;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>9mm Girls — Volume 1</h1>
-    <a href="../">← Back to 9mm Girls</a>
-  </header>
+  <div id="comic"></div>
 
-  <main class="reader">
+  <a class="back" href="../">← Back to 9mm Girls</a>
 
-   <img class="page" src="page-01.jpg" alt="9mm Girls Volume 1 - Page 1">
+  <script>
+    const comic = document.getElementById("comic");
 
-    <div class="navigation">
-      <a href="../">← Back</a>
-    </div>
+    for (let page = 1; page <= 69; page++) {
 
-  </main>
+      const number = String(page).padStart(2, "0");
 
-  <footer>
-    © 2026 SK6
-  </footer>
+      const image = document.createElement("img");
+
+      image.src = `page-${number} Large.jpeg`;
+
+      image.alt = `9mm Girls — Page ${page}`;
+
+      comic.appendChild(image);
+    }
+  </script>
 
 </body>
 </html>
