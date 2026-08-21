@@ -22,41 +22,50 @@
       overflow-x: hidden;
     }
 
-    /* GRUNGE OVERLAY */
+    /* SUBTLE PHOTOCOPY GRAIN */
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
-      z-index: 999;
-      opacity: 0.10;
+      z-index: 0;
+      opacity: 0.12;
 
       background-image:
         repeating-radial-gradient(
           circle at 0 0,
           transparent 0,
           transparent 2px,
-          rgba(255,255,255,0.15) 3px,
+          rgba(255,255,255,0.14) 3px,
           transparent 4px
         );
 
       mix-blend-mode: screen;
     }
 
-    /* RANDOM PHOTOCOPY MARKS */
+    /* PHOTOCOPY SCAN LINE */
 
     body::after {
       content: "";
       position: fixed;
       width: 140%;
-      height: 2px;
+      height: 3px;
       left: -20%;
-      top: 38%;
-      background: rgba(255,255,255,0.08);
-      transform: rotate(-2deg);
+      top: 42%;
+
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          rgba(255,255,255,0.10),
+          rgba(255,255,255,0.04),
+          transparent
+        );
+
+      transform: rotate(-1.5deg);
       pointer-events: none;
-      z-index: 998;
+      z-index: 0;
     }
 
     .page {
@@ -64,6 +73,7 @@
       margin: auto;
       padding: 25px 20px 70px;
       position: relative;
+      z-index: 1;
     }
 
     /* HEADER */
@@ -147,9 +157,11 @@
       text-decoration: none;
       display: block;
       position: relative;
+
       box-shadow:
         7px 7px 0 #000,
         10px 10px 0 #555;
+
       transition: transform .15s ease;
     }
 
@@ -332,7 +344,7 @@
 
   <div class="page">
 
-    <!-- RANDOM ZINE MARKINGS -->
+    <!-- ZINE MARKINGS -->
 
     <div class="zine-mark mark-one">
       SK6-001
