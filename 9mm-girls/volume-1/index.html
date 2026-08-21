@@ -14,11 +14,15 @@
 
     const number = String(currentPage).padStart(2, "0");
 
-    image.src = "../Page-" + number + "%20Large.jpeg";
+    image.src =
+      "https://raw.githubusercontent.com/AshSK6/sk6-comics/main/9mm-girls/Page-" +
+      number +
+      "%20Large.jpeg";
 
     image.alt = "9mm Girls — Page " + currentPage;
 
-    pageNumber.textContent = "Page " + currentPage + " / " + totalPages;
+    pageNumber.textContent =
+      "Page " + currentPage + " / " + totalPages;
 
     previousButton.disabled = currentPage === 1;
     nextButton.disabled = currentPage === totalPages;
@@ -27,27 +31,21 @@
   }
 
   previousButton.addEventListener("click", function() {
-
     if (currentPage > 1) {
       showPage(currentPage - 1);
     }
-
   });
 
   nextButton.addEventListener("click", function() {
-
     if (currentPage < totalPages) {
       showPage(currentPage + 1);
     }
-
   });
 
   image.addEventListener("click", function() {
-
     if (currentPage < totalPages) {
       showPage(currentPage + 1);
     }
-
   });
 
   document.addEventListener("keydown", function(event) {
