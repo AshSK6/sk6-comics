@@ -3,65 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>9mm Girls — Volume 1</title>
-
   <style>
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .reader {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #comic-page {
+      display: block;
+      max-width: 100%;
+      max-height: 80vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    button {
+      background: white;
+      color: #111;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ddd;
+    }
+    button:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+    #page-number {
+      color: #aaa;
+      min-width: 80px;
       text-align: center;
     }
-
-    img {
-      display: block;
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      margin: 0 auto;
-    }
-
     .back {
       display: block;
-      padding: 25px;
+      padding: 20px;
       background: #181818;
-      color: #aaa;
+      color: #999;
       text-decoration: none;
-      font-family: Arial, sans-serif;
+      text-align: center;
     }
-
     .back:hover {
       color: white;
     }
   </style>
 </head>
-
 <body>
-
-  <div id="comic"></div>
-
+  <div class="reader">
+    <img id="comic-page" src="" alt="9mm Girls page">
+    <div class="controls">
+      <button id="previous">← Previous</button>
+      <span id="page-number">Page 1 / 69</span>
+      <button id="next">Next →</button>
+    </div>
+  </div>
   <a class="back" href="../">← Back to 9mm Girls</a>
-
   <script>
-    const comic = document.getElementById("comic");
-
-    for (let page = 1; page <= 69; page++) {
-
-      const number = String(page).padStart(2, "0");
-
-      const image = document.createElement("img");
-
-      image.src = `Page-${number} Large.jpg`;
-
-      image.alt = `9mm Girls — Page ${page}`;
-
-      comic.appendChild(image);
+    let currentPage = 1;
+    const totalPages = 69;
+    const image = document.getElementById("comic-page");
+    const pageNumber = document.getElementById("page-number");
+    const previousButton = document.getElementById("previous");
+    const nextButton = document.getElementById("next");
+    function showPage(page) {
+      currentPage = page;
+      const number = String(currentPage).padStart(2, "0");
+      image.src = `Page-${number} Large.jpeg`;
+      image.alt = `9mm Girls — Page ${currentPage}`;
+      pageNumber.textContent = `Page ${currentPage} / ${totalPages}`;
+      previousButton.disabled = currentPage === 1;
+      nextButton.disabled = currentPage === totalPages;
+      window.scrollTo(0, 0);
     }
+    previousButton.addEventListener("click", function() {
+      if (currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+    });
+    nextButton.addEventListener("click", function() {
+      if (currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+    });
+    image.addEventListener("click", function() {
+      if (currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+    });
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "ArrowRight") {
+        if (currentPage < totalPages) {
+          showPage(currentPage + 1);
+        }
+      }
+      if (event.key === "ArrowLeft") {
+        if (currentPage > 1) {
+          showPage(currentPage - 1);
+        }
+      }
+    });
+    showPage(1);
   </script>
-
 </body>
 </html>
