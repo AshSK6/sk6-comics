@@ -7,6 +7,7 @@
   <title>SK6 — Comics / Art / Chaos</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -16,6 +17,7 @@
       --white: #f2f2ee;
       --green: #b7ff00;
       --grey: #202020;
+      --red: #e10600;
     }
 
     body {
@@ -188,6 +190,30 @@
       transform: translateY(-8px) rotate(0deg);
     }
 
+    /* 18+ BADGE */
+
+    .adult-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 10;
+
+      background: var(--red);
+      color: var(--white);
+
+      padding: 8px 10px;
+
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 1px;
+
+      border: 3px solid var(--black);
+
+      transform: rotate(3deg);
+
+      box-shadow: 4px 4px 0 var(--black);
+    }
+
     .cover {
       width: 100%;
       aspect-ratio: 3 / 4;
@@ -259,7 +285,7 @@
     .issue-label {
       position: absolute;
       top: 15px;
-      right: 15px;
+      left: 15px;
       z-index: 5;
 
       background: var(--green);
@@ -379,6 +405,11 @@
         width: 100%;
       }
 
+      .adult-badge {
+        top: 16px;
+        right: 16px;
+      }
+
       .x-one,
       .x-two {
         display: none;
@@ -387,11 +418,13 @@
     }
 
   </style>
+
 </head>
 
 <body>
 
   <div class="page">
+
 
     <!-- HEADER -->
 
@@ -450,6 +483,12 @@
         <!-- 9MM GIRLS -->
 
         <a class="comic" href="9mm-girls/">
+
+          <!-- 18+ BADGE -->
+
+          <div class="adult-badge">
+            18+
+          </div>
 
           <div class="issue-label">
             SK6-001
