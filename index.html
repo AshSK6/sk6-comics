@@ -19,12 +19,51 @@
         #111;
       color: #eee;
       font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* GRUNGE OVERLAY */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.10;
+
+      background-image:
+        repeating-radial-gradient(
+          circle at 0 0,
+          transparent 0,
+          transparent 2px,
+          rgba(255,255,255,0.15) 3px,
+          transparent 4px
+        );
+
+      mix-blend-mode: screen;
+    }
+
+    /* RANDOM PHOTOCOPY MARKS */
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 140%;
+      height: 2px;
+      left: -20%;
+      top: 38%;
+      background: rgba(255,255,255,0.08);
+      transform: rotate(-2deg);
+      pointer-events: none;
+      z-index: 998;
     }
 
     .page {
       max-width: 1200px;
       margin: auto;
       padding: 25px 20px 70px;
+      position: relative;
     }
 
     /* HEADER */
@@ -34,6 +73,7 @@
       border-bottom: 5px solid #eee;
       padding: 15px 0 30px;
       margin-bottom: 45px;
+      position: relative;
     }
 
     .logo {
@@ -201,6 +241,30 @@
       text-transform: uppercase;
     }
 
+    /* ZINE MARKINGS */
+
+    .zine-mark {
+      position: absolute;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .mark-one {
+      top: 210px;
+      left: 5px;
+      transform: rotate(-90deg);
+    }
+
+    .mark-two {
+      top: 520px;
+      right: 0;
+      transform: rotate(90deg);
+    }
+
     /* MANIFESTO */
 
     .manifesto {
@@ -254,6 +318,11 @@
         width: 100%;
       }
 
+      .mark-one,
+      .mark-two {
+        display: none;
+      }
+
     }
 
   </style>
@@ -262,6 +331,17 @@
 <body>
 
   <div class="page">
+
+    <!-- RANDOM ZINE MARKINGS -->
+
+    <div class="zine-mark mark-one">
+      SK6-001
+    </div>
+
+    <div class="zine-mark mark-two">
+      PRINT / DESTROY
+    </div>
+
 
     <!-- HEADER -->
 
