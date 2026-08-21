@@ -1,65 +1,128 @@
-<script>
-
-  let currentPage = 1;
-  const totalPages = 69;
-
-  const image = document.getElementById("comic-page");
-  const pageNumber = document.getElementById("page-number");
-  const previousButton = document.getElementById("previous");
-  const nextButton = document.getElementById("next");
-
-  function showPage(page) {
-
-    currentPage = page;
-
-    const number = String(currentPage).padStart(2, "0");
-
-    image.src =
-      "https://raw.githubusercontent.com/AshSK6/sk6-comics/main/9mm-girls/Page-" +
-      number +
-      "%20Large.jpeg";
-
-    image.alt = "9mm Girls — Page " + currentPage;
-
-    pageNumber.textContent =
-      "Page " + currentPage + " / " + totalPages;
-
-    previousButton.disabled = currentPage === 1;
-    nextButton.disabled = currentPage === totalPages;
-
-    window.scrollTo(0, 0);
-  }
-
-  previousButton.addEventListener("click", function() {
-    if (currentPage > 1) {
-      showPage(currentPage - 1);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9mm Girls — Volume 1</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
-  });
-
-  nextButton.addEventListener("click", function() {
-    if (currentPage < totalPages) {
-      showPage(currentPage + 1);
+    .reader {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-  });
-
-  image.addEventListener("click", function() {
-    if (currentPage < totalPages) {
-      showPage(currentPage + 1);
+    #comic-page {
+      max-width: 100%;
+      max-height: 75vh;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: auto;
     }
-  });
-
-  document.addEventListener("keydown", function(event) {
-
-    if (event.key === "ArrowRight" && currentPage < totalPages) {
-      showPage(currentPage + 1);
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
     }
-
-    if (event.key === "ArrowLeft" && currentPage > 1) {
-      showPage(currentPage - 1);
+    button {
+      background: white;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
     }
-
-  });
-
-  showPage(1);
-
-</script>
+    button:disabled {
+      opacity: 0.3;
+    }
+    #page-number {
+      color: #aaa;
+      min-width: 90px;
+    }
+    .back {
+      display: block;
+      padding: 20px;
+      background: #181818;
+      color: #aaa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="reader">
+    <img
+      id="comic-page"
+      src="../Page-01%20Large.jpeg"
+      alt="9mm Girls — Page 1"
+    >
+    <div class="controls">
+      <button id="previous" disabled>
+        ← Previous
+      </button>
+      <span id="page-number">
+        Page 1 / 69
+      </span>
+      <button id="next">
+        Next →
+      </button>
+    </div>
+  </div>
+  <a class="back" href="../">
+    ← Back to 9mm Girls
+  </a>
+  <script>
+    let currentPage = 1;
+    const totalPages = 69;
+    const image = document.getElementById("comic-page");
+    const pageNumber = document.getElementById("page-number");
+    const previousButton = document.getElementById("previous");
+    const nextButton = document.getElementById("next");
+    function showPage(page) {
+      currentPage = page;
+      const number = String(currentPage).padStart(2, "0");
+      image.src = "../Page-" + number + "%20Large.jpeg";
+      image.alt = "9mm Girls — Page " + currentPage;
+      pageNumber.textContent =
+        "Page " + currentPage + " / " + totalPages;
+      previousButton.disabled = currentPage === 1;
+      nextButton.disabled = currentPage === totalPages;
+    }
+    previousButton.addEventListener("click", function() {
+      if (currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+    });
+    nextButton.addEventListener("click", function() {
+      if (currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+    });
+    image.addEventListener("click", function() {
+      if (currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+    });
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "ArrowRight" && currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+      if (event.key === "ArrowLeft" && currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+    });
+  </script>
+</body>
+</html>
