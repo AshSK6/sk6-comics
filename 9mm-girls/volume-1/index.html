@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>9mm Girls — Volume 1</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       background: #111;
       color: white;
       font-family: Arial, sans-serif;
-      text-align: center;
     }
     .reader {
       min-height: 100vh;
@@ -20,13 +22,20 @@
       justify-content: center;
       padding: 20px;
     }
-    #comic-page {
-      max-width: 100%;
-      max-height: 75vh;
+    .spread {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1400px;
+    }
+    .spread img {
+      display: block;
+      max-width: 50%;
+      max-height: 78vh;
       width: auto;
       height: auto;
-      display: block;
-      margin: auto;
+      object-fit: contain;
     }
     .controls {
       display: flex;
@@ -47,10 +56,12 @@
     }
     button:disabled {
       opacity: 0.3;
+      cursor: default;
     }
-    #page-number {
+    #spread-number {
       color: #aaa;
-      min-width: 90px;
+      min-width: 100px;
+      text-align: center;
     }
     .back {
       display: block;
@@ -58,22 +69,31 @@
       background: #181818;
       color: #aaa;
       text-decoration: none;
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      .spread {
+        flex-direction: column;
+      }
+      .spread img {
+        max-width: 100%;
+        max-height: 55vh;
+      }
     }
   </style>
 </head>
 <body>
   <div class="reader">
-    <img
-      id="comic-page"
-      src="../Page-01%20Large.jpeg"
-      alt="9mm Girls — Page 1"
-    >
+    <div class="spread">
+      <img id="page-left" src="../Page-01%20Large.jpeg" alt="9mm Girls">
+      <img id="page-right" src="../Page-02%20Large.jpeg" alt="9mm Girls">
+    </div>
     <div class="controls">
       <button id="previous" disabled>
         ← Previous
       </button>
-      <span id="page-number">
-        Page 1 / 69
+      <span id="spread-number">
+        Pages 1–2
       </span>
       <button id="next">
         Next →
@@ -84,45 +104,90 @@
     ← Back to 9mm Girls
   </a>
   <script>
-    let currentPage = 1;
+    let currentSpread = 0;
     const totalPages = 69;
-    const image = document.getElementById("comic-page");
-    const pageNumber = document.getElementById("page-number");
-    const previousButton = document.getElementById("previous");
-    const nextButton = document.getElementById("next");
-    function showPage(page) {
-      currentPage = page;
-      const number = String(currentPage).padStart(2, "0");
-      image.src = "../Page-" + number + "%20Large.jpeg";
-      image.alt = "9mm Girls — Page " + currentPage;
-      pageNumber.textContent =
-        "Page " + currentPage + " / " + totalPages;
-      previousButton.disabled = currentPage === 1;
-      nextButton.disabled = currentPage === totalPages;
+    const pageLeft =
+      document.getElementById("page-left");
+    const pageRight =
+      document.getElementById("page-right");
+    const spreadNumber =
+      document.getElementById("spread-number");
+    const previousButton =
+      document.getElementById("previous");
+    const nextButton =
+      document.getElementById("next");
+    function getFilename(page) {
+      const number =
+        String(page).padStart(2, "0");
+      return "../Page-" + number + "%20Large.jpeg";
     }
-    previousButton.addEventListener("click", function() {
-      if (currentPage > 1) {
-        showPage(currentPage - 1);
+    function showSpread(spread) {
+      currentSpread = spread;
+      const leftPage =
+        currentSpread * 2 + 1;
+      const rightPage =
+        leftPage + 1;
+      pageLeft.src =
+        getFilename(leftPage);
+      pageLeft.alt =
+        "9mm Girls — Page " + leftPage;
+      if (rightPage <= totalPages) {
+        pageRight.src =
+          getFilename(rightPage);
+        pageRight.alt =
+          "9mm Girls — Page " + rightPage;
+        pageRight.style.display = "block";
+        spreadNumber.textContent =
+          "Pages " + leftPage + "–" + rightPage;
+      } else {
+        pageRight.style.display = "none";
+        spreadNumber.textContent =
+          "Page " + leftPage;
       }
-    });
-    nextButton.addEventListener("click", function() {
-      if (currentPage < totalPages) {
-        showPage(currentPage + 1);
+      previousButton.disabled =
+        currentSpread === 0;
+      const lastSpread =
+        Math.floor((totalPages - 1) / 2);
+      nextButton.disabled =
+        currentSpread === lastSpread;
+      window.scrollTo(0, 0);
+    }
+    previousButton.addEventListener(
+      "click",
+      function() {
+        if (currentSpread > 0) {
+          showSpread(currentSpread - 1);
+        }
       }
-    });
-    image.addEventListener("click", function() {
-      if (currentPage < totalPages) {
-        showPage(currentPage + 1);
+    );
+    nextButton.addEventListener(
+      "click",
+      function() {
+        const lastSpread =
+          Math.floor((totalPages - 1) / 2);
+        if (currentSpread < lastSpread) {
+          showSpread(currentSpread + 1);
+        }
       }
-    });
-    document.addEventListener("keydown", function(event) {
-      if (event.key === "ArrowRight" && currentPage < totalPages) {
-        showPage(currentPage + 1);
+    );
+    document.addEventListener(
+      "keydown",
+      function(event) {
+        if (event.key === "ArrowRight") {
+          const lastSpread =
+            Math.floor((totalPages - 1) / 2);
+          if (currentSpread < lastSpread) {
+            showSpread(currentSpread + 1);
+          }
+        }
+        if (event.key === "ArrowLeft") {
+          if (currentSpread > 0) {
+            showSpread(currentSpread - 1);
+          }
+        }
       }
-      if (event.key === "ArrowLeft" && currentPage > 1) {
-        showPage(currentPage - 1);
-      }
-    });
+    );
+    showSpread(0);
   </script>
 </body>
 </html>
