@@ -21,27 +21,29 @@
     .page {
       max-width: 1200px;
       margin: auto;
-      padding: 25px 20px 60px;
+      padding: 25px 20px 70px;
     }
+
+    /* HEADER */
 
     header {
       border-bottom: 5px solid #eee;
-      padding: 20px 0 25px;
+      padding: 15px 0 30px;
       margin-bottom: 45px;
     }
 
     .logo {
       font-size: clamp(90px, 20vw, 190px);
       font-weight: 900;
-      line-height: .75;
+      line-height: .72;
       letter-spacing: -12px;
       transform: rotate(-2deg);
       display: inline-block;
     }
 
     .tagline {
-      margin-top: 25px;
-      font-size: 16px;
+      margin-top: 28px;
+      font-size: 15px;
       font-weight: 900;
       letter-spacing: 5px;
       text-transform: uppercase;
@@ -50,23 +52,39 @@
     .stamp {
       display: inline-block;
       margin-top: 18px;
+      padding: 8px 14px;
       background: #eee;
       color: #111;
-      padding: 8px 14px;
       font-weight: 900;
+      text-transform: uppercase;
       transform: rotate(2deg);
+    }
+
+    /* SECTION */
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      display: inline-block;
+      margin: 0;
+      font-size: clamp(38px, 8vw, 70px);
+      line-height: .9;
+      letter-spacing: -4px;
+      text-transform: uppercase;
+      transform: rotate(-1deg);
+    }
+
+    .issue {
+      margin-top: 12px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 4px;
       text-transform: uppercase;
     }
 
-    .section-title {
-      font-size: clamp(36px, 7vw, 65px);
-      font-weight: 900;
-      text-transform: uppercase;
-      margin: 0 0 35px;
-      letter-spacing: -3px;
-      transform: rotate(-1deg);
-      display: inline-block;
-    }
+    /* COMICS */
 
     .comics {
       display: grid;
@@ -108,8 +126,8 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      font-size: 25px;
       font-weight: 900;
-      font-size: 24px;
       text-align: center;
     }
 
@@ -131,33 +149,78 @@
     }
 
     .description {
-      margin-top: 6px;
-      font-size: 13px;
-      font-weight: bold;
-      text-transform: uppercase;
+      margin-top: 7px;
+      font-size: 12px;
+      font-weight: 900;
       line-height: 1.4;
+      text-transform: uppercase;
     }
 
     .read {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 13px;
+      padding: 8px 13px;
       background: #111;
       color: #eee;
-      padding: 8px 13px;
       font-size: 12px;
       font-weight: 900;
       text-transform: uppercase;
     }
 
-    footer {
-      margin-top: 80px;
+    /* MANIFESTO */
+
+    .manifesto {
+      margin-top: 90px;
+      padding: 35px 20px;
       border-top: 5px solid #eee;
-      padding-top: 20px;
-      font-size: 12px;
+      border-bottom: 5px solid #eee;
+      text-align: center;
+      transform: rotate(-1deg);
+    }
+
+    .manifesto p {
+      margin: 0;
+      font-size: clamp(25px, 5vw, 45px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 50px;
+      font-size: 11px;
       font-weight: 900;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding: 20px 15px 50px;
+      }
+
+      .logo {
+        letter-spacing: -7px;
+      }
+
+      .comics {
+        gap: 28px;
+      }
+
+      .comic {
+        max-width: 420px;
+        margin: auto;
+        width: 100%;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -165,9 +228,13 @@
 
   <div class="page">
 
+    <!-- HEADER -->
+
     <header>
 
-      <div class="logo">SK6</div>
+      <div class="logo">
+        SK6
+      </div>
 
       <div class="tagline">
         Comics / Art / Chaos
@@ -180,10 +247,20 @@
     </header>
 
 
+    <!-- COMICS -->
+
     <main>
 
-      <div class="section-title">
-        Our Comics
+      <div class="section-heading">
+
+        <h2>
+          Our Comics
+        </h2>
+
+        <div class="issue">
+          SK6 — Independent Comics
+        </div>
+
       </div>
 
 
@@ -195,7 +272,12 @@
         <a class="comic" href="9mm-girls/">
 
           <div class="cover">
-            <img src="9mm-girls/1.jpg" alt="9mm Girls">
+
+            <img
+              src="9mm-girls/Page-01%20Large.jpeg"
+              alt="9mm Girls"
+            >
+
           </div>
 
           <div class="info">
@@ -219,10 +301,11 @@
 
         <!-- FREAKY 1/2 -->
 
-        <a class="comic" href="freaky-1-2/">
+        <div class="comic">
 
           <div class="cover">
-            FREAKY 1/2
+            FREAKY<br>
+            1/2
           </div>
 
           <div class="info">
@@ -232,19 +315,15 @@
             </div>
 
             <div class="description">
-              Another strange little universe from SK6.
-            </div>
-
-            <div class="read">
-              Read →
+              Coming soon from SK6.
             </div>
 
           </div>
 
-        </a>
+        </div>
 
 
-        <!-- MORE COMICS -->
+        <!-- FUTURE COMIC -->
 
         <div class="comic">
 
@@ -261,7 +340,7 @@
             </div>
 
             <div class="description">
-              More comics and stories from SK6.
+              More comics from SK6.
             </div>
 
           </div>
@@ -271,11 +350,24 @@
 
       </div>
 
+
+      <!-- MANIFESTO -->
+
+      <section class="manifesto">
+
+        <p>
+          Made by hand.<br>
+          Drawn with bad ideas.<br>
+          Read at your own risk.
+        </p>
+
+      </section>
+
     </main>
 
 
     <footer>
-      SK6 © 2026 — Independent Comics / Art / Chaos
+      SK6 © 2026 — Comics / Art / Chaos
     </footer>
 
   </div>
