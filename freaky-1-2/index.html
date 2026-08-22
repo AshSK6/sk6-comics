@@ -452,7 +452,7 @@ header {
 }
 
 
-/* ACTUAL MANGA PANEL */
+/* ACTUAL PANEL */
 
 .chapter-cover img {
 
@@ -905,7 +905,7 @@ footer {
 
 <a
   class="chapter-card"
-  href="chapter-1/"
+  href="volume-1/"
 >
 
   <div class="chapter-number">
@@ -913,11 +913,13 @@ footer {
   </div>
 
 
+  <!-- PANEL ONLY -->
+
   <div class="chapter-cover">
 
     <img
       id="randomFreaky1"
-      src="Fr1-01.jpeg"
+      src="./volume-1/Fr1-01.jpeg"
       alt="Freaky 1/2 Chapter 01 preview"
     >
 
@@ -1104,7 +1106,7 @@ const randomImage =
   );
 
 randomImage.src =
-  "Fr1-" +
+  "./volume-1/Fr1-" +
   String(randomPage).padStart(2, "0") +
   ".jpeg";
 
