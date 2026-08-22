@@ -486,7 +486,7 @@
     <div class="spread">
 
 
-      <!-- LEFT SIDE OF SPREAD -->
+      <!-- LEFT PAGE -->
 
       <img
         id="leftPage"
@@ -496,7 +496,7 @@
       >
 
 
-      <!-- RIGHT SIDE OF SPREAD -->
+      <!-- RIGHT PAGE -->
 
       <img
         id="rightPage"
@@ -515,11 +515,13 @@
   <div class="controls">
 
 
+    <!-- MANGA: LEFT = NEXT -->
+
     <button
-      id="previousButton"
-      onclick="previousSpread()"
+      id="nextButton"
+      onclick="nextSpread()"
     >
-      ← Previous
+      ← Next
     </button>
 
 
@@ -531,11 +533,13 @@
     </div>
 
 
+    <!-- MANGA: RIGHT = PREVIOUS -->
+
     <button
-      id="nextButton"
-      onclick="nextSpread()"
+      id="previousButton"
+      onclick="previousSpread()"
     >
-      Next →
+      Previous →
     </button>
 
 
@@ -564,6 +568,8 @@
     const nextButton =
       document.getElementById("nextButton");
 
+
+    /* UPDATE READER */
 
     function updateReader() {
 
@@ -628,7 +634,7 @@
       }
 
 
-      /* COUNTER */
+      /* PAGE COUNTER */
 
       pageCount.textContent =
         currentPage +
@@ -641,7 +647,7 @@
         totalPages;
 
 
-      /* BUTTONS */
+      /* BUTTON STATES */
 
       previousButton.disabled =
         currentPage === 1;
@@ -654,7 +660,7 @@
     }
 
 
-    /* NEXT SPREAD */
+    /* NEXT — MANGA DIRECTION */
 
     function nextSpread() {
 
@@ -672,7 +678,7 @@
     }
 
 
-    /* PREVIOUS SPREAD */
+    /* PREVIOUS — MANGA DIRECTION */
 
     function previousSpread() {
 
@@ -697,9 +703,20 @@
       function(event) {
 
 
+        /*
+          MANGA CONTROLS:
+
+          LEFT ARROW
+          = NEXT
+
+          RIGHT ARROW
+          = PREVIOUS
+        */
+
+
         if (
           event.key ===
-          "ArrowRight"
+          "ArrowLeft"
         ) {
 
           nextSpread();
@@ -709,7 +726,7 @@
 
         if (
           event.key ===
-          "ArrowLeft"
+          "ArrowRight"
         ) {
 
           previousSpread();
