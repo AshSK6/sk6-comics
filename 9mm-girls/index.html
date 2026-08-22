@@ -12,7 +12,6 @@
 
   <title>9mm Girls — SK6</title>
 
-
   <style>
 
     * {
@@ -36,7 +35,6 @@
       font-family: Arial, Helvetica, sans-serif;
       overflow-x: hidden;
     }
-
 
     /* BACKGROUND */
 
@@ -309,40 +307,32 @@
     /* COVER AREA */
 
     .chapter-cover {
-
       width: 100%;
-
       aspect-ratio: 3 / 4;
 
       background: var(--black);
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       overflow: hidden;
 
       position: relative;
-
-      border: 3px solid var(--red);
     }
 
 
-    /* SMALL RANDOM PREVIEW */
+    /* SMALL RANDOM COMIC PREVIEW */
 
     .preview-window {
-
-      width: 78%;
-
-      height: 55%;
+      width: 88%;
+      height: 42%;
 
       overflow: hidden;
 
-      border: 3px solid var(--red);
-
       background: var(--black);
+
+      border: 3px solid var(--red);
 
       transform: rotate(-2deg);
 
@@ -356,9 +346,7 @@
 
 
     .preview-window img {
-
       width: 100%;
-
       height: 100%;
 
       object-fit: cover;
@@ -368,9 +356,7 @@
     }
 
 
-    .chapter-card:hover
-    .preview-window {
-
+    .chapter-card:hover .preview-window {
       transform:
         rotate(1deg)
         scale(1.03);
@@ -380,9 +366,7 @@
     }
 
 
-    .chapter-card:hover
-    .preview-window img {
-
+    .chapter-card:hover .preview-window img {
       transform:
         scale(1.05);
     }
@@ -391,7 +375,6 @@
     /* PLACEHOLDER */
 
     .placeholder {
-
       color: var(--red);
 
       font-size: 32px;
@@ -409,11 +392,9 @@
 
 
     .coming {
-
       position: absolute;
 
       bottom: 18px;
-
       right: 18px;
 
       background: var(--black);
@@ -432,16 +413,18 @@
 
       text-transform: uppercase;
 
-      border: 2px solid var(--red);
+      border:
+        2px solid
+        var(--red);
 
-      transform: rotate(2deg);
+      transform:
+        rotate(2deg);
     }
 
 
     /* INFO */
 
     .chapter-info {
-
       padding:
         17px
         5px
@@ -450,7 +433,6 @@
 
 
     .chapter-title {
-
       font-size: 32px;
 
       font-weight: 900;
@@ -464,7 +446,6 @@
 
 
     .chapter-description {
-
       margin-top: 10px;
 
       font-size: 11px;
@@ -478,7 +459,6 @@
 
 
     .read {
-
       display: inline-block;
 
       margin-top: 15px;
@@ -504,7 +484,6 @@
     /* TRANSMISSION */
 
     .transmission {
-
       margin-top: 120px;
 
       padding:
@@ -528,7 +507,6 @@
 
 
     .transmission-label {
-
       color: var(--red);
 
       font-size: 10px;
@@ -542,7 +520,6 @@
 
 
     .transmission p {
-
       margin: 0;
 
       font-size:
@@ -563,13 +540,11 @@
 
 
     .transmission .red {
-
       color: var(--red);
     }
 
 
     .transmission-mark {
-
       position: absolute;
 
       right: 20px;
@@ -590,7 +565,6 @@
     /* FOOTER */
 
     footer {
-
       margin-top: 70px;
 
       text-align: center;
@@ -612,7 +586,6 @@
     @media (max-width: 750px) {
 
       .page {
-
         padding:
           15px
           15px
@@ -621,14 +594,12 @@
 
 
       nav {
-
         align-items:
           flex-start;
       }
 
 
       .nav-links {
-
         gap: 12px;
 
         flex-wrap: wrap;
@@ -639,7 +610,6 @@
 
 
       header {
-
         padding:
           60px
           0
@@ -648,7 +618,6 @@
 
 
       .logo {
-
         letter-spacing: -6px;
 
         text-shadow:
@@ -658,7 +627,6 @@
 
 
       .subtitle {
-
         font-size: 10px;
 
         letter-spacing: 3px;
@@ -666,13 +634,11 @@
 
 
       .section-heading {
-
         display: block;
       }
 
 
       .issue {
-
         display: block;
 
         margin-top: 15px;
@@ -680,7 +646,6 @@
 
 
       .chapters {
-
         grid-template-columns:
           1fr;
 
@@ -689,7 +654,6 @@
 
 
       .chapter-card {
-
         max-width: 430px;
 
         width: 100%;
@@ -699,21 +663,17 @@
 
 
       .preview-window {
-
-        width: 72%;
-
-        height: 52%;
+        width: 84%;
+        height: 40%;
       }
 
 
       .transmission {
-
         margin-top: 90px;
       }
 
 
       .transmission-mark {
-
         display: none;
       }
 
@@ -832,7 +792,6 @@
         href="volume-1/"
       >
 
-
         <div class="chapter-number">
           CHAPTER 01
         </div>
@@ -841,7 +800,7 @@
         <div class="chapter-cover">
 
 
-          <!-- SMALL RANDOM PREVIEW -->
+          <!-- RANDOM PREVIEW -->
 
           <div class="preview-window">
 
@@ -891,14 +850,12 @@
 
       <div class="chapter-card">
 
-
         <div class="chapter-number">
           CHAPTER 02
         </div>
 
 
         <div class="chapter-cover">
-
 
           <div class="placeholder">
 
@@ -912,12 +869,10 @@
             Coming Soon
           </div>
 
-
         </div>
 
 
         <div class="chapter-info">
-
 
           <div class="chapter-title">
             Chapter 02
@@ -931,9 +886,7 @@
 
           </div>
 
-
         </div>
-
 
       </div>
 
@@ -942,14 +895,12 @@
 
       <div class="chapter-card">
 
-
         <div class="chapter-number">
           SK6-003
         </div>
 
 
         <div class="chapter-cover">
-
 
           <div class="placeholder">
 
@@ -964,12 +915,10 @@
             Coming Soon
           </div>
 
-
         </div>
 
 
         <div class="chapter-info">
-
 
           <div class="chapter-title">
             More
@@ -983,9 +932,7 @@
 
           </div>
 
-
         </div>
-
 
       </div>
 
@@ -1057,11 +1004,11 @@
 <script>
 
   /*
-    9MM GIRLS RANDOM PREVIEW
+    RANDOM 9MM GIRLS PREVIEW
 
-    There are 69 pages.
+    69 pages total.
 
-    Files are named:
+    Files:
 
     Page-01 Large.jpeg
     Page-02 Large.jpeg
