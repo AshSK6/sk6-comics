@@ -3,900 +3,812 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-  <title>Freaky 1/2 — SK6</title>
+<title>Freaky 1/2 — SK6</title>
 
+<style>
 
-  <style>
+* {
+  box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+:root {
+  --black: #080808;
+  --white: #f2f2ee;
+  --blue: #5ecbff;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
-    :root {
-      --black: #080808;
-      --white: #f2f2ee;
-      --blue: #5ecbff;
-    }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
 
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* BACKGROUND */
 
+body::before {
+  content: "FREAKY 1/2  FREAKY 1/2";
 
-    body {
+  position: fixed;
 
-      margin: 0;
+  top: 42%;
+  left: -20%;
 
-      background: var(--black);
+  width: 150%;
 
-      color: var(--white);
+  font-size: 13vw;
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+  font-weight: 900;
 
-      overflow-x: hidden;
-    }
+  letter-spacing: -8px;
 
+  white-space: nowrap;
 
-    /* BACKGROUND */
+  color: rgba(255,255,255,.025);
 
-    body::before {
+  transform: rotate(-7deg);
 
-      content:
-        "FREAKY  FREAKY  FREAKY  FREAKY";
+  pointer-events: none;
 
-      position: fixed;
+  z-index: 0;
+}
 
-      top: 42%;
+body::after {
+  content: "";
 
-      left: -20%;
+  position: fixed;
 
-      width: 150%;
+  width: 160%;
 
-      font-size: 13vw;
+  height: 4px;
 
-      font-weight: 900;
+  left: -30%;
 
-      letter-spacing: -8px;
+  top: 43%;
 
-      white-space: nowrap;
+  background: var(--blue);
 
-      color:
-        rgba(255,255,255,.025);
+  opacity: .55;
 
-      transform:
-        rotate(-7deg);
+  transform: rotate(-2deg);
 
-      pointer-events: none;
+  pointer-events: none;
 
-      z-index: 0;
-    }
+  z-index: 0;
+}
 
 
-    body::after {
+/* PAGE */
 
-      content: "";
+.page {
+  max-width: 1250px;
 
-      position: fixed;
+  margin: auto;
 
-      width: 160%;
+  padding:
+    20px
+    25px
+    80px;
 
-      height: 4px;
+  position: relative;
 
-      left: -30%;
+  z-index: 1;
+}
 
-      top: 43%;
 
-      background: var(--blue);
+/* NAVIGATION */
 
-      opacity: .55;
+nav {
+  display: flex;
 
-      transform:
-        rotate(-2deg);
+  justify-content: space-between;
 
-      pointer-events: none;
+  align-items: center;
 
-      z-index: 0;
-    }
+  padding:
+    12px
+    0
+    18px;
 
+  border-bottom:
+    2px solid
+    var(--white);
+}
 
-    /* PAGE */
+.nav-logo {
+  color: var(--blue);
 
-    .page {
+  text-decoration: none;
 
-      max-width: 1250px;
+  font-size: 18px;
 
-      margin: auto;
+  font-weight: 900;
 
-      padding:
-        20px
-        25px
-        80px;
+  letter-spacing: 4px;
+}
 
-      position: relative;
+.nav-links {
+  display: flex;
 
-      z-index: 1;
-    }
+  gap: 25px;
+}
 
+.nav-links a {
+  color: var(--white);
 
-    /* NAV */
+  text-decoration: none;
 
-    nav {
+  font-size: 10px;
 
-      display: flex;
+  font-weight: 900;
 
-      justify-content:
-        space-between;
+  letter-spacing: 2px;
 
-      align-items: center;
+  text-transform: uppercase;
 
-      padding:
-        12px
-        0
-        18px;
+  transition:
+    color .15s ease;
+}
 
-      border-bottom:
-        2px solid
-        var(--white);
-    }
+.nav-links a:hover {
+  color: var(--blue);
+}
 
 
-    .nav-logo {
+/* HERO */
 
-      color: var(--blue);
+header {
+  position: relative;
 
-      text-decoration: none;
+  text-align: center;
 
-      font-size: 18px;
+  padding:
+    70px
+    0
+    55px;
 
-      font-weight: 900;
+  border-bottom:
+    10px solid
+    var(--white);
 
-      letter-spacing: 4px;
-    }
+  margin-bottom: 75px;
 
+  overflow: hidden;
+}
 
-    .nav-links {
+.number {
+  position: absolute;
 
-      display: flex;
+  top: 20px;
 
-      gap: 25px;
-    }
+  left: 0;
 
+  font-size: 11px;
 
-    .nav-links a {
+  font-weight: 900;
 
-      color: var(--white);
+  letter-spacing: 3px;
 
-      text-decoration: none;
+  color: var(--blue);
+}
 
-      font-size: 10px;
+.kicker {
+  font-size: 11px;
 
-      font-weight: 900;
+  font-weight: 900;
 
-      letter-spacing: 2px;
+  letter-spacing: 5px;
 
-      text-transform: uppercase;
+  color: var(--blue);
 
-      transition:
-        color .15s ease;
-    }
+  text-transform: uppercase;
 
+  margin-bottom: 20px;
+}
 
-    .nav-links a:hover {
+.logo {
+  margin: 0;
 
-      color: var(--blue);
-    }
+  font-size:
+    clamp(
+      65px,
+      15vw,
+      180px
+    );
 
+  font-weight: 900;
 
-    /* HERO */
+  line-height: .75;
 
-    header {
+  letter-spacing: -9px;
 
-      position: relative;
+  text-transform: uppercase;
 
-      text-align: center;
+  transform: skew(-7deg);
 
-      padding:
-        70px
-        0
-        55px;
+  text-shadow:
+    6px 6px 0
+    var(--blue);
+}
 
-      border-bottom:
-        10px solid
-        var(--white);
+.subtitle {
+  margin-top: 35px;
 
-      margin-bottom: 75px;
+  font-size: 13px;
 
-      overflow: hidden;
-    }
+  font-weight: 900;
 
+  letter-spacing: 5px;
 
-    .number {
+  text-transform: uppercase;
+}
 
-      position: absolute;
+.subtitle span {
+  color: var(--blue);
+}
 
-      top: 20px;
+.stamp {
+  display: inline-block;
 
-      left: 0;
+  margin-top: 25px;
 
-      font-size: 11px;
+  padding:
+    9px
+    15px;
 
-      font-weight: 900;
+  background: var(--blue);
 
-      letter-spacing: 3px;
+  color: var(--black);
 
-      color: var(--blue);
-    }
+  font-size: 11px;
 
+  font-weight: 900;
 
-    .kicker {
+  letter-spacing: 2px;
 
-      font-size: 11px;
+  text-transform: uppercase;
 
-      font-weight: 900;
+  transform: rotate(-2deg);
+}
 
-      letter-spacing: 5px;
 
-      color: var(--blue);
+/* SECTION */
 
-      text-transform: uppercase;
+.section-heading {
+  display: flex;
 
-      margin-bottom: 20px;
-    }
+  align-items: flex-end;
 
+  justify-content: space-between;
 
-    .logo {
+  gap: 20px;
 
-      margin: 0;
+  margin-bottom: 45px;
 
-      font-size:
-        clamp(
-          75px,
-          16vw,
-          190px
-        );
+  border-bottom:
+    3px solid
+    var(--white);
 
-      font-weight: 900;
+  padding-bottom: 15px;
+}
 
-      line-height: .75;
+.section-heading h2 {
+  margin: 0;
 
-      letter-spacing: -9px;
+  font-size:
+    clamp(
+      45px,
+      9vw,
+      90px
+    );
 
-      text-transform: uppercase;
+  line-height: .8;
 
-      transform:
-        skew(-7deg);
+  letter-spacing: -6px;
 
-      text-shadow:
-        6px 6px 0 var(--blue);
-    }
+  font-weight: 900;
 
+  text-transform: uppercase;
+}
 
-    .subtitle {
+.issue {
+  font-size: 11px;
 
-      margin-top: 35px;
+  font-weight: 900;
 
-      font-size: 13px;
+  letter-spacing: 3px;
 
-      font-weight: 900;
+  text-transform: uppercase;
 
-      letter-spacing: 5px;
+  color: var(--blue);
 
-      text-transform: uppercase;
-    }
+  white-space: nowrap;
+}
 
 
-    .subtitle span {
+/* CHAPTERS */
 
-      color: var(--blue);
-    }
+.chapters {
+  display: grid;
 
+  grid-template-columns:
+    repeat(3, 1fr);
 
-    .stamp {
+  gap: 25px;
+}
 
-      display: inline-block;
 
-      margin-top: 25px;
+/* CHAPTER CARD */
 
-      padding:
-        9px
-        15px;
+.chapter-card {
+  position: relative;
 
-      background: var(--blue);
+  display: block;
 
-      color: var(--black);
+  background: var(--white);
 
-      font-size: 11px;
+  color: var(--black);
 
-      font-weight: 900;
+  padding: 12px;
 
-      letter-spacing: 2px;
+  text-decoration: none;
 
-      text-transform: uppercase;
+  border:
+    4px solid
+    var(--white);
 
-      transform:
-        rotate(-2deg);
-    }
+  box-shadow:
+    10px 10px 0
+    var(--blue);
 
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
 
-    /* CHAPTER SECTION */
+.chapter-card:nth-child(1) {
+  transform: rotate(-1deg);
+}
 
-    .section-heading {
+.chapter-card:nth-child(2) {
+  transform: rotate(0deg);
+}
 
-      display: flex;
+.chapter-card:nth-child(3) {
+  transform: rotate(1deg);
+}
 
-      align-items: flex-end;
+.chapter-card:hover {
+  transform:
+    translateY(-12px)
+    rotate(0deg);
 
-      justify-content:
-        space-between;
+  box-shadow:
+    15px 15px 0
+    var(--blue);
+}
 
-      gap: 20px;
 
-      margin-bottom: 45px;
+/* CHAPTER LABEL */
 
-      border-bottom:
-        3px solid
-        var(--white);
+.chapter-number {
+  position: absolute;
 
-      padding-bottom: 15px;
-    }
+  top: 18px;
 
+  left: 18px;
 
-    .section-heading h2 {
+  z-index: 5;
 
-      margin: 0;
+  background: var(--blue);
 
-      font-size:
-        clamp(
-          45px,
-          9vw,
-          90px
-        );
+  color: var(--black);
 
-      line-height: .8;
+  padding:
+    7px
+    9px;
 
-      letter-spacing: -6px;
+  font-size: 10px;
 
-      font-weight: 900;
+  font-weight: 900;
 
-      text-transform: uppercase;
-    }
+  letter-spacing: 2px;
 
+  text-transform: uppercase;
+}
 
-    .issue {
 
-      font-size: 11px;
+/* PANEL AREA */
 
-      font-weight: 900;
+.chapter-cover {
 
-      letter-spacing: 3px;
+  width: 100%;
 
-      text-transform: uppercase;
+  display: flex;
 
-      color: var(--blue);
+  align-items: center;
 
-      white-space: nowrap;
-    }
+  justify-content: center;
 
+  background: transparent;
 
-    /* CHAPTER GRID */
+  padding:
+    45px
+    0
+    15px;
+}
 
-    .chapters {
 
-      display: grid;
+/* ACTUAL MANGA PANEL */
 
-      grid-template-columns:
-        repeat(3, 1fr);
+.chapter-cover img {
 
-      gap: 25px;
-    }
+  width: 88%;
 
+  height: auto;
 
-    /* CHAPTER CARD */
+  aspect-ratio: 2.4 / 1;
 
-    .chapter {
+  object-fit: cover;
 
-      position: relative;
+  display: block;
 
-      display: block;
+  background: transparent;
 
-      background: var(--white);
+  border:
+    4px solid
+    var(--blue);
 
-      color: var(--black);
+  transform:
+    rotate(-2deg);
 
-      padding: 12px;
+  transition:
+    transform .3s ease;
+}
 
-      text-decoration: none;
+.chapter-card:hover .chapter-cover img {
 
-      border:
-        4px solid
-        var(--white);
+  transform:
+    rotate(0deg)
+    scale(1.04);
+}
 
-      box-shadow:
-        10px 10px 0
-        var(--blue);
 
-      transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-    }
+/* PLACEHOLDER */
 
+.placeholder {
 
-    .chapter:nth-child(1) {
+  color: var(--blue);
 
-      transform:
-        rotate(-1deg);
-    }
+  font-size: 32px;
 
+  font-weight: 900;
 
-    .chapter:nth-child(2) {
+  line-height: .8;
 
-      transform:
-        rotate(0deg);
-    }
+  letter-spacing: -2px;
 
+  text-align: center;
 
-    .chapter:nth-child(3) {
+  text-transform: uppercase;
+}
 
-      transform:
-        rotate(1deg);
-    }
+.coming {
 
+  position: absolute;
 
-    .chapter:hover {
+  bottom: 18px;
 
-      transform:
-        translateY(-12px)
-        rotate(0deg);
+  right: 18px;
 
-      box-shadow:
-        15px 15px 0
-        var(--blue);
-    }
+  background: var(--black);
 
+  color: var(--blue);
 
-    /* CHAPTER NUMBER */
+  padding:
+    7px
+    9px;
 
-    .chapter-number {
+  font-size: 9px;
 
-      position: absolute;
+  font-weight: 900;
 
-      top: 18px;
+  letter-spacing: 2px;
 
-      left: 18px;
+  text-transform: uppercase;
 
-      z-index: 5;
+  border:
+    2px solid
+    var(--blue);
 
-      background: var(--blue);
+  transform:
+    rotate(2deg);
+}
 
-      color: var(--black);
 
-      padding:
-        7px
-        9px;
+/* INFO */
 
-      font-size: 10px;
+.chapter-info {
 
-      font-weight: 900;
+  padding:
+    17px
+    5px
+    8px;
+}
 
-      letter-spacing: 2px;
+.chapter-title {
 
-      text-transform: uppercase;
-    }
+  font-size: 32px;
 
+  font-weight: 900;
 
-    /* CHAPTER IMAGE */
+  line-height: .9;
 
-    .chapter-cover {
+  letter-spacing: -2px;
 
-      width: 100%;
+  text-transform: uppercase;
+}
 
-      aspect-ratio: 3 / 4;
+.chapter-description {
 
-      background:
-        var(--black);
+  margin-top: 10px;
 
-      display: flex;
+  font-size: 11px;
 
-      align-items: center;
+  font-weight: 900;
 
-      justify-content: center;
+  line-height: 1.4;
 
-      overflow: hidden;
+  text-transform: uppercase;
+}
 
-      position: relative;
+.read {
 
-      border:
-        3px solid
-        var(--blue);
-    }
+  display: inline-block;
 
+  margin-top: 15px;
 
-    .chapter-cover img {
+  padding:
+    9px
+    14px;
 
-      width: 100%;
+  background: var(--black);
 
-      height: 100%;
+  color: var(--blue);
 
-      object-fit: cover;
+  font-size: 11px;
 
-      transition:
-        transform .4s ease;
-    }
+  font-weight: 900;
 
+  letter-spacing: 2px;
 
-    .chapter:hover
-    .chapter-cover img {
+  text-transform: uppercase;
+}
 
-      transform:
-        scale(1.04);
-    }
 
+/* TRANSMISSION */
 
-    /* PLACEHOLDER */
+.transmission {
 
-    .placeholder {
+  margin-top: 120px;
 
-      color: var(--blue);
+  padding:
+    55px
+    20px;
 
-      font-size: 32px;
+  border-top:
+    10px solid
+    var(--white);
 
-      font-weight: 900;
+  border-bottom:
+    10px solid
+    var(--white);
 
-      line-height: .8;
+  text-align: center;
 
-      letter-spacing: -2px;
+  position: relative;
 
-      text-align: center;
+  overflow: hidden;
+}
 
-      text-transform: uppercase;
-    }
+.transmission-label {
 
+  color: var(--blue);
 
-    .coming {
+  font-size: 10px;
 
-      position: absolute;
+  font-weight: 900;
 
-      bottom: 18px;
+  letter-spacing: 4px;
 
-      right: 18px;
+  margin-bottom: 25px;
+}
 
-      background: var(--black);
+.transmission p {
 
-      color: var(--blue);
+  margin: 0;
 
-      padding:
-        7px
-        9px;
+  font-size:
+    clamp(
+      35px,
+      7vw,
+      75px
+    );
 
-      font-size: 9px;
+  font-weight: 900;
 
-      font-weight: 900;
+  line-height: .83;
 
-      letter-spacing: 2px;
+  letter-spacing: -5px;
 
-      text-transform: uppercase;
+  text-transform: uppercase;
+}
 
-      border:
-        2px solid
-        var(--blue);
+.transmission .blue {
+  color: var(--blue);
+}
 
-      transform:
-        rotate(2deg);
-    }
+.transmission-mark {
 
+  position: absolute;
 
-    /* INFO */
+  right: 20px;
 
-    .chapter-info {
+  bottom: 10px;
 
-      padding:
-        17px
-        5px
-        8px;
-    }
+  font-size: 70px;
 
+  font-weight: 900;
 
-    .chapter-title {
+  color: var(--blue);
 
-      font-size: 32px;
+  transform:
+    rotate(-10deg);
+}
 
-      font-weight: 900;
 
-      line-height: .9;
+/* FOOTER */
 
-      letter-spacing: -2px;
+footer {
 
-      text-transform: uppercase;
-    }
+  margin-top: 70px;
 
+  text-align: center;
 
-    .chapter-description {
+  font-size: 10px;
 
-      margin-top: 10px;
+  font-weight: 900;
 
-      font-size: 11px;
+  letter-spacing: 4px;
 
-      font-weight: 900;
+  text-transform: uppercase;
 
-      line-height: 1.4;
+  opacity: .5;
+}
 
-      text-transform: uppercase;
-    }
 
+/* MOBILE */
 
-    .read {
+@media (max-width: 750px) {
 
-      display: inline-block;
+  .page {
 
-      margin-top: 15px;
+    padding:
+      15px
+      15px
+      60px;
+  }
 
-      padding:
-        9px
-        14px;
+  nav {
+    align-items:
+      flex-start;
+  }
 
-      background:
-        var(--black);
+  .nav-links {
 
-      color: var(--blue);
+    gap: 12px;
 
-      font-size: 11px;
+    flex-wrap: wrap;
 
-      font-weight: 900;
+    justify-content:
+      flex-end;
+  }
 
-      letter-spacing: 2px;
+  header {
 
-      text-transform: uppercase;
-    }
+    padding:
+      60px
+      0
+      45px;
+  }
 
+  .logo {
 
-    /* CHAPTERS 2 & 3 */
+    letter-spacing: -6px;
 
-    .chapter-disabled {
+    text-shadow:
+      4px 4px 0
+      var(--blue);
+  }
 
-      cursor: default;
-    }
+  .subtitle {
 
+    font-size: 10px;
 
-    .chapter-disabled:hover {
+    letter-spacing: 3px;
+  }
 
-      transform:
-        translateY(-6px)
-        rotate(0deg);
-    }
+  .section-heading {
 
+    display: block;
+  }
 
-    .chapter-disabled
-    .chapter-cover {
+  .issue {
 
-      opacity: .85;
-    }
+    display: block;
 
+    margin-top: 15px;
+  }
 
-    /* TRANSMISSION */
+  .chapters {
 
-    .transmission {
+    grid-template-columns:
+      1fr;
 
-      margin-top: 120px;
+    gap: 40px;
+  }
 
-      padding:
-        55px
-        20px;
+  .chapter-card {
 
-      border-top:
-        10px solid
-        var(--white);
+    max-width: 430px;
 
-      border-bottom:
-        10px solid
-        var(--white);
+    width: 100%;
 
-      text-align: center;
+    margin: auto;
+  }
 
-      position: relative;
+  .chapter-cover {
 
-      overflow: hidden;
-    }
+    padding:
+      45px
+      0
+      15px;
+  }
 
+  .chapter-cover img {
 
-    .transmission-label {
+    width: 88%;
 
-      color: var(--blue);
+    aspect-ratio:
+      2.4 / 1;
+  }
 
-      font-size: 10px;
+  .transmission {
 
-      font-weight: 900;
+    margin-top: 90px;
+  }
 
-      letter-spacing: 4px;
+  .transmission-mark {
 
-      margin-bottom: 25px;
-    }
+    display: none;
+  }
 
+}
 
-    .transmission p {
-
-      margin: 0;
-
-      font-size:
-        clamp(
-          35px,
-          7vw,
-          75px
-        );
-
-      font-weight: 900;
-
-      line-height: .83;
-
-      letter-spacing: -5px;
-
-      text-transform: uppercase;
-    }
-
-
-    .transmission .blue {
-
-      color: var(--blue);
-    }
-
-
-    .transmission-mark {
-
-      position: absolute;
-
-      right: 20px;
-
-      bottom: 10px;
-
-      font-size: 70px;
-
-      font-weight: 900;
-
-      color: var(--blue);
-
-      transform:
-        rotate(-10deg);
-    }
-
-
-    /* FOOTER */
-
-    footer {
-
-      margin-top: 70px;
-
-      text-align: center;
-
-      font-size: 10px;
-
-      font-weight: 900;
-
-      letter-spacing: 4px;
-
-      text-transform: uppercase;
-
-      opacity: .5;
-    }
-
-
-    /* MOBILE */
-
-    @media (max-width: 750px) {
-
-
-      .page {
-
-        padding:
-          15px
-          15px
-          60px;
-      }
-
-
-      nav {
-
-        align-items:
-          flex-start;
-      }
-
-
-      .nav-links {
-
-        gap: 12px;
-
-        flex-wrap: wrap;
-
-        justify-content:
-          flex-end;
-      }
-
-
-      header {
-
-        padding:
-          60px
-          0
-          45px;
-      }
-
-
-      .logo {
-
-        letter-spacing:
-          -6px;
-
-        text-shadow:
-          4px 4px 0
-          var(--blue);
-      }
-
-
-      .subtitle {
-
-        font-size: 10px;
-
-        letter-spacing: 3px;
-      }
-
-
-      .section-heading {
-
-        display: block;
-      }
-
-
-      .issue {
-
-        display: block;
-
-        margin-top: 15px;
-      }
-
-
-      .chapters {
-
-        grid-template-columns:
-          1fr;
-
-        gap: 40px;
-      }
-
-
-      .chapter {
-
-        max-width: 430px;
-
-        width: 100%;
-
-        margin: auto;
-      }
-
-
-      .transmission {
-
-        margin-top: 90px;
-      }
-
-
-      .transmission-mark {
-
-        display: none;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -907,335 +819,296 @@
 <div class="page">
 
 
-  <!-- NAVIGATION -->
+<!-- NAVIGATION -->
 
-  <nav>
+<nav>
 
+  <a
+    class="nav-logo"
+    href="../"
+  >
+    SK6
+  </a>
 
-    <a
-      class="nav-logo"
-      href="../"
-    >
-      SK6
+  <div class="nav-links">
+
+    <a href="#chapters">
+      Chapters
     </a>
 
+    <a href="#transmission">
+      About
+    </a>
 
-    <div class="nav-links">
+    <a href="../">
+      SK6 Home
+    </a>
 
+  </div>
 
-      <a href="#chapters">
-        Chapters
-      </a>
+</nav>
 
 
-      <a href="#transmission">
-        About
-      </a>
+<!-- HERO -->
 
+<header>
 
-      <a href="../">
-        SK6 Home
-      </a>
+  <div class="number">
+    SK6 // 002
+  </div>
 
+  <div class="kicker">
+    SK6 Presents
+  </div>
 
-    </div>
+  <h1 class="logo">
+    FREAKY 1/2
+  </h1>
 
+  <div class="subtitle">
 
-  </nav>
+    Weird <span>/</span>
+    Strange <span>/</span>
+    Freaky
 
+  </div>
 
-  <!-- HERO -->
+  <div class="stamp">
+    FREAKY 1/2 // SK6
+  </div>
 
-  <header>
+</header>
 
 
-    <div class="number">
-      SK6 // 002
-    </div>
+<!-- CHAPTERS -->
 
+<main id="chapters">
 
-    <div class="kicker">
-      SK6 Presents
-    </div>
 
+<div class="section-heading">
 
-    <h1 class="logo">
-      FREAKY 1/2
-    </h1>
+  <h2>
+    Chapters
+  </h2>
 
+  <div class="issue">
+    Freaky 1/2 / SK6-002
+  </div>
 
-    <div class="subtitle">
+</div>
 
-      A story told
-      <span>
-        right to left
-      </span>
 
-    </div>
+<div class="chapters">
 
 
-    <div class="stamp">
+<!-- CHAPTER 01 -->
 
-      Manga // Right → Left
+<a
+  class="chapter-card"
+  href="chapter-1/"
+>
 
-    </div>
+  <div class="chapter-number">
+    CHAPTER 01
+  </div>
 
 
-  </header>
+  <div class="chapter-cover">
 
-
-  <!-- CHAPTERS -->
-
-  <main id="chapters">
-
-
-    <div class="section-heading">
-
-
-      <h2>
-        Chapters
-      </h2>
-
-
-      <div class="issue">
-        Freaky 1/2 / SK6-002
-      </div>
-
-
-    </div>
-
-
-    <div class="chapters">
-
-
-      <!-- CHAPTER 1 -->
-
-      <a
-        class="chapter"
-        href="volume-1/"
-      >
-
-
-        <div class="chapter-number">
-          CHAPTER 01
-        </div>
-
-
-        <div class="chapter-cover">
-
-
-          <img
-            src="volume-1/Fr1-01.jpeg"
-            alt="Freaky 1/2 Chapter 1"
-          >
-
-
-        </div>
-
-
-        <div class="chapter-info">
-
-
-          <div class="chapter-title">
-            Chapter 01
-          </div>
-
-
-          <div class="chapter-description">
-
-            The beginning of
-            Freaky 1/2.
-
-            Read manga style,
-            right to left.
-
-          </div>
-
-
-          <div class="read">
-            Read →
-          </div>
-
-
-        </div>
-
-
-      </a>
-
-
-      <!-- CHAPTER 2 -->
-
-      <div
-        class="chapter chapter-disabled"
-      >
-
-
-        <div class="chapter-number">
-          CHAPTER 02
-        </div>
-
-
-        <div class="chapter-cover">
-
-
-          <div class="placeholder">
-
-            CHAPTER<br>
-            02
-
-          </div>
-
-
-          <div class="coming">
-            Coming Soon
-          </div>
-
-
-        </div>
-
-
-        <div class="chapter-info">
-
-
-          <div class="chapter-title">
-            Chapter 02
-          </div>
-
-
-          <div class="chapter-description">
-
-            More Freaky 1/2
-            coming soon.
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-      <!-- CHAPTER 3 -->
-
-      <div
-        class="chapter chapter-disabled"
-      >
-
-
-        <div class="chapter-number">
-          CHAPTER 03
-        </div>
-
-
-        <div class="chapter-cover">
-
-
-          <div class="placeholder">
-
-            CHAPTER<br>
-            03
-
-          </div>
-
-
-          <div class="coming">
-            Coming Soon
-          </div>
-
-
-        </div>
-
-
-        <div class="chapter-info">
-
-
-          <div class="chapter-title">
-            Chapter 03
-          </div>
-
-
-          <div class="chapter-description">
-
-            More Freaky 1/2
-            coming soon.
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-    <!-- TRANSMISSION -->
-
-    <section
-      class="transmission"
-      id="transmission"
+    <img
+      id="randomFreaky1"
+      src="Fr1-01.jpeg"
+      alt="Freaky 1/2 Chapter 01 preview"
     >
 
-
-      <div class="transmission-label">
-
-        FREAKY TRANSMISSION // 002
-
-      </div>
+  </div>
 
 
-      <p>
+  <div class="chapter-info">
 
-        Three chapters.<br>
+    <div class="chapter-title">
+      Chapter 01
+    </div>
 
+    <div class="chapter-description">
 
-        <span class="blue">
+      The first chapter
+      of Freaky 1/2.
 
-          One freaky story.
+    </div>
 
-        </span>
+    <div class="read">
+      Read →
+    </div>
 
+  </div>
 
-      </p>
-
-
-      <div class="transmission-mark">
-        X
-      </div>
-
-
-    </section>
-
-
-  </main>
+</a>
 
 
-  <!-- FOOTER -->
+<!-- CHAPTER 02 -->
 
-  <footer>
+<div class="chapter-card">
+
+  <div class="chapter-number">
+    CHAPTER 02
+  </div>
+
+  <div class="chapter-cover">
+
+    <div class="placeholder">
+
+      CHAPTER<br>
+      02
+
+    </div>
+
+    <div class="coming">
+      Coming Soon
+    </div>
+
+  </div>
+
+  <div class="chapter-info">
+
+    <div class="chapter-title">
+      Chapter 02
+    </div>
+
+    <div class="chapter-description">
+
+      More Freaky 1/2
+      coming soon.
+
+    </div>
+
+  </div>
+
+</div>
 
 
-    SK6 © 2026
+<!-- CHAPTER 03 -->
 
+<div class="chapter-card">
 
-    <br><br>
+  <div class="chapter-number">
+    CHAPTER 03
+  </div>
 
+  <div class="chapter-cover">
 
-    Freaky 1/2
+    <div class="placeholder">
 
+      CHAPTER<br>
+      03
 
-    <br><br>
+    </div>
 
+    <div class="coming">
+      Coming Soon
+    </div>
 
-    Comics / Art / Chaos
+  </div>
 
-  </footer>
+  <div class="chapter-info">
+
+    <div class="chapter-title">
+      Chapter 03
+    </div>
+
+    <div class="chapter-description">
+
+      More Freaky 1/2
+      coming soon.
+
+    </div>
+
+  </div>
+
+</div>
 
 
 </div>
+
+
+<!-- TRANSMISSION -->
+
+<section
+  class="transmission"
+  id="transmission"
+>
+
+  <div class="transmission-label">
+
+    FREAKY TRANSMISSION // 002
+
+  </div>
+
+  <p>
+
+    Strange things.<br>
+
+    <span class="blue">
+      Weird stories.
+    </span><br>
+
+    Keep reading.
+
+  </p>
+
+  <div class="transmission-mark">
+    X
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  SK6 © 2026
+
+  <br><br>
+
+  Freaky 1/2
+
+  <br><br>
+
+  Comics / Art / Chaos
+
+</footer>
+
+
+</div>
+
+
+<!-- RANDOM PANEL -->
+
+<script>
+
+const totalFreakyPages = 54;
+
+const randomPage =
+  Math.floor(
+    Math.random() *
+    totalFreakyPages
+  ) + 1;
+
+const randomImage =
+  document.getElementById(
+    "randomFreaky1"
+  );
+
+randomImage.src =
+  "Fr1-" +
+  String(randomPage).padStart(2, "0") +
+  ".jpeg";
+
+</script>
 
 
 </body>
