@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Freaky 1/2 — SK6</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #080808;
+  --white: #f2f2ee;
+  --blue: #5ecbff;
+  --dark-blue: #0b1d27;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "FREAKY 1/2";
+  position: fixed;
+  top: 35%;
+  left: -10%;
+  width: 120%;
+  font-size: 18vw;
+  font-weight: 900;
+  letter-spacing: -12px;
+  white-space: nowrap;
+  color: rgba(94,203,255,0.035);
+  transform: rotate(-8deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 25px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 18px;
+  border-bottom: 2px solid var(--white);
+}
+
+.logo {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+/* HEADER */
+
+header {
+  text-align: center;
+  padding: 80px 10px 70px;
+  border-bottom: 10px solid var(--blue);
+}
+
+.small-title {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(65px, 15vw, 170px);
+  line-height: .75;
+  letter-spacing: -10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.half {
+  color: var(--blue);
+}
+
+.subtitle {
+  margin-top: 40px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+/* MAIN */
+
+main {
+  padding-top: 70px;
+}
+
+.coming-soon {
+  border: 4px solid var(--blue);
+  padding: 60px 30px;
+  text-align: center;
+
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      var(--black),
+      var(--black) 12px,
+      var(--dark-blue) 12px,
+      var(--dark-blue) 24px
+    );
+
+  box-shadow: 15px 15px 0 var(--blue);
+}
+
+.coming-soon h2 {
+  margin: 0;
+  font-size: clamp(40px, 8vw, 85px);
+  line-height: .85;
+  letter-spacing: -5px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.coming-soon h2 span {
+  color: var(--blue);
+}
+
+.coming-soon p {
+  max-width: 600px;
+  margin: 35px auto 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+/* INFO */
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 70px;
+}
+
+.info-box {
+  border-top: 3px solid var(--blue);
+  padding-top: 15px;
+}
+
+.info-box span {
+  display: block;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* BACK */
+
+.back {
+  display: inline-block;
+  margin-top: 80px;
+  padding: 12px 20px;
+  background: var(--blue);
+  color: var(--black);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.back:hover {
+  background: var(--white);
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 100px;
+  padding-top: 25px;
+  border-top: 2px solid #333;
+  text-align: center;
+  color: #666;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .page {
+    padding: 15px 15px 60px;
+  }
+
+  header {
+    padding-top: 60px;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .coming-soon {
+    box-shadow: 9px 9px 0 var(--blue);
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<nav>
+
+<a class="logo" href="../">
+SK6
+</a>
+
+<a href="../">
+← All Comics
+</a>
+
+</nav>
+
+<header>
+
+<div class="small-title">
+SK6 // 002
+</div>
+
+<h1>
+Freaky <span class="half">1/2</span>
+</h1>
+
+<div class="subtitle">
+A new story from SK6
+</div>
+
+</header>
+
+<main>
+
+<section class="coming-soon">
+
+<h2>
+Coming<br>
+<span>Soon</span>
+</h2>
+
+<p>
+Something strange is taking shape.
+Freaky 1/2 is currently in the works.
+Check back when we're ready to let
+it loose.
+</p>
+
+</section>
+
+<section class="info">
+
+<div class="info-box">
+
+<span>
+Status
+</span>
+
+<p>
+Currently in production.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<span>
+From
+</span>
+
+<p>
+SK6 — Independent comics & stories.
+</p>
+
+</div>
+
+</section>
+
+<a class="back" href="../">
+← Back to SK6
+</a>
+
+</main>
+
+<footer>
+
+SK6 © 2026
+
+<br><br>
+
+Comics / Art / Chaos
+
+</footer>
+
+</div>
+
+</body>
+</html>
