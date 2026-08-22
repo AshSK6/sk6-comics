@@ -10,8 +10,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Freaky 1/2 — Volume 1</title>
-
+  <title>Freaky 1/2 — Chapter 01</title>
 
   <style>
 
@@ -19,13 +18,11 @@
       box-sizing: border-box;
     }
 
-
     :root {
       --black: #080808;
       --white: #f2f2ee;
       --blue: #5ecbff;
     }
-
 
     html,
     body {
@@ -44,7 +41,6 @@
         sans-serif;
     }
 
-
     body {
       overflow-x: hidden;
     }
@@ -57,9 +53,8 @@
       width: 100%;
 
       padding:
-        18px
-        25px
-        15px;
+        16px
+        25px;
 
       border-bottom:
         2px solid
@@ -71,7 +66,9 @@
 
       justify-content: space-between;
 
-      gap: 20px;
+      position: relative;
+
+      z-index: 20;
     }
 
 
@@ -81,15 +78,13 @@
 
       text-decoration: none;
 
-      font-size: 12px;
+      font-size: 11px;
 
       font-weight: 900;
 
       letter-spacing: 2px;
 
       text-transform: uppercase;
-
-      white-space: nowrap;
     }
 
 
@@ -100,7 +95,7 @@
 
     .title {
 
-      font-size: 20px;
+      font-size: 17px;
 
       font-weight: 900;
 
@@ -114,7 +109,7 @@
 
     .volume {
 
-      font-size: 10px;
+      font-size: 9px;
 
       font-weight: 900;
 
@@ -123,8 +118,6 @@
       color: var(--blue);
 
       text-transform: uppercase;
-
-      white-space: nowrap;
     }
 
 
@@ -144,15 +137,13 @@
       justify-content: center;
 
       padding:
-        35px
-        25px
-        110px;
-
-      position: relative;
+        20px
+        20px
+        100px;
     }
 
 
-    /* TWO PAGE SPREAD */
+    /* SPREAD */
 
     .spread {
 
@@ -160,38 +151,50 @@
 
       flex-direction: row-reverse;
 
-      align-items: center;
+      align-items: stretch;
 
       justify-content: center;
 
-      width: 100%;
+      width: auto;
 
-      max-width: 1500px;
+      max-width: 100%;
 
-      gap: 5px;
+      gap: 0;
+
+      line-height: 0;
+
+      background: var(--black);
     }
 
+
+    /* PAGES */
 
     .page {
 
       display: block;
 
-      width: 50%;
+      width: auto;
 
-      max-height:
-        calc(100vh - 210px);
+      height:
+        calc(100vh - 180px);
+
+      max-width: 50vw;
 
       object-fit: contain;
 
-      background: #111;
+      margin: 0;
 
-      box-shadow:
-        0 0 0 1px
-        rgba(255,255,255,.08);
+      padding: 0;
+
+      border: 0;
+
+      box-shadow: none;
+
+      background: transparent;
     }
 
 
-    /* NAVIGATION */
+    /* CONTROLS */
 
     .controls {
 
@@ -204,12 +207,12 @@
       width: 100%;
 
       padding:
-        15px
+        12px
         20px
-        18px;
+        15px;
 
       background:
-        rgba(8,8,8,.96);
+        rgba(8,8,8,.97);
 
       border-top:
         2px solid
@@ -236,10 +239,10 @@
       color: var(--black);
 
       padding:
-        11px
-        18px;
+        10px
+        17px;
 
-      font-size: 11px;
+      font-size: 10px;
 
       font-weight: 900;
 
@@ -251,8 +254,7 @@
 
       transition:
         background .15s ease,
-        color .15s ease,
-        transform .15s ease;
+        color .15s ease;
     }
 
 
@@ -260,8 +262,7 @@
 
       background: var(--blue);
 
-      transform:
-        translateY(-2px);
+      color: var(--black);
     }
 
 
@@ -270,18 +271,16 @@
       opacity: .25;
 
       cursor: default;
-
-      transform: none;
     }
 
 
     .page-count {
 
-      min-width: 105px;
+      min-width: 100px;
 
       text-align: center;
 
-      font-size: 11px;
+      font-size: 10px;
 
       font-weight: 900;
 
@@ -291,19 +290,19 @@
     }
 
 
-    /* MANGA NOTE */
+    /* DIRECTION */
 
     .reading-direction {
 
       position: fixed;
 
-      top: 75px;
+      top: 65px;
 
-      right: 20px;
+      right: 18px;
 
       z-index: 50;
 
-      font-size: 9px;
+      font-size: 8px;
 
       font-weight: 900;
 
@@ -313,7 +312,7 @@
 
       text-transform: uppercase;
 
-      opacity: .7;
+      opacity: .65;
     }
 
 
@@ -321,13 +320,11 @@
 
     @media (max-width: 750px) {
 
-
       header {
 
         padding:
+          14px
           15px;
-
-        flex-wrap: wrap;
 
         justify-content: center;
       }
@@ -349,7 +346,7 @@
 
       .title {
 
-        font-size: 16px;
+        font-size: 14px;
 
         letter-spacing: 2px;
       }
@@ -358,12 +355,12 @@
       .reader {
 
         padding:
-          20px
           10px
-          95px;
+          8px
+          85px;
 
         min-height:
-          calc(100vh - 75px);
+          calc(100vh - 65px);
       }
 
 
@@ -372,19 +369,26 @@
         width: 100%;
 
         display: block;
+
+        text-align: center;
       }
 
 
       .page {
 
-        width: 100%;
+        width: auto;
 
         max-width: 100%;
 
+        height:
+          calc(100vh - 125px);
+
         max-height:
-          calc(100vh - 150px);
+          calc(100vh - 125px);
 
         object-fit: contain;
+
+        margin: 0 auto;
       }
 
 
@@ -396,31 +400,32 @@
 
       .reading-direction {
 
-        top: 65px;
+        top: 55px;
 
-        right: 10px;
+        right: 8px;
 
-        font-size: 8px;
+        font-size: 7px;
       }
 
 
       .controls {
 
         padding:
-          12px
-          10px;
+          10px
+          8px
+          12px;
 
-        gap: 8px;
+        gap: 7px;
       }
 
 
       button {
 
         padding:
-          10px
-          12px;
+          9px
+          11px;
 
-        font-size: 9px;
+        font-size: 8px;
 
         letter-spacing: 1px;
       }
@@ -428,13 +433,12 @@
 
       .page-count {
 
-        min-width: 75px;
+        min-width: 65px;
 
-        font-size: 9px;
+        font-size: 8px;
       }
 
     }
-
 
   </style>
 
@@ -448,12 +452,11 @@
 
   <header>
 
-
     <a
       class="back"
       href="../"
     >
-      ← Freaky
+      ← Chapters
     </a>
 
 
@@ -463,9 +466,8 @@
 
 
     <div class="volume">
-      Volume 1
+      Chapter 01
     </div>
-
 
   </header>
 
@@ -481,18 +483,7 @@
 
   <main class="reader">
 
-
     <div class="spread">
-
-
-      <!-- RIGHT PAGE -->
-
-      <img
-        id="rightPage"
-        class="page"
-        src="Fr1-01.jpeg"
-        alt="Freaky 1/2 page 1"
-      >
 
 
       <!-- LEFT PAGE -->
@@ -505,8 +496,16 @@
       >
 
 
-    </div>
+      <!-- RIGHT PAGE -->
 
+      <img
+        id="rightPage"
+        class="page"
+        src="Fr1-01.jpeg"
+        alt="Freaky 1/2 page 1"
+      >
+
+    </div>
 
   </main>
 
@@ -545,18 +544,10 @@
 
   <script>
 
-
-    /* TOTAL PAGES */
-
     const totalPages = 54;
-
-
-    /* CURRENT SPREAD */
 
     let currentPage = 1;
 
-
-    /* ELEMENTS */
 
     const rightPage =
       document.getElementById("rightPage");
@@ -574,23 +565,10 @@
       document.getElementById("nextButton");
 
 
-    /* UPDATE READER */
-
     function updateReader() {
 
 
-      /*
-        MANGA ORDER:
-
-        PAGE 01 = RIGHT
-        PAGE 02 = LEFT
-
-        PAGE 03 = RIGHT
-        PAGE 04 = LEFT
-
-        etc.
-      */
-
+      /* RIGHT PAGE */
 
       rightPage.src =
         "Fr1-" +
@@ -603,12 +581,17 @@
         currentPage;
 
 
-      if (currentPage + 1 <= totalPages) {
+      /* LEFT PAGE */
 
+      if (
+        currentPage + 1 <=
+        totalPages
+      ) {
 
         leftPage.src =
           "Fr1-" +
-          String(currentPage + 1).padStart(2, "0") +
+          String(currentPage + 1)
+            .padStart(2, "0") +
           ".jpeg";
 
 
@@ -618,17 +601,17 @@
 
 
         leftPage.style.display =
-          "";
-
+          "block";
 
       } else {
-
 
         leftPage.style.display =
           "none";
 
       }
 
+
+      /* PAGE COUNTER */
 
       pageCount.textContent =
         currentPage +
@@ -641,12 +624,15 @@
         totalPages;
 
 
+      /* BUTTONS */
+
       previousButton.disabled =
         currentPage === 1;
 
 
       nextButton.disabled =
-        currentPage + 1 >= totalPages;
+        currentPage + 2 >
+        totalPages;
 
     }
 
@@ -654,7 +640,6 @@
     /* NEXT */
 
     function nextSpread() {
-
 
       if (
         currentPage + 2 <=
@@ -674,9 +659,9 @@
 
     function previousSpread() {
 
-
       if (
-        currentPage - 2 >= 1
+        currentPage - 2 >=
+        1
       ) {
 
         currentPage -= 2;
@@ -695,20 +680,9 @@
       function(event) {
 
 
-        /*
-          RIGHT ARROW = NEXT
-
-          LEFT ARROW = PREVIOUS
-
-          This keeps the physical
-          buttons intuitive while
-          the pages themselves remain
-          manga right-to-left.
-        */
-
-
         if (
-          event.key === "ArrowRight"
+          event.key ===
+          "ArrowRight"
         ) {
 
           nextSpread();
@@ -717,7 +691,8 @@
 
 
         if (
-          event.key === "ArrowLeft"
+          event.key ===
+          "ArrowLeft"
         ) {
 
           previousSpread();
@@ -731,7 +706,6 @@
     /* START */
 
     updateReader();
-
 
   </script>
 
