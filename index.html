@@ -17,6 +17,7 @@
       --white: #f2f2ee;
       --green: #b7ff00;
       --red: #e10600;
+      --blue: #5ecbff;
     }
 
     html {
@@ -208,7 +209,9 @@
       display: block;
       position: relative;
       border: 4px solid var(--white);
+
       box-shadow: 10px 10px 0 var(--green);
+
       transition:
         transform .2s ease,
         box-shadow .2s ease;
@@ -231,7 +234,7 @@
       box-shadow: 15px 15px 0 var(--green);
     }
 
-    /* 9MM HOVER */
+    /* 9MM */
 
     .comic-9mm:hover {
       box-shadow: 15px 15px 0 var(--red);
@@ -242,7 +245,18 @@
       color: var(--white);
     }
 
-    /* 18+ */
+    /* FREAKY */
+
+    .comic-freaky:hover {
+      box-shadow: 15px 15px 0 var(--blue);
+    }
+
+    .comic-freaky:hover .read {
+      background: var(--blue);
+      color: var(--black);
+    }
+
+    /* 18+ BADGE */
 
     .adult-badge {
       position: absolute;
@@ -271,6 +285,7 @@
     .cover {
       width: 100%;
       aspect-ratio: 3 / 4;
+
       background: var(--black);
 
       display: flex;
@@ -289,12 +304,18 @@
       content: "";
       position: absolute;
       inset: 0;
+
       border: 3px solid var(--green);
+
       pointer-events: none;
     }
 
     .comic-9mm .cover::after {
       border-color: var(--red);
+    }
+
+    .comic-freaky .cover::after {
+      border-color: var(--blue);
     }
 
     .cover img {
@@ -313,6 +334,10 @@
       color: var(--green);
       letter-spacing: -2px;
       line-height: .8;
+    }
+
+    .freaky-placeholder {
+      color: var(--blue);
     }
 
     /* CARD INFO */
@@ -370,6 +395,16 @@
       text-transform: uppercase;
     }
 
+    .comic-9mm .issue-label {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .comic-freaky .issue-label {
+      background: var(--blue);
+      color: var(--black);
+    }
+
     /* TRANSMISSION */
 
     .transmission {
@@ -380,15 +415,19 @@
       border-bottom: 10px solid var(--white);
 
       text-align: center;
+
       position: relative;
       overflow: hidden;
     }
 
     .transmission-label {
       color: var(--green);
+
       font-size: 10px;
       font-weight: 900;
+
       letter-spacing: 4px;
+
       margin-bottom: 25px;
     }
 
@@ -398,8 +437,11 @@
       font-size: clamp(35px, 7vw, 75px);
 
       font-weight: 900;
+
       line-height: .83;
+
       letter-spacing: -5px;
+
       text-transform: uppercase;
     }
 
@@ -409,11 +451,14 @@
 
     .transmission-mark {
       position: absolute;
+
       right: 20px;
       bottom: 10px;
 
       font-size: 70px;
+
       font-weight: 900;
+
       color: var(--green);
 
       transform: rotate(-10deg);
@@ -440,7 +485,9 @@
       font-size: clamp(22px, 4vw, 45px);
 
       font-weight: 900;
+
       line-height: .9;
+
       letter-spacing: -2px;
 
       text-transform: uppercase;
@@ -452,6 +499,7 @@
       position: absolute;
 
       font-size: 60px;
+
       font-weight: 900;
 
       line-height: 1;
@@ -483,6 +531,7 @@
       text-align: center;
 
       font-size: 10px;
+
       font-weight: 900;
 
       letter-spacing: 4px;
@@ -506,7 +555,9 @@
 
       .nav-links {
         gap: 12px;
+
         flex-wrap: wrap;
+
         justify-content: flex-end;
       }
 
@@ -520,17 +571,21 @@
 
       .issue {
         display: block;
+
         margin-top: 15px;
       }
 
       .comics {
         grid-template-columns: 1fr;
+
         gap: 40px;
       }
 
       .comic {
         max-width: 430px;
+
         margin: auto;
+
         width: 100%;
       }
 
@@ -560,269 +615,286 @@
 
 <body>
 
-  <div class="page">
+<div class="page">
 
 
-    <!-- NAVIGATION -->
+  <!-- NAVIGATION -->
 
-    <nav>
+  <nav>
 
-      <a class="nav-logo" href="#">
+    <a class="nav-logo" href="#">
+      SK6
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#comics">
+        Comics
+      </a>
+
+      <a href="#transmission">
+        About
+      </a>
+
+      <a href="#manifesto">
         SK6
       </a>
 
-      <div class="nav-links">
+      <a href="#footer">
+        Contact
+      </a>
 
-        <a href="#comics">
-          Comics
-        </a>
-
-        <a href="#transmission">
-          About
-        </a>
-
-        <a href="#manifesto">
-          SK6
-        </a>
-
-        <a href="#footer">
-          Contact
-        </a>
-
-      </div>
-
-    </nav>
-
-
-    <!-- HEADER -->
-
-    <header>
-
-      <div class="number">
-        SK6 // 001
-      </div>
-
-      <div class="logo">
-        SK6
-      </div>
-
-      <div class="tagline">
-        Comics <span>/</span>
-        Art <span>/</span>
-        Chaos
-      </div>
-
-      <div class="stamp">
-        No Rules. Just Comics.
-      </div>
-
-    </header>
-
-
-    <!-- GRAPHIC MARKS -->
-
-    <div class="x-mark x-one">
-      X
     </div>
 
-    <div class="x-mark x-two">
-      X
+  </nav>
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="number">
+      SK6 // 001
     </div>
 
+    <div class="logo">
+      SK6
+    </div>
 
-    <!-- COMICS -->
+    <div class="tagline">
+      Comics <span>/</span>
+      Art <span>/</span>
+      Chaos
+    </div>
 
-    <main id="comics">
+    <div class="stamp">
+      No Rules. Just Comics.
+    </div>
 
-      <div class="section-heading">
+  </header>
 
-        <h2>
-          Our Comics
-        </h2>
 
-        <div class="issue">
-          Independent / Underground / SK6
-        </div>
+  <!-- GRAPHIC MARKS -->
 
-      </div>
-
-
-      <div class="comics">
-
-
-        <!-- 9MM GIRLS -->
-
-        <a
-          class="comic comic-9mm"
-          href="9mm-girls/"
-        >
-
-          <div class="adult-badge">
-            18+
-          </div>
-
-          <div class="issue-label">
-            SK6-001
-          </div>
-
-          <div class="cover">
-
-            <img
-              src="9mm-girls/Page-01%20Large.jpeg"
-              alt="9mm Girls"
-            >
-
-          </div>
-
-          <div class="info">
-
-            <div class="title">
-              9mm Girls
-            </div>
-
-            <div class="description">
-              Guns. Girls. Cars.
-              Questionable life choices.
-            </div>
-
-            <div class="read">
-              Read →
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- FREAKY 1/2 -->
-
-        <div class="comic">
-
-          <div class="issue-label">
-            SK6-002
-          </div>
-
-          <div class="cover">
-
-            <div class="placeholder">
-              FREAKY<br>
-              1/2
-            </div>
-
-          </div>
-
-          <div class="info">
-
-            <div class="title">
-              Freaky 1/2
-            </div>
-
-            <div class="description">
-              Coming soon from SK6.
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- MORE -->
-
-        <div class="comic">
-
-          <div class="issue-label">
-            SK6-003
-          </div>
-
-          <div class="cover">
-
-            <div class="placeholder">
-              MORE<br>
-              COMING<br>
-              SOON
-            </div>
-
-          </div>
-
-          <div class="info">
-
-            <div class="title">
-              More
-            </div>
-
-            <div class="description">
-              More comics from SK6.
-            </div>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-
-      <!-- TRANSMISSION -->
-
-      <section
-        class="transmission"
-        id="transmission"
-      >
-
-        <div class="transmission-label">
-          SK6 TRANSMISSION // 001
-        </div>
-
-        <p>
-          Two artists.<br>
-
-          <span class="green">
-            Too many ideas.
-          </span><br>
-
-          Zero adult supervision.
-        </p>
-
-        <div class="transmission-mark">
-          X
-        </div>
-
-      </section>
-
-
-      <!-- MANIFESTO -->
-
-      <section
-        class="manifesto"
-        id="manifesto"
-      >
-
-        <p>
-          Made by hand.<br>
-          Drawn with bad ideas.<br>
-          Read at your own risk.
-        </p>
-
-      </section>
-
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer id="footer">
-
-      SK6 © 2026
-
-      <br><br>
-
-      Comics / Art / Chaos
-
-    </footer>
-
-
+  <div class="x-mark x-one">
+    X
   </div>
+
+  <div class="x-mark x-two">
+    X
+  </div>
+
+
+  <!-- COMICS -->
+
+  <main id="comics">
+
+    <div class="section-heading">
+
+      <h2>
+        Our Comics
+      </h2>
+
+      <div class="issue">
+        Independent / Underground / SK6
+      </div>
+
+    </div>
+
+
+    <div class="comics">
+
+
+      <!-- 9MM GIRLS -->
+
+      <a
+        class="comic comic-9mm"
+        href="9mm-girls/"
+      >
+
+        <div class="adult-badge">
+          18+
+        </div>
+
+        <div class="issue-label">
+          SK6-001
+        </div>
+
+        <div class="cover">
+
+          <img
+            src="9mm-girls/Page-01%20Large.jpeg"
+            alt="9mm Girls"
+          >
+
+        </div>
+
+        <div class="info">
+
+          <div class="title">
+            9mm Girls
+          </div>
+
+          <div class="description">
+            Guns. Girls. Cars.
+            Questionable life choices.
+          </div>
+
+          <div class="read">
+            Read →
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- FREAKY 1/2 -->
+
+      <a
+        class="comic comic-freaky"
+        href="freaky-1-2/"
+      >
+
+        <div class="issue-label">
+          SK6-002
+        </div>
+
+        <div class="cover">
+
+          <div class="placeholder freaky-placeholder">
+
+            FREAKY<br>
+            1/2
+
+          </div>
+
+        </div>
+
+        <div class="info">
+
+          <div class="title">
+            Freaky 1/2
+          </div>
+
+          <div class="description">
+            Coming soon from SK6.
+          </div>
+
+          <div class="read">
+            Explore →
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- MORE -->
+
+      <div class="comic">
+
+        <div class="issue-label">
+          SK6-003
+        </div>
+
+        <div class="cover">
+
+          <div class="placeholder">
+
+            MORE<br>
+            COMING<br>
+            SOON
+
+          </div>
+
+        </div>
+
+        <div class="info">
+
+          <div class="title">
+            More
+          </div>
+
+          <div class="description">
+            More comics from SK6.
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- TRANSMISSION -->
+
+    <section
+      class="transmission"
+      id="transmission"
+    >
+
+      <div class="transmission-label">
+        SK6 TRANSMISSION // 001
+      </div>
+
+      <p>
+
+        Two artists.<br>
+
+        <span class="green">
+          Too many stories.
+        </span><br>
+
+        Still making them.
+
+      </p>
+
+      <div class="transmission-mark">
+        X
+      </div>
+
+    </section>
+
+
+    <!-- MANIFESTO -->
+
+    <section
+      class="manifesto"
+      id="manifesto"
+    >
+
+      <p>
+
+        Made by hand.<br>
+
+        Built from weird ideas.<br>
+
+        Made because we wanted to.
+
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer id="footer">
+
+    SK6 © 2026
+
+    <br><br>
+
+    Comics / Art / Chaos
+
+  </footer>
+
+
+</div>
 
 </body>
 </html>
