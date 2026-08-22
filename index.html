@@ -117,6 +117,19 @@
       padding: 50px 0 45px;
       border-bottom: 10px solid var(--white);
       margin-bottom: 70px;
+
+      /*
+        Gives the characters room to live
+        around the SK6 logo.
+      */
+      min-height: 470px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      overflow: visible;
     }
 
     .number {
@@ -127,22 +140,99 @@
       font-weight: 900;
       letter-spacing: 3px;
       color: var(--green);
+      z-index: 6;
     }
 
+    /* CHARACTERS */
+
+    .character {
+      position: absolute;
+
+      bottom: 0;
+
+      width: 330px;
+      max-width: 32vw;
+
+      height: auto;
+
+      pointer-events: none;
+
+      z-index: 2;
+
+      transition:
+        transform .4s ease,
+        filter .4s ease;
+    }
+
+    .character-ash {
+      left: -25px;
+
+      transform:
+        translateY(0)
+        rotate(-3deg);
+    }
+
+    .character-vice {
+      right: -25px;
+
+      transform:
+        translateY(0)
+        rotate(3deg);
+    }
+
+    header:hover .character-ash {
+      transform:
+        translateY(-8px)
+        rotate(-4deg);
+    }
+
+    header:hover .character-vice {
+      transform:
+        translateY(-8px)
+        rotate(4deg);
+    }
+
+    /* LOGO */
+
     .logo {
+      position: relative;
+
+      z-index: 5;
+
       font-size: clamp(100px, 22vw, 230px);
+
       font-weight: 900;
+
       line-height: .7;
+
       letter-spacing: -16px;
+
       text-align: center;
+
       transform: skew(-5deg);
+
+      /*
+        Slight text shadow gives the logo
+        separation from the characters.
+      */
+      text-shadow:
+        5px 5px 0 var(--black),
+        -3px -3px 0 var(--black);
     }
 
     .tagline {
+      position: relative;
+
+      z-index: 6;
+
       margin-top: 40px;
+
       font-size: 14px;
+
       font-weight: 900;
+
       letter-spacing: 7px;
+
       text-transform: uppercase;
     }
 
@@ -151,15 +241,28 @@
     }
 
     .stamp {
+      position: relative;
+
+      z-index: 6;
+
       display: inline-block;
+
       margin-top: 25px;
+
       padding: 9px 15px;
+
       background: var(--green);
+
       color: var(--black);
+
       font-size: 12px;
+
       font-weight: 900;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
+
       transform: rotate(-2deg);
     }
 
@@ -561,8 +664,39 @@
         justify-content: flex-end;
       }
 
+      header {
+        min-height: 360px;
+        padding-top: 55px;
+      }
+
       .logo {
         letter-spacing: -9px;
+
+        font-size: clamp(85px, 25vw, 150px);
+      }
+
+      .character {
+        width: 220px;
+        max-width: 42vw;
+      }
+
+      .character-ash {
+        left: -35px;
+      }
+
+      .character-vice {
+        right: -35px;
+      }
+
+      .tagline {
+        font-size: 10px;
+        letter-spacing: 4px;
+        margin-top: 30px;
+      }
+
+      .stamp {
+        font-size: 10px;
+        padding: 8px 10px;
       }
 
       .section-heading {
@@ -656,6 +790,27 @@
     <div class="number">
       SK6 // 001
     </div>
+
+
+    <!-- ASH -->
+
+    <img
+      class="character character-ash"
+      src="images/ash1.png"
+      alt=""
+    >
+
+
+    <!-- VICE -->
+
+    <img
+      class="character character-vice"
+      src="images/vice1.png"
+      alt=""
+    >
+
+
+    <!-- SK6 LOGO -->
 
     <div class="logo">
       SK6
