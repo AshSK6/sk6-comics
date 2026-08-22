@@ -305,7 +305,7 @@
     }
 
 
-    /* PREVIEW AREA */
+    /* IMAGE AREA */
 
     .chapter-cover {
       width: 100%;
@@ -323,55 +323,27 @@
     }
 
 
-    /* THE ACTUAL RANDOM SNIPPET */
+    /* ACTUAL MANGA SNIPPET */
 
-    .preview-window {
+    .chapter-cover img {
       width: 88%;
       height: 42%;
-
-      overflow: hidden;
-
-      background: transparent;
-
-      border: none;
-
-      transform: rotate(-2deg);
-
-      filter:
-        drop-shadow(7px 7px 0 var(--red));
-
-      transition:
-        transform .25s ease,
-        filter .25s ease;
-    }
-
-
-    .preview-window img {
-      width: 100%;
-      height: 100%;
 
       object-fit: cover;
 
       display: block;
 
+      transform: rotate(-2deg);
+
       transition:
-        transform .4s ease;
+        transform .3s ease;
     }
 
 
-    .chapter-card:hover .preview-window {
+    .chapter-card:hover .chapter-cover img {
       transform:
-        rotate(1deg)
-        scale(1.03);
-
-      filter:
-        drop-shadow(9px 9px 0 var(--red));
-    }
-
-
-    .chapter-card:hover .preview-window img {
-      transform:
-        scale(1.05);
+        rotate(0deg)
+        scale(1.04);
     }
 
 
@@ -434,7 +406,6 @@
         8px;
     }
 
-
     .chapter-title {
       font-size: 32px;
 
@@ -447,7 +418,6 @@
       text-transform: uppercase;
     }
 
-
     .chapter-description {
       margin-top: 10px;
 
@@ -459,7 +429,6 @@
 
       text-transform: uppercase;
     }
-
 
     .read {
       display: inline-block;
@@ -508,7 +477,6 @@
       overflow: hidden;
     }
 
-
     .transmission-label {
       color: var(--red);
 
@@ -520,7 +488,6 @@
 
       margin-bottom: 25px;
     }
-
 
     .transmission p {
       margin: 0;
@@ -541,11 +508,9 @@
       text-transform: uppercase;
     }
 
-
     .transmission .red {
       color: var(--red);
     }
-
 
     .transmission-mark {
       position: absolute;
@@ -595,12 +560,10 @@
           60px;
       }
 
-
       nav {
         align-items:
           flex-start;
       }
-
 
       .nav-links {
         gap: 12px;
@@ -611,14 +574,12 @@
           flex-end;
       }
 
-
       header {
         padding:
           60px
           0
           45px;
       }
-
 
       .logo {
         letter-spacing: -6px;
@@ -628,18 +589,15 @@
           var(--red);
       }
 
-
       .subtitle {
         font-size: 10px;
 
         letter-spacing: 3px;
       }
 
-
       .section-heading {
         display: block;
       }
-
 
       .issue {
         display: block;
@@ -647,14 +605,12 @@
         margin-top: 15px;
       }
 
-
       .chapters {
         grid-template-columns:
           1fr;
 
         gap: 40px;
       }
-
 
       .chapter-card {
         max-width: 430px;
@@ -664,17 +620,14 @@
         margin: auto;
       }
 
-
-      .preview-window {
+      .chapter-cover img {
         width: 84%;
         height: 40%;
       }
 
-
       .transmission {
         margin-top: 90px;
       }
-
 
       .transmission-mark {
         display: none;
@@ -704,18 +657,15 @@
       SK6
     </a>
 
-
     <div class="nav-links">
 
       <a href="#chapters">
         Chapters
       </a>
 
-
       <a href="#transmission">
         About
       </a>
-
 
       <a href="../">
         SK6 Home
@@ -734,16 +684,13 @@
       SK6 // 001
     </div>
 
-
     <div class="kicker">
       SK6 Presents
     </div>
 
-
     <h1 class="logo">
       9MM GIRLS
     </h1>
-
 
     <div class="subtitle">
 
@@ -753,11 +700,9 @@
 
     </div>
 
-
     <div class="stamp">
       18+ // 9MM GIRLS
     </div>
-
 
     <div class="adult-badge">
       18+
@@ -776,7 +721,6 @@
       <h2>
         Chapters
       </h2>
-
 
       <div class="issue">
         9mm Girls / SK6-001
@@ -802,30 +746,20 @@
 
         <div class="chapter-cover">
 
-
-          <!-- RANDOM MANGA SNIPPET -->
-
-          <div class="preview-window">
-
-            <img
-              id="random9mm"
-              src="Page-01%20Large.jpeg"
-              alt="9mm Girls Chapter 01 preview"
-            >
-
-          </div>
-
+          <img
+            id="random9mm"
+            src="Page-01%20Large.jpeg"
+            alt="9mm Girls Chapter 01 preview"
+          >
 
         </div>
 
 
         <div class="chapter-info">
 
-
           <div class="chapter-title">
             Chapter 01
           </div>
-
 
           <div class="chapter-description">
 
@@ -837,14 +771,11 @@
 
           </div>
 
-
           <div class="read">
             Read →
           </div>
 
-
         </div>
-
 
       </a>
 
@@ -857,7 +788,6 @@
           CHAPTER 02
         </div>
 
-
         <div class="chapter-cover">
 
           <div class="placeholder">
@@ -867,20 +797,17 @@
 
           </div>
 
-
           <div class="coming">
             Coming Soon
           </div>
 
         </div>
 
-
         <div class="chapter-info">
 
           <div class="chapter-title">
             Chapter 02
           </div>
-
 
           <div class="chapter-description">
 
@@ -902,7 +829,6 @@
           SK6-003
         </div>
 
-
         <div class="chapter-cover">
 
           <div class="placeholder">
@@ -913,20 +839,17 @@
 
           </div>
 
-
           <div class="coming">
             Coming Soon
           </div>
 
         </div>
 
-
         <div class="chapter-info">
 
           <div class="chapter-title">
             More
           </div>
-
 
           <div class="chapter-description">
 
@@ -950,13 +873,9 @@
       id="transmission"
     >
 
-
       <div class="transmission-label">
-
         9MM TRANSMISSION // 001
-
       </div>
-
 
       <p>
 
@@ -970,11 +889,9 @@
 
       </p>
 
-
       <div class="transmission-mark">
         X
       </div>
-
 
     </section>
 
@@ -1006,23 +923,7 @@
 
 <script>
 
-  /*
-    RANDOM 9MM GIRLS PREVIEW
-
-    69 pages total.
-
-    Files:
-
-    Page-01 Large.jpeg
-    Page-02 Large.jpeg
-    Page-03 Large.jpeg
-    ...
-    Page-69 Large.jpeg
-  */
-
-
   const total9mmPages = 69;
-
 
   const randomPage =
     Math.floor(
@@ -1030,12 +931,10 @@
       total9mmPages
     ) + 1;
 
-
   const randomImage =
     document.getElementById(
       "random9mm"
     );
-
 
   randomImage.src =
     "Page-" +
