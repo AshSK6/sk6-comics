@@ -17,7 +17,6 @@
       --white: #f2f2ee;
       --green: #b7ff00;
       --red: #e10600;
-      --grey: #202020;
     }
 
     html {
@@ -32,9 +31,7 @@
       overflow-x: hidden;
     }
 
-    /* =========================
-       BACKGROUND GRAPHICS
-    ========================= */
+    /* BACKGROUND */
 
     body::before {
       content: "SK6  SK6  SK6  SK6  SK6";
@@ -74,24 +71,19 @@
       z-index: 1;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       padding: 12px 0 18px;
-
       border-bottom: 2px solid var(--white);
     }
 
     .nav-logo {
       color: var(--green);
       text-decoration: none;
-
       font-size: 18px;
       font-weight: 900;
       letter-spacing: 4px;
@@ -105,12 +97,10 @@
     .nav-links a {
       color: var(--white);
       text-decoration: none;
-
       font-size: 10px;
       font-weight: 900;
       letter-spacing: 2px;
       text-transform: uppercase;
-
       transition: color .15s ease;
     }
 
@@ -118,18 +108,13 @@
       color: var(--green);
     }
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: relative;
       text-align: center;
-
       padding: 50px 0 45px;
-
       border-bottom: 10px solid var(--white);
-
       margin-bottom: 70px;
     }
 
@@ -137,37 +122,26 @@
       position: absolute;
       top: 15px;
       left: 0;
-
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 3px;
-
       color: var(--green);
     }
 
     .logo {
       font-size: clamp(100px, 22vw, 230px);
-
       font-weight: 900;
-
       line-height: .7;
-
       letter-spacing: -16px;
-
       text-align: center;
-
       transform: skew(-5deg);
     }
 
     .tagline {
       margin-top: 40px;
-
       font-size: 14px;
-
       font-weight: 900;
-
       letter-spacing: 7px;
-
       text-transform: uppercase;
     }
 
@@ -177,105 +151,64 @@
 
     .stamp {
       display: inline-block;
-
       margin-top: 25px;
-
       padding: 9px 15px;
-
       background: var(--green);
-
       color: var(--black);
-
       font-size: 12px;
-
       font-weight: 900;
-
       letter-spacing: 2px;
-
       text-transform: uppercase;
-
       transform: rotate(-2deg);
     }
 
-    /* =========================
-       SECTION HEADINGS
-    ========================= */
+    /* SECTION */
 
     .section-heading {
       display: flex;
-
       align-items: flex-end;
-
       justify-content: space-between;
-
       gap: 20px;
-
       margin-bottom: 45px;
-
       border-bottom: 3px solid var(--white);
-
       padding-bottom: 15px;
     }
 
     .section-heading h2 {
       margin: 0;
-
       font-size: clamp(45px, 9vw, 90px);
-
       line-height: .8;
-
       letter-spacing: -6px;
-
       font-weight: 900;
-
       text-transform: uppercase;
     }
 
     .issue {
       font-size: 11px;
-
       font-weight: 900;
-
       letter-spacing: 3px;
-
       text-transform: uppercase;
-
       color: var(--green);
-
       white-space: nowrap;
     }
 
-    /* =========================
-       COMIC GRID
-    ========================= */
+    /* COMICS */
 
     .comics {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
     .comic {
       background: var(--white);
-
       color: var(--black);
-
       padding: 10px;
-
       text-decoration: none;
-
       display: block;
-
       position: relative;
-
       border: 4px solid var(--white);
-
-      box-shadow:
-        10px 10px 0 var(--green);
-
+      box-shadow: 10px 10px 0 var(--green);
       transition:
         transform .2s ease,
         box-shadow .2s ease;
@@ -294,19 +227,14 @@
     }
 
     .comic:hover {
-      transform:
-        translateY(-12px)
-        rotate(0deg);
-
-      box-shadow:
-        15px 15px 0 var(--green);
+      transform: translateY(-12px) rotate(0deg);
+      box-shadow: 15px 15px 0 var(--green);
     }
 
     /* 9MM HOVER */
 
     .comic-9mm:hover {
-      box-shadow:
-        15px 15px 0 var(--red);
+      box-shadow: 15px 15px 0 var(--red);
     }
 
     .comic-9mm:hover .read {
@@ -314,75 +242,54 @@
       color: var(--white);
     }
 
-    /* =========================
-       18+ BADGE
-    ========================= */
+    /* 18+ */
 
     .adult-badge {
       position: absolute;
-
       top: 18px;
       right: 18px;
-
       z-index: 10;
 
       background: var(--red);
-
       color: var(--white);
 
       padding: 8px 10px;
 
       font-size: 15px;
-
       font-weight: 900;
-
       letter-spacing: 1px;
 
       border: 3px solid var(--black);
 
       transform: rotate(3deg);
 
-      box-shadow:
-        4px 4px 0 var(--black);
+      box-shadow: 4px 4px 0 var(--black);
     }
 
-    /* =========================
-       COVER
-    ========================= */
+    /* COVER */
 
     .cover {
       width: 100%;
-
       aspect-ratio: 3 / 4;
-
       background: var(--black);
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       overflow: hidden;
-
       position: relative;
 
       font-size: 30px;
-
       font-weight: 900;
-
       text-align: center;
     }
 
     .cover::after {
       content: "";
-
       position: absolute;
-
       inset: 0;
-
       border: 3px solid var(--green);
-
       pointer-events: none;
     }
 
@@ -393,11 +300,9 @@
     .cover img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
 
-      transition:
-        transform .4s ease;
+      transition: transform .4s ease;
     }
 
     .comic:hover .cover img {
@@ -406,15 +311,11 @@
 
     .placeholder {
       color: var(--green);
-
       letter-spacing: -2px;
-
       line-height: .8;
     }
 
-    /* =========================
-       CARD INFO
-    ========================= */
+    /* CARD INFO */
 
     .info {
       padding: 15px 5px 8px;
@@ -422,104 +323,72 @@
 
     .title {
       font-size: 31px;
-
       font-weight: 900;
-
       text-transform: uppercase;
-
       letter-spacing: -2px;
-
       line-height: .9;
     }
 
     .description {
       margin-top: 9px;
-
       font-size: 11px;
-
       font-weight: 900;
-
       line-height: 1.4;
-
       text-transform: uppercase;
     }
 
     .read {
       display: inline-block;
-
       margin-top: 14px;
-
       padding: 9px 14px;
 
       background: var(--black);
-
       color: var(--green);
 
       font-size: 11px;
-
       font-weight: 900;
-
       letter-spacing: 2px;
-
       text-transform: uppercase;
     }
 
-    /* =========================
-       ISSUE LABEL
-    ========================= */
+    /* ISSUE LABEL */
 
     .issue-label {
       position: absolute;
-
       top: 15px;
       left: 15px;
-
       z-index: 5;
 
       background: var(--green);
-
       color: var(--black);
 
       padding: 6px 8px;
 
       font-size: 9px;
-
       font-weight: 900;
-
       letter-spacing: 2px;
-
       text-transform: uppercase;
     }
 
-    /* =========================
-       TRANSMISSION
-    ========================= */
+    /* TRANSMISSION */
 
     .transmission {
       margin-top: 120px;
-
       padding: 55px 20px;
 
       border-top: 10px solid var(--white);
-
       border-bottom: 10px solid var(--white);
 
       text-align: center;
-
       position: relative;
-
       overflow: hidden;
     }
 
     .transmission-label {
       color: var(--green);
-
       font-size: 10px;
-
       font-weight: 900;
-
       letter-spacing: 4px;
-
       margin-bottom: 25px;
     }
 
@@ -529,11 +398,8 @@
       font-size: clamp(35px, 7vw, 75px);
 
       font-weight: 900;
-
       line-height: .83;
-
       letter-spacing: -5px;
-
       text-transform: uppercase;
     }
 
@@ -543,23 +409,17 @@
 
     .transmission-mark {
       position: absolute;
-
       right: 20px;
-
       bottom: 10px;
 
       font-size: 70px;
-
       font-weight: 900;
-
       color: var(--green);
 
       transform: rotate(-10deg);
     }
 
-    /* =========================
-       MANIFESTO
-    ========================= */
+    /* MANIFESTO */
 
     .manifesto {
       margin-top: 90px;
@@ -567,7 +427,6 @@
       padding: 40px 20px;
 
       background: var(--green);
-
       color: var(--black);
 
       text-align: center;
@@ -581,23 +440,18 @@
       font-size: clamp(22px, 4vw, 45px);
 
       font-weight: 900;
-
       line-height: .9;
-
       letter-spacing: -2px;
 
       text-transform: uppercase;
     }
 
-    /* =========================
-       GRAPHIC X
-    ========================= */
+    /* GRAPHIC X */
 
     .x-mark {
       position: absolute;
 
       font-size: 60px;
-
       font-weight: 900;
 
       line-height: 1;
@@ -609,7 +463,6 @@
 
     .x-one {
       top: 500px;
-
       left: -10px;
 
       transform: rotate(15deg);
@@ -617,15 +470,12 @@
 
     .x-two {
       top: 1050px;
-
       right: -5px;
 
       transform: rotate(-12deg);
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       margin-top: 70px;
@@ -633,7 +483,6 @@
       text-align: center;
 
       font-size: 10px;
-
       font-weight: 900;
 
       letter-spacing: 4px;
@@ -643,17 +492,12 @@
       opacity: .5;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 750px) {
 
       .page {
-        padding:
-          15px
-          15px
-          60px;
+        padding: 15px 15px 60px;
       }
 
       nav {
@@ -662,9 +506,7 @@
 
       .nav-links {
         gap: 12px;
-
         flex-wrap: wrap;
-
         justify-content: flex-end;
       }
 
@@ -678,21 +520,17 @@
 
       .issue {
         display: block;
-
         margin-top: 15px;
       }
 
       .comics {
         grid-template-columns: 1fr;
-
         gap: 40px;
       }
 
       .comic {
         max-width: 430px;
-
         margin: auto;
-
         width: 100%;
       }
 
@@ -725,16 +563,11 @@
   <div class="page">
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <!-- NAVIGATION -->
 
     <nav>
 
-      <a
-        class="nav-logo"
-        href="#"
-      >
+      <a class="nav-logo" href="#">
         SK6
       </a>
 
@@ -761,9 +594,7 @@
     </nav>
 
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+    <!-- HEADER -->
 
     <header>
 
@@ -799,9 +630,7 @@
     </div>
 
 
-    <!-- =========================
-         COMICS
-    ========================= -->
+    <!-- COMICS -->
 
     <main id="comics">
 
@@ -821,9 +650,7 @@
       <div class="comics">
 
 
-        <!-- =====================
-             9MM GIRLS
-        ====================== -->
+        <!-- 9MM GIRLS -->
 
         <a
           class="comic comic-9mm"
@@ -867,9 +694,7 @@
         </a>
 
 
-        <!-- =====================
-             FREAKY 1/2
-        ====================== -->
+        <!-- FREAKY 1/2 -->
 
         <div class="comic">
 
@@ -901,9 +726,7 @@
         </div>
 
 
-        <!-- =====================
-             MORE
-        ====================== -->
+        <!-- MORE -->
 
         <div class="comic">
 
@@ -939,9 +762,7 @@
       </div>
 
 
-      <!-- =========================
-           TRANSMISSION
-      ========================= -->
+      <!-- TRANSMISSION -->
 
       <section
         class="transmission"
@@ -969,9 +790,7 @@
       </section>
 
 
-      <!-- =========================
-           MANIFESTO
-      ========================= -->
+      <!-- MANIFESTO -->
 
       <section
         class="manifesto"
@@ -990,9 +809,7 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer id="footer">
 
