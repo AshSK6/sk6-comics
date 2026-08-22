@@ -143,13 +143,13 @@
     }
 
 
-    /* SPREAD */
+    /* MANGA SPREAD */
 
     .spread {
 
       display: flex;
 
-      flex-direction: row-reverse;
+      flex-direction: row;
 
       align-items: stretch;
 
@@ -486,7 +486,7 @@
     <div class="spread">
 
 
-      <!-- LEFT PAGE -->
+      <!-- LEFT SIDE OF SPREAD -->
 
       <img
         id="leftPage"
@@ -496,7 +496,7 @@
       >
 
 
-      <!-- RIGHT PAGE -->
+      <!-- RIGHT SIDE OF SPREAD -->
 
       <img
         id="rightPage"
@@ -568,11 +568,28 @@
     function updateReader() {
 
 
+      /*
+        MANGA ORDER:
+
+        PAGE 01 = RIGHT
+        PAGE 02 = LEFT
+
+        PAGE 03 = RIGHT
+        PAGE 04 = LEFT
+
+        PAGE 05 = RIGHT
+        PAGE 06 = LEFT
+
+        etc.
+      */
+
+
       /* RIGHT PAGE */
 
       rightPage.src =
         "Fr1-" +
-        String(currentPage).padStart(2, "0") +
+        String(currentPage)
+          .padStart(2, "0") +
         ".jpeg";
 
 
@@ -611,7 +628,7 @@
       }
 
 
-      /* PAGE COUNTER */
+      /* COUNTER */
 
       pageCount.textContent =
         currentPage +
@@ -637,7 +654,7 @@
     }
 
 
-    /* NEXT */
+    /* NEXT SPREAD */
 
     function nextSpread() {
 
@@ -655,7 +672,7 @@
     }
 
 
-    /* PREVIOUS */
+    /* PREVIOUS SPREAD */
 
     function previousSpread() {
 
