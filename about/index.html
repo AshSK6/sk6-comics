@@ -1,944 +1,1043 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-  <title>SK6 — About</title>
+<title>About — SK6</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+<!-- FONT -->
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <style>
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
 
-    * {
-      box-sizing: border-box;
-    }
+<link
+  href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
 
-    :root {
-      --black: #080808;
-      --white: #f2f2ee;
-      --green: #b7ff00;
-      --red: #e10600;
-      --blue: #5ecbff;
-    }
 
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
 
-    body {
-      margin: 0;
-      background: var(--black);
-      color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
-    }
+* {
+  box-sizing: border-box;
+}
 
 
-    /* BACKGROUND */
+:root {
 
-    body::before {
+  --black: #080808;
 
-      content: "SK6  SK6  SK6  SK6  SK6";
+  --white: #f2f2ee;
 
-      position: fixed;
+  --green: #b7ff00;
 
-      top: 40%;
+  --pink: #ff4f7b;
 
-      left: -20%;
+}
 
-      width: 140%;
 
-      font-size: 12vw;
+html {
+  scroll-behavior: smooth;
+}
 
-      font-weight: 900;
 
-      letter-spacing: -8px;
+body {
 
-      white-space: nowrap;
+  margin: 0;
 
-      color: rgba(255,255,255,0.025);
+  background:
+    var(--black);
 
-      transform: rotate(-7deg);
+  color:
+    var(--white);
 
-      pointer-events: none;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-      z-index: 0;
-    }
+  overflow-x:
+    hidden;
+}
 
 
-    body::after {
+/* BACKGROUND */
 
-      content: "";
+body::before {
 
-      position: fixed;
+  content:
+    "SK6  SK6  SK6  SK6  SK6";
 
-      width: 160%;
+  position: fixed;
 
-      height: 4px;
+  top: 42%;
 
-      left: -30%;
+  left: -20%;
 
-      top: 43%;
+  width: 140%;
 
-      background: var(--green);
+  font-size: 12vw;
 
-      opacity: .6;
+  font-weight: 900;
 
-      transform: rotate(-2deg);
+  letter-spacing: -8px;
 
-      pointer-events: none;
+  white-space: nowrap;
 
-      z-index: 0;
-    }
+  color:
+    rgba(255,255,255,.025);
 
+  transform:
+    rotate(-7deg);
 
-    .page {
+  pointer-events:
+    none;
 
-      max-width: 1250px;
+  z-index: 0;
+}
 
-      margin: auto;
 
-      padding: 20px 25px 80px;
+body::after {
 
-      position: relative;
+  content: "";
 
-      z-index: 1;
-    }
+  position: fixed;
 
+  width: 160%;
 
-    /* NAVIGATION */
+  height: 4px;
 
-    nav {
+  left: -30%;
 
-      display: flex;
+  top: 43%;
 
-      justify-content: space-between;
+  background:
+    var(--green);
 
-      align-items: center;
+  opacity: .6;
 
-      padding: 12px 0 18px;
+  transform:
+    rotate(-2deg);
 
-      border-bottom: 2px solid var(--white);
-    }
+  pointer-events:
+    none;
 
+  z-index: 0;
+}
 
-    .nav-logo {
 
-      color: var(--green);
+/* PAGE */
 
-      text-decoration: none;
+.page {
 
-      font-size: 18px;
+  max-width:
+    1250px;
 
-      font-weight: 900;
+  margin:
+    auto;
 
-      letter-spacing: 4px;
-    }
+  padding:
+    20px
+    25px
+    80px;
 
+  position:
+    relative;
 
-    .nav-links {
+  z-index:
+    1;
+}
 
-      display: flex;
 
-      gap: 25px;
-    }
+/* NAVIGATION */
 
+nav {
 
-    .nav-links a {
+  display:
+    flex;
 
-      color: var(--white);
+  justify-content:
+    space-between;
 
-      text-decoration: none;
+  align-items:
+    center;
 
-      font-size: 10px;
+  padding:
+    12px
+    0
+    18px;
 
-      font-weight: 900;
+  border-bottom:
+    2px solid
+    var(--white);
+}
 
-      letter-spacing: 2px;
 
-      text-transform: uppercase;
+.nav-logo {
 
-      transition: color .15s ease;
-    }
+  color:
+    var(--green);
 
+  text-decoration:
+    none;
 
-    .nav-links a:hover {
+  font-size:
+    18px;
 
-      color: var(--green);
-    }
+  font-weight:
+    900;
 
+  letter-spacing:
+    4px;
+}
 
-    /* HERO */
 
-    .hero {
+.nav-links {
 
-      min-height: 520px;
+  display:
+    flex;
 
-      display: flex;
+  gap:
+    25px;
+}
 
-      flex-direction: column;
 
-      justify-content: center;
+.nav-links a {
 
-      align-items: center;
+  color:
+    var(--white);
 
-      text-align: center;
+  text-decoration:
+    none;
 
-      position: relative;
+  font-size:
+    10px;
 
-      border-bottom: 10px solid var(--white);
+  font-weight:
+    900;
 
-      margin-bottom: 90px;
+  letter-spacing:
+    2px;
 
-      overflow: hidden;
-    }
+  text-transform:
+    uppercase;
 
+  transition:
+    color .15s ease;
+}
 
-    .hero-number {
 
-      position: absolute;
+.nav-links a:hover {
 
-      top: 25px;
+  color:
+    var(--green);
+}
 
-      left: 0;
 
-      color: var(--green);
+/* HERO */
 
-      font-size: 11px;
+.hero {
 
-      font-weight: 900;
+  text-align:
+    center;
 
-      letter-spacing: 3px;
-    }
+  padding:
+    75px
+    0
+    65px;
 
+  border-bottom:
+    10px solid
+    var(--white);
 
-    .hero-title {
+  margin-bottom:
+    90px;
+}
 
-      font-family: "Teko", sans-serif;
 
-      font-size: clamp(130px, 25vw, 290px);
+.kicker {
 
-      line-height: .6;
+  color:
+    var(--green);
 
-      letter-spacing: -8px;
+  font-size:
+    11px;
 
-      font-weight: 700;
+  font-weight:
+    900;
 
-      transform: skew(-7deg);
+  letter-spacing:
+    5px;
 
-      text-shadow:
+  text-transform:
+    uppercase;
 
-        7px 7px 0 var(--black),
+  margin-bottom:
+    25px;
+}
 
-        -4px -4px 0 var(--black),
 
-        11px 11px 0 var(--green);
-    }
+.hero-title {
 
+  margin:
+    0;
 
-    .hero-subtitle {
+  font-family:
+    "Teko",
+    sans-serif;
 
-      margin-top: 55px;
+  font-size:
+    clamp(
+      100px,
+      18vw,
+      220px
+    );
 
-      font-size: 14px;
+  font-weight:
+    700;
 
-      font-weight: 900;
+  line-height:
+    .62;
 
-      letter-spacing: 7px;
+  letter-spacing:
+    -8px;
 
-      text-transform: uppercase;
-    }
+  transform:
+    skew(-7deg);
 
+  text-shadow:
 
-    .hero-subtitle span {
+    7px 7px 0
+    var(--black),
 
-      color: var(--green);
-    }
+    -4px -4px 0
+    var(--black),
 
+    11px 11px 0
+    var(--green);
+}
 
-    /* INTRO */
 
-    .intro {
+.hero-subtitle {
 
-      max-width: 950px;
+  margin-top:
+    45px;
 
-      margin: 0 auto 120px;
+  font-size:
+    13px;
 
-      text-align: center;
-    }
+  font-weight:
+    900;
 
+  letter-spacing:
+    5px;
 
-    .section-label {
+  text-transform:
+    uppercase;
+}
 
-      color: var(--green);
 
-      font-size: 10px;
+.hero-subtitle span {
 
-      font-weight: 900;
+  color:
+    var(--green);
+}
 
-      letter-spacing: 4px;
 
-      margin-bottom: 25px;
-    }
+/* SECTION HEADING */
 
+.section-label {
 
-    .intro h2 {
+  color:
+    var(--green);
 
-      margin: 0;
+  font-size:
+    10px;
 
-      font-size: clamp(55px, 9vw, 105px);
+  font-weight:
+    900;
 
-      line-height: .78;
+  letter-spacing:
+    4px;
 
-      letter-spacing: -6px;
+  text-transform:
+    uppercase;
 
-      text-transform: uppercase;
-    }
+  margin-bottom:
+    20px;
+}
 
 
-    .intro h2 span {
+.section-title {
 
-      color: var(--green);
-    }
+  margin:
+    0
+    0
+    70px;
 
+  font-size:
+    clamp(
+      55px,
+      9vw,
+      100px
+    );
 
-    .intro p {
+  line-height:
+    .75;
 
-      max-width: 760px;
+  letter-spacing:
+    -6px;
 
-      margin: 40px auto 0;
+  text-transform:
+    uppercase;
 
-      font-size: 17px;
+  border-bottom:
+    3px solid
+    var(--white);
 
-      line-height: 1.7;
+  padding-bottom:
+    20px;
+}
 
-      font-weight: 600;
-    }
 
+/* ARTIST BLOCK */
 
-    /* ARTISTS */
+.artist {
 
-    .artists {
+  display:
+    grid;
 
-      margin-top: 100px;
-    }
+  grid-template-columns:
+    1fr
+    1fr;
 
+  gap:
+    70px;
 
-    .artists-heading {
+  align-items:
+    center;
 
-      display: flex;
+  margin-bottom:
+    120px;
+}
 
-      justify-content: space-between;
 
-      align-items: flex-end;
+/* ARTIST IMAGE */
 
-      border-bottom: 3px solid var(--white);
+.artist-image {
 
-      padding-bottom: 15px;
+  position:
+    relative;
 
-      margin-bottom: 50px;
-    }
+  display:
+    flex;
 
+  justify-content:
+    center;
 
-    .artists-heading h2 {
+  align-items:
+    center;
 
-      margin: 0;
+  padding:
+    25px;
+}
 
-      font-size: clamp(55px, 9vw, 95px);
 
-      line-height: .8;
+/* FRAME */
 
-      letter-spacing: -6px;
+.artist-frame {
 
-      text-transform: uppercase;
-    }
+  width:
+    100%;
 
+  max-width:
+    480px;
 
-    .artists-heading span {
+  padding:
+    12px;
 
-      color: var(--green);
+  background:
+    var(--black);
 
-      font-size: 10px;
+  border:
+    5px solid
+    var(--green);
 
-      font-weight: 900;
+  box-shadow:
+    12px 12px 0
+    var(--green);
 
-      letter-spacing: 3px;
+  transform:
+    rotate(-2deg);
 
-      text-transform: uppercase;
-    }
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
 
 
-    /* ARTIST GRID */
+.artist-image img {
 
-    .artist-grid {
+  width:
+    100%;
 
-      display: grid;
+  height:
+    auto;
 
-      grid-template-columns: repeat(2, 1fr);
+  display:
+    block;
+}
 
-      gap: 30px;
-    }
 
+.artist:hover
+.artist-frame {
 
-    /* ARTIST CARD */
+  transform:
+    rotate(0deg)
+    translateY(-8px);
 
-    .artist {
+  box-shadow:
+    18px 18px 0
+    var(--green);
+}
 
-      position: relative;
 
-      min-height: 520px;
+/* VICE */
 
-      background: var(--white);
+.artist.vice
+.artist-frame {
 
-      color: var(--black);
+  border-color:
+    var(--pink);
 
-      border: 4px solid var(--white);
+  box-shadow:
+    12px 12px 0
+    var(--pink);
 
-      overflow: hidden;
+  transform:
+    rotate(2deg);
+}
 
-      display: flex;
 
-      flex-direction: column;
+.artist.vice:hover
+.artist-frame {
 
-      justify-content: flex-end;
+  transform:
+    rotate(0deg)
+    translateY(-8px);
 
-      transition: transform .25s ease;
-    }
+  box-shadow:
+    18px 18px 0
+    var(--pink);
+}
 
 
-    .artist:hover {
+/* ARTIST NUMBER */
 
-      transform: translateY(-8px);
-    }
+.artist-number {
 
+  position:
+    absolute;
 
-    /* ASH */
+  top:
+    5px;
 
-    .artist-ash {
+  left:
+    5px;
 
-      box-shadow: 12px 12px 0 var(--green);
-    }
+  z-index:
+    5;
 
+  background:
+    var(--green);
 
-    /* VICE */
+  color:
+    var(--black);
 
-    .artist-vice {
+  padding:
+    8px
+    10px;
 
-      box-shadow: 12px 12px 0 var(--blue);
-    }
+  font-size:
+    10px;
 
+  font-weight:
+    900;
 
-    /* CHARACTER IMAGE */
+  letter-spacing:
+    2px;
 
-    .artist-image {
+  transform:
+    rotate(-4deg);
+}
 
-      position: absolute;
 
-      top: 0;
+.artist.vice
+.artist-number {
 
-      left: 0;
+  background:
+    var(--pink);
 
-      width: 100%;
+  color:
+    var(--black);
 
-      height: 75%;
+  transform:
+    rotate(4deg);
+}
 
-      display: flex;
 
-      align-items: flex-start;
+/* ARTIST INFO */
 
-      justify-content: center;
+.artist-info {
 
-      overflow: hidden;
-    }
+  max-width:
+    550px;
+}
 
 
-    .artist-image img {
+.artist-role {
 
-      width: 90%;
+  color:
+    var(--green);
 
-      height: 100%;
+  font-size:
+    11px;
 
-      object-fit: contain;
+  font-weight:
+    900;
 
-      object-position: center bottom;
+  letter-spacing:
+    4px;
 
-      transition: transform .4s ease;
-    }
+  text-transform:
+    uppercase;
 
+  margin-bottom:
+    15px;
+}
 
-    .artist:hover .artist-image img {
 
-      transform:
-        scale(1.04)
-        translateY(-5px);
-    }
+.artist.vice
+.artist-role {
 
+  color:
+    var(--pink);
+}
 
-    /* ARTIST TEXT */
 
-    .artist-content {
+.artist-name {
 
-      position: relative;
+  margin:
+    0;
 
-      z-index: 3;
+  font-family:
+    "Teko",
+    sans-serif;
 
-      padding: 25px;
+  font-size:
+    clamp(
+      70px,
+      9vw,
+      110px
+    );
 
-      background: var(--white);
+  font-weight:
+    700;
 
-      border-top: 4px solid var(--black);
-    }
+  line-height:
+    .65;
 
+  letter-spacing:
+    -4px;
 
-    .artist-name {
+  text-transform:
+    uppercase;
+}
 
-      font-family: "Teko", sans-serif;
 
-      font-size: 75px;
+.artist-description {
 
-      line-height: .7;
+  margin-top:
+    30px;
 
-      letter-spacing: -3px;
+  font-size:
+    15px;
 
-      text-transform: uppercase;
-    }
+  line-height:
+    1.7;
 
+  font-weight:
+    600;
+}
 
-    .artist-role {
 
-      margin-top: 20px;
+/* ACCENT LINE */
 
-      font-size: 11px;
+.artist-line {
 
-      font-weight: 900;
+  width:
+    80px;
 
-      letter-spacing: 2px;
+  height:
+    6px;
 
-      text-transform: uppercase;
-    }
+  background:
+    var(--green);
 
+  margin-top:
+    30px;
+}
 
-    .artist-description {
 
-      margin-top: 20px;
+.artist.vice
+.artist-line {
 
-      font-size: 13px;
+  background:
+    var(--pink);
+}
 
-      line-height: 1.5;
 
-      font-weight: 600;
+/* SK6 SECTION */
 
-      max-width: 480px;
-    }
+.sk6-section {
 
+  margin-top:
+    40px;
 
-    /* GRAPHIC X */
+  padding:
+    70px
+    30px;
 
-    .artist-mark {
+  background:
+    var(--green);
 
-      position: absolute;
+  color:
+    var(--black);
 
-      right: 15px;
+  text-align:
+    center;
 
-      top: 15px;
+  transform:
+    rotate(-1deg);
+}
 
-      font-size: 70px;
 
-      font-weight: 900;
+.sk6-section h2 {
 
-      opacity: .12;
+  margin:
+    0;
 
-      transform: rotate(-10deg);
+  font-size:
+    clamp(
+      45px,
+      8vw,
+      80px
+    );
 
-      z-index: 4;
+  line-height:
+    .8;
 
-      pointer-events: none;
-    }
+  letter-spacing:
+    -5px;
 
+  text-transform:
+    uppercase;
+}
 
-    /* WHAT WE MAKE */
 
-    .make {
+.sk6-section p {
 
-      margin-top: 130px;
+  max-width:
+    750px;
 
-      padding: 60px 25px;
+  margin:
+    30px
+    auto
+    0;
 
-      border-top: 10px solid var(--white);
+  font-size:
+    15px;
 
-      border-bottom: 10px solid var(--white);
+  line-height:
+    1.7;
 
-      text-align: center;
-    }
+  font-weight:
+    700;
+}
 
 
-    .make h2 {
+/* BACK BUTTON */
 
-      margin: 0;
+.back {
 
-      font-size: clamp(50px, 9vw, 95px);
+  display:
+    flex;
 
-      line-height: .8;
+  justify-content:
+    center;
 
-      letter-spacing: -6px;
+  margin-top:
+    90px;
+}
 
-      text-transform: uppercase;
-    }
 
+.back a {
 
-    .make h2 span {
+  display:
+    inline-block;
 
-      color: var(--green);
-    }
+  padding:
+    13px
+    20px;
 
+  background:
+    var(--white);
 
-    .make-list {
+  color:
+    var(--black);
 
-      margin-top: 45px;
+  text-decoration:
+    none;
 
-      display: flex;
+  font-size:
+    11px;
 
-      justify-content: center;
+  font-weight:
+    900;
 
-      flex-wrap: wrap;
+  letter-spacing:
+    3px;
 
-      gap: 12px;
-    }
+  text-transform:
+    uppercase;
 
+  border:
+    3px solid
+    var(--white);
 
-    .make-list span {
+  transition:
+    all .2s ease;
+}
 
-      padding: 10px 15px;
 
-      background: var(--green);
+.back a:hover {
 
-      color: var(--black);
+  background:
+    var(--green);
 
-      font-size: 11px;
+  border-color:
+    var(--green);
 
-      font-weight: 900;
+  transform:
+    translateY(-5px);
+}
 
-      letter-spacing: 2px;
 
-      text-transform: uppercase;
+/* FOOTER */
 
-      transform: rotate(-1deg);
-    }
+footer {
 
+  margin-top:
+    70px;
 
-    .make-list span:nth-child(2) {
+  text-align:
+    center;
 
-      background: var(--red);
+  font-size:
+    10px;
 
-      color: var(--white);
+  font-weight:
+    900;
 
-      transform: rotate(2deg);
-    }
+  letter-spacing:
+    4px;
 
+  text-transform:
+    uppercase;
 
-    .make-list span:nth-child(3) {
+  opacity:
+    .5;
+}
 
-      background: var(--blue);
 
-      color: var(--black);
+/* MOBILE */
 
-      transform: rotate(-2deg);
-    }
+@media (max-width: 750px) {
 
 
-    /* MANIFESTO */
+  .page {
 
-    .manifesto {
+    padding:
+      15px
+      15px
+      60px;
+  }
 
-      margin-top: 110px;
 
-      padding: 60px 25px;
+  nav {
 
-      background: var(--green);
+    align-items:
+      flex-start;
+  }
 
-      color: var(--black);
 
-      text-align: center;
+  .nav-links {
 
-      transform: rotate(-1deg);
-    }
+    gap:
+      12px;
 
+    flex-wrap:
+      wrap;
 
-    .manifesto-label {
+    justify-content:
+      flex-end;
+  }
 
-      font-size: 10px;
 
-      font-weight: 900;
+  .hero {
 
-      letter-spacing: 4px;
+    padding:
+      65px
+      0
+      55px;
 
-      margin-bottom: 30px;
-    }
+    margin-bottom:
+      65px;
+  }
 
 
-    .manifesto p {
+  .hero-title {
 
-      margin: 0;
+    font-size:
+      clamp(
+        95px,
+        25vw,
+        160px
+      );
 
-      font-size: clamp(30px, 6vw, 70px);
+    letter-spacing:
+      -6px;
 
-      font-weight: 900;
+    text-shadow:
 
-      line-height: .85;
+      5px 5px 0
+      var(--black),
 
-      letter-spacing: -4px;
+      -3px -3px 0
+      var(--black),
 
-      text-transform: uppercase;
-    }
+      8px 8px 0
+      var(--green);
+  }
 
 
-    /* BACK BUTTON */
+  .hero-subtitle {
 
-    .back {
+    font-size:
+      10px;
 
-      display: flex;
+    letter-spacing:
+      3px;
 
-      justify-content: center;
+    line-height:
+      1.7;
 
-      margin-top: 80px;
-    }
+    padding:
+      0 15px;
+  }
 
 
-    .back a {
+  .section-title {
 
-      display: inline-block;
+    margin-bottom:
+      55px;
+  }
 
-      padding: 13px 20px;
 
-      background: var(--white);
+  .artist {
 
-      color: var(--black);
+    grid-template-columns:
+      1fr;
 
-      text-decoration: none;
+    gap:
+      50px;
 
-      font-size: 11px;
+    margin-bottom:
+      100px;
+  }
 
-      font-weight: 900;
 
-      letter-spacing: 3px;
+  .artist-image {
 
-      text-transform: uppercase;
+    padding:
+      15px;
+  }
 
-      border: 3px solid var(--white);
 
-      transition: all .2s ease;
-    }
+  .artist-frame {
 
+    max-width:
+      420px;
 
-    .back a:hover {
+    box-shadow:
+      8px 8px 0
+      var(--green);
+  }
 
-      background: var(--green);
 
-      border-color: var(--green);
+  .artist.vice
+  .artist-frame {
 
-      transform: translateY(-5px);
-    }
+    box-shadow:
+      8px 8px 0
+      var(--pink);
+  }
 
 
-    /* FOOTER */
+  .artist-info {
 
-    footer {
+    max-width:
+      none;
+  }
 
-      margin-top: 80px;
 
-      text-align: center;
+  .artist-name {
 
-      font-size: 10px;
+    font-size:
+      80px;
+  }
 
-      font-weight: 900;
 
-      letter-spacing: 4px;
+  .artist-description {
 
-      text-transform: uppercase;
+    font-size:
+      14px;
+  }
 
-      opacity: .5;
-    }
 
+  .sk6-section {
 
-    /* MOBILE */
+    padding:
+      55px
+      20px;
+  }
 
-    @media (max-width: 750px) {
+}
 
-      .page {
-
-        padding:
-          15px
-          15px
-          60px;
-      }
-
-
-      nav {
-
-        align-items:
-          flex-start;
-      }
-
-
-      .nav-links {
-
-        gap: 12px;
-
-        flex-wrap: wrap;
-
-        justify-content:
-          flex-end;
-      }
-
-
-      .hero {
-
-        min-height: 400px;
-
-        margin-bottom: 70px;
-      }
-
-
-      .hero-title {
-
-        font-size:
-          clamp(
-            110px,
-            30vw,
-            170px
-          );
-
-        letter-spacing: -5px;
-
-        text-shadow:
-
-          5px 5px 0 var(--black),
-
-          -3px -3px 0 var(--black),
-
-          8px 8px 0 var(--green);
-      }
-
-
-      .hero-subtitle {
-
-        font-size: 10px;
-
-        letter-spacing: 4px;
-
-        margin-top: 45px;
-      }
-
-
-      .intro {
-
-        margin-bottom: 80px;
-      }
-
-
-      .intro p {
-
-        font-size: 15px;
-      }
-
-
-      .artists-heading {
-
-        display: block;
-      }
-
-
-      .artists-heading span {
-
-        display: block;
-
-        margin-top: 15px;
-      }
-
-
-      .artist-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-      }
-
-
-      .artist {
-
-        min-height: 500px;
-      }
-
-
-      .artist-image {
-
-        height: 72%;
-      }
-
-
-      .artist-image img {
-
-        width: 95%;
-      }
-
-
-      .artist-content {
-
-        padding: 22px;
-      }
-
-
-      .artist-name {
-
-        font-size: 65px;
-      }
-
-
-      .artist-role {
-
-        font-size: 10px;
-
-        letter-spacing: 1.5px;
-      }
-
-
-      .artist-description {
-
-        font-size: 13px;
-      }
-
-
-      .make {
-
-        margin-top: 90px;
-      }
-
-
-      .manifesto {
-
-        margin-top: 80px;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -949,336 +1048,317 @@
 <div class="page">
 
 
-  <!-- NAVIGATION -->
+<!-- NAVIGATION -->
 
-  <nav>
+<nav>
 
-    <a
-      class="nav-logo"
-      href="../"
-    >
+
+  <a
+    class="nav-logo"
+    href="../"
+  >
+
+    SK6
+
+  </a>
+
+
+  <div class="nav-links">
+
+    <a href="#artists">
+      Artists
+    </a>
+
+    <a href="#sk6">
       SK6
     </a>
 
-
-    <div class="nav-links">
-
-      <a href="../#comics">
-        Comics
-      </a>
-
-      <a href="index.html">
-        About
-      </a>
-
-      <a href="../">
-        Home
-      </a>
-
-    </div>
-
-  </nav>
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-number">
-      SK6 // ABOUT
-    </div>
-
-
-    <div class="hero-title">
-      SK6
-    </div>
-
-
-    <div class="hero-subtitle">
-
-      Two artists
-      <span>/</span>
-      Too many stories
-
-    </div>
-
-  </section>
-
-
-  <!-- INTRO -->
-
-  <section class="intro">
-
-    <div class="section-label">
-      WHO THE FUCK IS SK6?
-    </div>
-
-
-    <h2>
-
-      We make comics<br>
-
-      because we
-      <span>want to.</span>
-
-    </h2>
-
-
-    <p>
-
-      SK6 is an independent comics and art project
-      built by two artists who wanted to make their
-      own stories, their own way.
-
-      <br><br>
-
-      No publisher telling us what to make.
-      No algorithm deciding what a comic should be.
-      Just ideas, drawings, stories, characters,
-      and a lot of time spent making things
-      we actually want to exist.
-
-    </p>
-
-  </section>
-
-
-  <!-- ARTISTS -->
-
-  <section class="artists">
-
-
-    <div class="artists-heading">
-
-      <h2>
-        The Artists
-      </h2>
-
-      <span>
-        SK6 // 002
-      </span>
-
-    </div>
-
-
-    <div class="artist-grid">
-
-
-      <!-- ASH -->
-
-      <article class="artist artist-ash">
-
-
-        <div class="artist-image">
-
-          <img
-            src="../images/Ash1.png"
-            alt="Ash"
-          >
-
-        </div>
-
-
-        <div class="artist-content">
-
-
-          <div class="artist-name">
-            Ash
-          </div>
-
-
-          <div class="artist-role">
-
-            Artist / Writer / Story Crafter
-
-          </div>
-
-
-          <div class="artist-description">
-
-            One half of SK6.
-
-            <br><br>
-
-            Draws, writes, develops characters,
-            and helps turn ideas into stories
-            that we actually want to read.
-
-          </div>
-
-
-        </div>
-
-
-        <div class="artist-mark">
-          X
-        </div>
-
-
-      </article>
-
-
-      <!-- VICE -->
-
-      <article class="artist artist-vice">
-
-
-        <div class="artist-image">
-
-          <img
-            src="../images/Vice1.png"
-            alt="Vice"
-          >
-
-        </div>
-
-
-        <div class="artist-content">
-
-
-          <div class="artist-name">
-            Vice
-          </div>
-
-
-          <div class="artist-role">
-
-            Artist / Writer / Idea Maker
-
-          </div>
-
-
-          <div class="artist-description">
-
-            The other half of SK6.
-
-            <br><br>
-
-            Brings ideas, characters, and stories
-            to the table and helps turn them
-            into something real.
-
-          </div>
-
-
-        </div>
-
-
-        <div class="artist-mark">
-          X
-        </div>
-
-
-      </article>
-
-
-    </div>
-
-
-  </section>
-
-
-  <!-- WHAT WE MAKE -->
-
-  <section class="make">
-
-
-    <div class="section-label">
-      WHAT WE MAKE
-    </div>
-
-
-    <h2>
-
-      Comics.<br>
-
-      Art.<br>
-
-      <span>Stories.</span>
-
-    </h2>
-
-
-    <div class="make-list">
-
-      <span>
-        Comics
-      </span>
-
-      <span>
-        Illustration
-      </span>
-
-      <span>
-        Stories
-      </span>
-
-      <span>
-        Animation
-      </span>
-
-      <span>
-        Original Ideas
-      </span>
-
-    </div>
-
-
-  </section>
-
-
-  <!-- MANIFESTO -->
-
-  <section class="manifesto">
-
-
-    <div class="manifesto-label">
-      SK6 // MANIFESTO
-    </div>
-
-
-    <p>
-
-      Made by hand.<br>
-
-      Built from ideas.<br>
-
-      Made because we wanted to.
-
-    </p>
-
-
-  </section>
-
-
-  <!-- BACK -->
-
-  <div class="back">
-
     <a href="../">
-
-      ← Back to SK6
-
+      Home
     </a>
 
   </div>
 
 
-  <!-- FOOTER -->
+</nav>
 
-  <footer>
 
-    SK6 © 2026
+<!-- HERO -->
+
+<header class="hero">
+
+
+  <div class="kicker">
+
+    SK6 // ABOUT
+
+  </div>
+
+
+  <h1 class="hero-title">
+
+    SK6
+
+  </h1>
+
+
+  <div class="hero-subtitle">
+
+    Two artists
+
+    <span>/</span>
+
+    Too many stories
+
+    <span>/</span>
+
+    Still making them
+
+  </div>
+
+
+</header>
+
+
+<!-- ARTISTS -->
+
+<main id="artists">
+
+
+  <div class="section-label">
+
+    SK6 // THE PEOPLE BEHIND IT
+
+  </div>
+
+
+  <h2 class="section-title">
+
+    Meet SK6
+
+  </h2>
+
+
+  <!-- ASH -->
+
+  <section class="artist">
+
+
+    <div class="artist-image">
+
+
+      <div class="artist-number">
+
+        SK6 // 01
+
+      </div>
+
+
+      <div class="artist-frame">
+
+
+        <img
+
+          src="images/Ash-about.png"
+
+          alt="Ash"
+
+        >
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="artist-info">
+
+
+      <div class="artist-role">
+
+        Artist / Writer / Keeper of the Shrimps
+
+      </div>
+
+
+      <h3 class="artist-name">
+
+        Ash
+
+      </h3>
+
+
+      <p class="artist-description">
+
+        Stories, characters, worlds and
+        all the little details that make
+        them feel alive.
+
+        <br><br>
+
+        Ash works across mature comics and
+        illustration, bringing strong ideas to
+        life one page at a time.
+
+      </p>
+
+
+      <div class="artist-line"></div>
+
+
+    </div>
+
+
+  </section>
+
+
+  <!-- VICE -->
+
+  <section class="artist vice">
+
+
+    <div class="artist-image">
+
+
+      <div class="artist-number">
+
+        SK6 // 02
+
+      </div>
+
+
+      <div class="artist-frame">
+
+
+        <img
+
+          src="images/Vice-about.png"
+
+          alt="Vice"
+
+        >
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="artist-info">
+
+
+      <div class="artist-role">
+
+        Artist / Writer / Cat Whisperer
+
+      </div>
+
+
+      <h3 class="artist-name">
+
+        Vice
+
+      </h3>
+
+
+      <p class="artist-description">
+
+        Characters, designs, atmosphere
+        and the visual side of cute and wholesome worlds
+        SK6 creates.
+
+        <br><br>
+
+        Turning ideas into images,
+        characters and stories that
+        hopefully stick around in your head.
+
+      </p>
+
+
+      <div class="artist-line"></div>
+
+
+    </div>
+
+
+  </section>
+
+
+</main>
+
+
+<!-- SK6 -->
+
+<section
+  class="sk6-section"
+  id="sk6"
+>
+
+
+  <h2>
+
+    Why SK6?
+
+  </h2>
+
+
+  <p>
+
+    SK6 is an independent comic and art
+    project created by two artists who
+    wanted to make their own stories,
+    their own characters, and their own
+    worlds.
 
     <br><br>
 
-    Comics / Art / Chaos
+    No giant studio.
 
-  </footer>
+    No committee.
+
+    Just two artists making comics
+    because we love making them.
+
+  </p>
+
+
+</section>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+
+  <a href="../">
+
+    ← Back to SK6
+
+  </a>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  SK6 © 2026
+
+  <br><br>
+
+  Comics / Art / Chaos
+
+</footer>
 
 
 </div>
 
 
 </body>
+
 </html>
