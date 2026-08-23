@@ -10,7 +10,7 @@
   content="width=device-width, initial-scale=1.0"
 >
 
-<title>Freaky 1/2 — SK6</title>
+<title>Freaky 1/2 — Chapter 01 — SK6</title>
 
 <style>
 
@@ -24,111 +24,59 @@
   --blue: #5ecbff;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  background: var(--black);
+  color: var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 body {
-  margin: 0;
-  background: var(--black);
-  color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
 
-/* BACKGROUND */
+/* TOP BAR */
 
-body::before {
-  content: "FREAKY 1/2  FREAKY 1/2";
+.topbar {
 
-  position: fixed;
-
-  top: 42%;
-  left: -20%;
-
-  width: 150%;
-
-  font-size: 13vw;
-
-  font-weight: 900;
-
-  letter-spacing: -8px;
-
-  white-space: nowrap;
-
-  color: rgba(255,255,255,.025);
-
-  transform: rotate(-7deg);
-
-  pointer-events: none;
-
-  z-index: 0;
-}
-
-body::after {
-  content: "";
-
-  position: fixed;
-
-  width: 160%;
-
-  height: 4px;
-
-  left: -30%;
-
-  top: 43%;
-
-  background: var(--blue);
-
-  opacity: .55;
-
-  transform: rotate(-2deg);
-
-  pointer-events: none;
-
-  z-index: 0;
-}
-
-
-/* PAGE */
-
-.page {
-  max-width: 1250px;
-
-  margin: auto;
+  width: 100%;
 
   padding:
-    20px
-    25px
-    80px;
+    15px
+    20px;
 
-  position: relative;
-
-  z-index: 1;
-}
-
-
-/* NAVIGATION */
-
-nav {
   display: flex;
-
-  justify-content: space-between;
 
   align-items: center;
 
-  padding:
-    12px
-    0
-    18px;
+  justify-content: space-between;
 
   border-bottom:
     2px solid
     var(--white);
+
+  position: sticky;
+
+  top: 0;
+
+  background: var(--black);
+
+  z-index: 100;
 }
 
-.nav-logo {
+.logo {
+
   color: var(--blue);
 
   text-decoration: none;
@@ -140,13 +88,21 @@ nav {
   letter-spacing: 4px;
 }
 
-.nav-links {
-  display: flex;
+.chapter-title {
 
-  gap: 25px;
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  text-align: center;
 }
 
-.nav-links a {
+.back {
+
   color: var(--white);
 
   text-decoration: none;
@@ -158,533 +114,178 @@ nav {
   letter-spacing: 2px;
 
   text-transform: uppercase;
-
-  transition:
-    color .15s ease;
 }
 
-.nav-links a:hover {
+.back:hover {
+
   color: var(--blue);
 }
 
 
-/* HERO */
+/* READER */
 
-header {
-  position: relative;
+.reader {
 
-  text-align: center;
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
 
   padding:
-    70px
-    0
-    55px;
-
-  border-bottom:
-    10px solid
-    var(--white);
-
-  margin-bottom: 75px;
-
-  overflow: hidden;
-}
-
-.number {
-  position: absolute;
-
-  top: 20px;
-
-  left: 0;
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 3px;
-
-  color: var(--blue);
-}
-
-.kicker {
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 5px;
-
-  color: var(--blue);
-
-  text-transform: uppercase;
-
-  margin-bottom: 20px;
-}
-
-.logo {
-  margin: 0;
-
-  font-size:
-    clamp(
-      65px,
-      15vw,
-      180px
-    );
-
-  font-weight: 900;
-
-  line-height: .75;
-
-  letter-spacing: -9px;
-
-  text-transform: uppercase;
-
-  transform: skew(-7deg);
-
-  text-shadow:
-    6px 6px 0
-    var(--blue);
-}
-
-.subtitle {
-  margin-top: 35px;
-
-  font-size: 13px;
-
-  font-weight: 900;
-
-  letter-spacing: 5px;
-
-  text-transform: uppercase;
-}
-
-.subtitle span {
-  color: var(--blue);
-}
-
-.stamp {
-  display: inline-block;
-
-  margin-top: 25px;
-
-  padding:
-    9px
-    15px;
-
-  background: var(--blue);
-
-  color: var(--black);
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  transform: rotate(-2deg);
+    30px
+    20px
+    100px;
 }
 
 
-/* SECTION */
+/* PAGE SPREAD */
 
-.section-heading {
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  margin-bottom: 45px;
-
-  border-bottom:
-    3px solid
-    var(--white);
-
-  padding-bottom: 15px;
-}
-
-.section-heading h2 {
-  margin: 0;
-
-  font-size:
-    clamp(
-      45px,
-      9vw,
-      90px
-    );
-
-  line-height: .8;
-
-  letter-spacing: -6px;
-
-  font-weight: 900;
-
-  text-transform: uppercase;
-}
-
-.issue {
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-
-  color: var(--blue);
-
-  white-space: nowrap;
-}
-
-
-/* CHAPTERS */
-
-.chapters {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 25px;
-}
-
-
-/* CHAPTER CARD */
-
-.chapter-card {
-  position: relative;
-
-  display: block;
-
-  background: var(--white);
-
-  color: var(--black);
-
-  padding: 12px;
-
-  text-decoration: none;
-
-  border:
-    4px solid
-    var(--white);
-
-  box-shadow:
-    10px 10px 0
-    var(--blue);
-
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease;
-}
-
-.chapter-card:nth-child(1) {
-  transform: rotate(-1deg);
-}
-
-.chapter-card:nth-child(2) {
-  transform: rotate(0deg);
-}
-
-.chapter-card:nth-child(3) {
-  transform: rotate(1deg);
-}
-
-.chapter-card:hover {
-  transform:
-    translateY(-12px)
-    rotate(0deg);
-
-  box-shadow:
-    15px 15px 0
-    var(--blue);
-}
-
-
-/* CHAPTER LABEL */
-
-.chapter-number {
-  position: absolute;
-
-  top: 18px;
-
-  left: 18px;
-
-  z-index: 5;
-
-  background: var(--blue);
-
-  color: var(--black);
-
-  padding:
-    7px
-    9px;
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-}
-
-
-/* PANEL AREA */
-
-.chapter-cover {
+.spread {
 
   width: 100%;
 
   display: flex;
 
-  align-items: center;
+  flex-direction: row;
 
   justify-content: center;
 
-  background: transparent;
+  align-items: flex-start;
 
-  padding:
-    45px
-    0
-    15px;
+  gap: 12px;
+
+  direction: ltr;
+
+  margin: 0 auto;
 }
 
 
-/* ACTUAL MANGA PANEL */
+/*
+  MANGA ORDER
 
-.chapter-cover img {
+  Page 1 = RIGHT
+  Page 2 = LEFT
 
-  width: 88%;
+  Page 3 = RIGHT
+  Page 4 = LEFT
 
-  height: auto;
+  etc.
+*/
 
-  aspect-ratio: 2.4 / 1;
+.page {
 
-  object-fit: cover;
+  width: 50%;
 
   display: block;
 
-  background: transparent;
+  max-width: 700px;
 
-  border:
-    4px solid
-    var(--blue);
+  height: auto;
 
-  transform:
-    rotate(-2deg);
-
-  transition:
-    transform .3s ease;
-}
-
-.chapter-card:hover .chapter-cover img {
-
-  transform:
-    rotate(0deg)
-    scale(1.04);
-}
-
-
-/* PLACEHOLDER */
-
-.placeholder {
-
-  color: var(--blue);
-
-  font-size: 32px;
-
-  font-weight: 900;
-
-  line-height: .8;
-
-  letter-spacing: -2px;
-
-  text-align: center;
-
-  text-transform: uppercase;
-}
-
-.coming {
-
-  position: absolute;
-
-  bottom: 18px;
-
-  right: 18px;
+  object-fit: contain;
 
   background: var(--black);
 
-  color: var(--blue);
-
-  padding:
-    7px
-    9px;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  border:
-    2px solid
-    var(--blue);
-
-  transform:
-    rotate(2deg);
-}
-
-
-/* INFO */
-
-.chapter-info {
-
-  padding:
-    17px
-    5px
-    8px;
-}
-
-.chapter-title {
-
-  font-size: 32px;
-
-  font-weight: 900;
-
-  line-height: .9;
-
-  letter-spacing: -2px;
-
-  text-transform: uppercase;
-}
-
-.chapter-description {
-
-  margin-top: 10px;
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  line-height: 1.4;
-
-  text-transform: uppercase;
-}
-
-.read {
-
-  display: inline-block;
-
-  margin-top: 15px;
-
-  padding:
-    9px
-    14px;
-
-  background: var(--black);
-
-  color: var(--blue);
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-}
-
-
-/* TRANSMISSION */
-
-.transmission {
-
-  margin-top: 120px;
-
-  padding:
-    55px
-    20px;
-
-  border-top:
-    10px solid
-    var(--white);
-
-  border-bottom:
-    10px solid
-    var(--white);
-
-  text-align: center;
-
-  position: relative;
-
-  overflow: hidden;
-}
-
-.transmission-label {
-
-  color: var(--blue);
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 4px;
-
-  margin-bottom: 25px;
-}
-
-.transmission p {
+  border: none;
 
   margin: 0;
 
-  font-size:
-    clamp(
-      35px,
-      7vw,
-      75px
-    );
+  padding: 0;
+}
+
+
+/* NAVIGATION */
+
+.controls {
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin:
+    35px
+    auto
+    0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.control {
+
+  border: none;
+
+  background: var(--blue);
+
+  color: var(--black);
+
+  padding:
+    12px
+    18px;
+
+  font-size: 11px;
 
   font-weight: 900;
 
-  line-height: .83;
-
-  letter-spacing: -5px;
+  letter-spacing: 2px;
 
   text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    transform .15s ease,
+    background .15s ease;
 }
 
-.transmission .blue {
-  color: var(--blue);
-}
-
-.transmission-mark {
-
-  position: absolute;
-
-  right: 20px;
-
-  bottom: 10px;
-
-  font-size: 70px;
-
-  font-weight: 900;
-
-  color: var(--blue);
+.control:hover {
 
   transform:
-    rotate(-10deg);
+    translateY(-3px);
+
+  background: var(--white);
+}
+
+.control:disabled {
+
+  opacity: .25;
+
+  cursor: default;
+
+  transform: none;
 }
 
 
-/* FOOTER */
+/*
+  MANGA NAVIGATION
 
-footer {
+  NEXT is on the LEFT
+  PREVIOUS is on the RIGHT
 
-  margin-top: 70px;
+  because the manga reads
+  from RIGHT to LEFT.
+*/
+
+.previous {
+
+  order: 2;
+}
+
+.next {
+
+  order: 1;
+}
+
+
+/* PAGE COUNTER */
+
+.counter {
 
   text-align: center;
 
@@ -692,118 +293,99 @@ footer {
 
   font-weight: 900;
 
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+
+  color: var(--blue);
 
   text-transform: uppercase;
 
-  opacity: .5;
+  margin-top: 18px;
 }
 
 
 /* MOBILE */
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 
-  .page {
-
-    padding:
-      15px
-      15px
-      60px;
-  }
-
-  nav {
-    align-items:
-      flex-start;
-  }
-
-  .nav-links {
-
-    gap: 12px;
-
-    flex-wrap: wrap;
-
-    justify-content:
-      flex-end;
-  }
-
-  header {
+  .topbar {
 
     padding:
-      60px
-      0
-      45px;
-  }
-
-  .logo {
-
-    letter-spacing: -6px;
-
-    text-shadow:
-      4px 4px 0
-      var(--blue);
-  }
-
-  .subtitle {
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-  }
-
-  .section-heading {
-
-    display: block;
-  }
-
-  .issue {
-
-    display: block;
-
-    margin-top: 15px;
-  }
-
-  .chapters {
-
-    grid-template-columns:
-      1fr;
-
-    gap: 40px;
-  }
-
-  .chapter-card {
-
-    max-width: 430px;
-
-    width: 100%;
-
-    margin: auto;
-  }
-
-  .chapter-cover {
-
-    padding:
-      45px
-      0
+      13px
       15px;
   }
 
-  .chapter-cover img {
+  .chapter-title {
 
-    width: 88%;
+    font-size: 9px;
 
-    aspect-ratio:
-      2.4 / 1;
+    letter-spacing: 2px;
   }
 
-  .transmission {
+  .back {
 
-    margin-top: 90px;
+    font-size: 9px;
+
+    letter-spacing: 1px;
   }
 
-  .transmission-mark {
+  .reader {
 
-    display: none;
+    padding:
+      15px
+      8px
+      80px;
+  }
+
+  .spread {
+
+    gap: 4px;
+  }
+
+  .page {
+
+    width: 50%;
+  }
+
+  .controls {
+
+    margin-top: 25px;
+
+    padding:
+      0
+      5px;
+  }
+
+  .control {
+
+    padding:
+      11px
+      12px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+}
+
+
+/* VERY SMALL SCREENS */
+
+@media (max-width: 500px) {
+
+  .spread {
+
+    gap: 2px;
+  }
+
+  .page {
+
+    width: 50%;
+  }
+
+  .chapter-title {
+
+    max-width: 120px;
   }
 
 }
@@ -816,299 +398,357 @@ footer {
 <body>
 
 
-<div class="page">
+<!-- TOP BAR -->
 
-
-<!-- NAVIGATION -->
-
-<nav>
+<div class="topbar">
 
   <a
-    class="nav-logo"
+    class="logo"
     href="../"
   >
     SK6
   </a>
 
-  <div class="nav-links">
 
-    <a href="#chapters">
-      Chapters
-    </a>
+  <div class="chapter-title">
 
-    <a href="#transmission">
-      About
-    </a>
-
-    <a href="../">
-      SK6 Home
-    </a>
-
-  </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<header>
-
-  <div class="number">
-    SK6 // 002
-  </div>
-
-  <div class="kicker">
-    SK6 Presents
-  </div>
-
-  <h1 class="logo">
     FREAKY 1/2
-  </h1>
-
-  <div class="subtitle">
-
-    Weird <span>/</span>
-    Strange <span>/</span>
-    Freaky
+    //
+    CHAPTER 01
 
   </div>
 
-  <div class="stamp">
-    FREAKY 1/2 // SK6
-  </div>
 
-</header>
-
-
-<!-- CHAPTERS -->
-
-<main id="chapters">
-
-
-<div class="section-heading">
-
-  <h2>
+  <a
+    class="back"
+    href="../"
+  >
     Chapters
-  </h2>
-
-  <div class="issue">
-    Freaky 1/2 / SK6-002
-  </div>
+  </a>
 
 </div>
 
 
-<div class="chapters">
+
+<!-- READER -->
+
+<main class="reader">
 
 
-<!-- CHAPTER 01 -->
+  <div
+    class="spread"
+    id="spread"
+  >
 
-<a
-  class="chapter-card"
-  href="chapter-1/"
->
+    <!-- Pages are inserted by JavaScript -->
 
-  <div class="chapter-number">
-    CHAPTER 01
   </div>
 
 
-  <!-- JUST THE PANEL -->
+  <!-- CONTROLS -->
 
-  <div class="chapter-cover">
+  <div class="controls">
 
-    <img
-      id="randomFreaky1"
-      src="./chapter-1/Fr1-01.jpeg"
-      alt="Freaky 1/2 Chapter 01 preview"
+
+    <!-- NEXT = LEFT -->
+
+    <button
+      class="control next"
+      id="nextButton"
+      onclick="nextSpread()"
     >
 
+      ← NEXT
+
+    </button>
+
+
+    <!-- PREVIOUS = RIGHT -->
+
+    <button
+      class="control previous"
+      id="previousButton"
+      onclick="previousSpread()"
+    >
+
+      PREVIOUS →
+
+    </button>
+
+
   </div>
 
 
-  <div class="chapter-info">
+  <div
+    class="counter"
+    id="counter"
+  >
 
-    <div class="chapter-title">
-      Chapter 01
-    </div>
-
-    <div class="chapter-description">
-
-      The first chapter
-      of Freaky 1/2.
-
-    </div>
-
-    <div class="read">
-      Read →
-    </div>
+    PAGES 1–2 / 54
 
   </div>
-
-</a>
-
-
-<!-- CHAPTER 02 -->
-
-<div class="chapter-card">
-
-  <div class="chapter-number">
-    CHAPTER 02
-  </div>
-
-  <div class="chapter-cover">
-
-    <div class="placeholder">
-
-      CHAPTER<br>
-      02
-
-    </div>
-
-    <div class="coming">
-      Coming Soon
-    </div>
-
-  </div>
-
-  <div class="chapter-info">
-
-    <div class="chapter-title">
-      Chapter 02
-    </div>
-
-    <div class="chapter-description">
-
-      More Freaky 1/2
-      coming soon.
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- CHAPTER 03 -->
-
-<div class="chapter-card">
-
-  <div class="chapter-number">
-    CHAPTER 03
-  </div>
-
-  <div class="chapter-cover">
-
-    <div class="placeholder">
-
-      CHAPTER<br>
-      03
-
-    </div>
-
-    <div class="coming">
-      Coming Soon
-    </div>
-
-  </div>
-
-  <div class="chapter-info">
-
-    <div class="chapter-title">
-      Chapter 03
-    </div>
-
-    <div class="chapter-description">
-
-      More Freaky 1/2
-      coming soon.
-
-    </div>
-
-  </div>
-
-</div>
-
-
-</div>
-
-
-<!-- TRANSMISSION -->
-
-<section
-  class="transmission"
-  id="transmission"
->
-
-  <div class="transmission-label">
-
-    FREAKY TRANSMISSION // 002
-
-  </div>
-
-  <p>
-
-    Strange things.<br>
-
-    <span class="blue">
-      Weird stories.
-    </span><br>
-
-    Keep reading.
-
-  </p>
-
-  <div class="transmission-mark">
-    X
-  </div>
-
-</section>
 
 
 </main>
 
 
-<!-- FOOTER -->
-
-<footer>
-
-  SK6 © 2026
-
-  <br><br>
-
-  Freaky 1/2
-
-  <br><br>
-
-  Comics / Art / Chaos
-
-</footer>
-
-
-</div>
-
-
-<!-- RANDOM PANEL -->
 
 <script>
 
-const totalFreakyPages = 54;
 
-const randomPage =
-  Math.floor(
-    Math.random() *
-    totalFreakyPages
-  ) + 1;
+/* SETTINGS */
 
-const randomImage =
+const totalPages = 54;
+
+let currentSpread = 0;
+
+const pagesPerSpread = 2;
+
+
+/*
+  Page order:
+
+  Spread 0:
+    Page 1 = RIGHT
+    Page 2 = LEFT
+
+  Spread 1:
+    Page 3 = RIGHT
+    Page 4 = LEFT
+
+  Spread 2:
+    Page 5 = RIGHT
+    Page 6 = LEFT
+
+  etc.
+*/
+
+
+/* ELEMENTS */
+
+const spread =
   document.getElementById(
-    "randomFreaky1"
+    "spread"
   );
 
-randomImage.src =
-  "./chapter-1/Fr1-" +
-  String(randomPage).padStart(2, "0") +
-  ".jpeg";
+const counter =
+  document.getElementById(
+    "counter"
+  );
+
+const nextButton =
+  document.getElementById(
+    "nextButton"
+  );
+
+const previousButton =
+  document.getElementById(
+    "previousButton"
+  );
+
+
+/* SHOW SPREAD */
+
+function showSpread() {
+
+  spread.innerHTML = "";
+
+
+  /*
+    First page of the spread
+    goes on the RIGHT.
+
+    Second page goes on the LEFT.
+  */
+
+  const firstPage =
+    currentSpread * 2 + 1;
+
+  const secondPage =
+    firstPage + 1;
+
+
+  /*
+    PAGE 2 / LEFT
+
+    We add the second page first
+    so it appears on the LEFT.
+  */
+
+  if (
+    secondPage <= totalPages
+  ) {
+
+    const leftPage =
+      document.createElement("img");
+
+    leftPage.className = "page";
+
+    leftPage.src =
+      "Fr1-" +
+      String(secondPage).padStart(2, "0") +
+      ".jpeg";
+
+    leftPage.alt =
+      "Freaky 1/2 Page " +
+      secondPage;
+
+    leftPage.loading = "eager";
+
+    spread.appendChild(
+      leftPage
+    );
+  }
+
+
+  /*
+    PAGE 1 / RIGHT
+  */
+
+  if (
+    firstPage <= totalPages
+  ) {
+
+    const rightPage =
+      document.createElement("img");
+
+    rightPage.className = "page";
+
+    rightPage.src =
+      "Fr1-" +
+      String(firstPage).padStart(2, "0") +
+      ".jpeg";
+
+    rightPage.alt =
+      "Freaky 1/2 Page " +
+      firstPage;
+
+    rightPage.loading = "eager";
+
+    spread.appendChild(
+      rightPage
+    );
+  }
+
+
+  /* COUNTER */
+
+  if (
+    secondPage <= totalPages
+  ) {
+
+    counter.textContent =
+      "PAGES " +
+      firstPage +
+      "–" +
+      secondPage +
+      " / " +
+      totalPages;
+
+  } else {
+
+    counter.textContent =
+      "PAGE " +
+      firstPage +
+      " / " +
+      totalPages;
+
+  }
+
+
+  /* BUTTON STATES */
+
+  previousButton.disabled =
+    currentSpread === 0;
+
+  nextButton.disabled =
+    secondPage >= totalPages;
+
+}
+
+
+/* NEXT */
+
+function nextSpread() {
+
+  if (
+    currentSpread <
+    Math.ceil(totalPages / 2) - 1
+  ) {
+
+    currentSpread++;
+
+    showSpread();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+
+}
+
+
+/* PREVIOUS */
+
+function previousSpread() {
+
+  if (
+    currentSpread > 0
+  ) {
+
+    currentSpread--;
+
+    showSpread();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+
+}
+
+
+/*
+  KEYBOARD CONTROLS
+
+  LEFT ARROW  = NEXT
+  RIGHT ARROW = PREVIOUS
+
+  This matches the manga
+  right-to-left reading direction.
+*/
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key === "ArrowLeft"
+    ) {
+
+      nextSpread();
+
+    }
+
+    if (
+      event.key === "ArrowRight"
+    ) {
+
+      previousSpread();
+
+    }
+
+  }
+);
+
+
+/* START */
+
+showSpread();
 
 </script>
 
