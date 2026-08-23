@@ -25,119 +25,79 @@
     rel="stylesheet"
   >
 
-
   <style>
 
     * {
       box-sizing: border-box;
     }
 
-
     :root {
-
       --black: #080808;
       --white: #f2f2ee;
       --green: #b7ff00;
       --blue: #5ecbff;
-
     }
-
 
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
-
       margin: 0;
-
       background: var(--black);
-
       color: var(--white);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
       overflow-x: hidden;
     }
-
 
     /* BACKGROUND */
 
     body::before {
-
       content:
         "FREAKY 1/2  FREAKY 1/2  FREAKY 1/2";
 
       position: fixed;
-
       top: 42%;
-
       left: -20%;
-
       width: 150%;
 
       font-size: 11vw;
-
       font-weight: 900;
-
       letter-spacing: -6px;
-
       white-space: nowrap;
 
-      color:
-        rgba(
-          255,
-          255,
-          255,
-          0.025
-        );
+      color: rgba(255,255,255,0.025);
 
-      transform:
-        rotate(-7deg);
+      transform: rotate(-7deg);
 
       pointer-events: none;
-
       z-index: 0;
     }
 
-
     body::after {
-
       content: "";
 
       position: fixed;
 
       width: 160%;
-
       height: 4px;
 
       left: -30%;
-
       top: 43%;
 
       background: var(--blue);
-
       opacity: .55;
 
-      transform:
-        rotate(-2deg);
+      transform: rotate(-2deg);
 
       pointer-events: none;
-
       z-index: 0;
     }
-
 
     /* PAGE */
 
     .page {
-
       max-width: 1250px;
-
       margin: auto;
 
       padding:
@@ -146,22 +106,16 @@
         80px;
 
       position: relative;
-
       z-index: 1;
     }
-
 
     /* NAVIGATION */
 
     nav {
-
       display: flex;
 
-      justify-content:
-        space-between;
-
-      align-items:
-        center;
+      justify-content: space-between;
+      align-items: center;
 
       padding:
         12px
@@ -172,58 +126,44 @@
         2px solid var(--white);
     }
 
-
     .nav-logo {
-
       color: var(--blue);
 
       text-decoration: none;
 
       font-size: 18px;
-
       font-weight: 900;
 
       letter-spacing: 4px;
     }
 
-
     .nav-links {
-
       display: flex;
-
       gap: 25px;
     }
 
-
     .nav-links a {
-
       color: var(--white);
 
       text-decoration: none;
 
       font-size: 10px;
-
       font-weight: 900;
 
       letter-spacing: 2px;
 
       text-transform: uppercase;
 
-      transition:
-        color .15s ease;
+      transition: color .15s ease;
     }
-
 
     .nav-links a:hover {
-
       color: var(--blue);
     }
-
 
     /* HERO */
 
     .hero {
-
       position: relative;
 
       text-align: center;
@@ -242,9 +182,7 @@
       overflow: visible;
     }
 
-
     .presented {
-
       color: var(--blue);
 
       font-size: 11px;
@@ -255,26 +193,24 @@
 
       text-transform: uppercase;
 
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
+    /* FREAKY TITLE */
 
     .hero-title {
-
-      font-family:
-        "Teko",
-        sans-serif;
+      font-family: "Teko", sans-serif;
 
       font-size:
         clamp(
-          110px,
-          22vw,
-          270px
+          85px,
+          14vw,
+          175px
         );
 
-      line-height: .55;
+      line-height: .65;
 
-      letter-spacing: -9px;
+      letter-spacing: -6px;
 
       font-weight: 700;
 
@@ -285,16 +221,14 @@
 
       text-shadow:
 
-        7px 7px 0 var(--black),
+        6px 6px 0 var(--black),
 
-        -4px -4px 0 var(--black),
+        -3px -3px 0 var(--black),
 
-        11px 11px 0 var(--blue);
+        9px 9px 0 var(--blue);
     }
 
-
     .tagline {
-
       margin-top: 55px;
 
       font-size: 13px;
@@ -306,17 +240,13 @@
       text-transform: uppercase;
     }
 
-
     .tagline span {
-
       color: var(--blue);
     }
-
 
     /* TEEN BADGE */
 
     .teen-badge {
-
       display: inline-block;
 
       margin-top: 28px;
@@ -337,8 +267,7 @@
 
       text-transform: uppercase;
 
-      transform:
-        rotate(-2deg);
+      transform: rotate(-2deg);
 
       border:
         3px solid var(--black);
@@ -347,29 +276,20 @@
         4px 4px 0 var(--white);
     }
 
-
     /* VIDEO */
 
     .video-section {
-
       margin-top: 20px;
-
       margin-bottom: 100px;
     }
 
-
     .video-label {
-
       display: flex;
 
-      justify-content:
-        space-between;
-
-      align-items:
-        center;
+      justify-content: space-between;
+      align-items: center;
 
       width: 72%;
-
       max-width: 850px;
 
       margin:
@@ -383,9 +303,7 @@
         3px solid var(--white);
     }
 
-
     .video-label span:first-child {
-
       color: var(--blue);
 
       font-size: 11px;
@@ -397,9 +315,7 @@
       text-transform: uppercase;
     }
 
-
     .video-label span:last-child {
-
       font-size: 9px;
 
       font-weight: 900;
@@ -411,20 +327,15 @@
       text-transform: uppercase;
     }
 
-
     .video-frame {
-
       position: relative;
 
       width: 72%;
-
       max-width: 850px;
 
-      aspect-ratio:
-        16 / 9;
+      aspect-ratio: 16 / 9;
 
-      margin:
-        0 auto;
+      margin: 0 auto;
 
       background: #000;
 
@@ -437,27 +348,21 @@
         12px 12px 0 var(--blue);
     }
 
-
     .video-frame iframe {
-
       position: absolute;
 
       inset: 0;
 
       width: 100%;
-
       height: 100%;
 
       border: 0;
     }
 
-
     .video-corner {
-
       position: absolute;
 
       right: 12px;
-
       top: 12px;
 
       z-index: 5;
@@ -481,11 +386,9 @@
       pointer-events: none;
     }
 
-
     /* ABOUT */
 
     .about {
-
       margin-top: 80px;
 
       padding:
@@ -497,9 +400,7 @@
         3px solid var(--white);
     }
 
-
     .about-label {
-
       color: var(--blue);
 
       font-size: 10px;
@@ -513,9 +414,7 @@
       margin-bottom: 20px;
     }
 
-
     .about-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -527,9 +426,7 @@
       align-items: start;
     }
 
-
     .about h2 {
-
       margin: 0;
 
       font-size:
@@ -546,15 +443,11 @@
       text-transform: uppercase;
     }
 
-
     .about h2 span {
-
       color: var(--blue);
     }
 
-
     .about p {
-
       margin: 0;
 
       font-size: 15px;
@@ -566,24 +459,18 @@
       max-width: 600px;
     }
 
-
     /* CHAPTERS */
 
     .chapters {
-
       margin-top: 90px;
     }
 
-
     .section-heading {
-
       display: flex;
 
-      justify-content:
-        space-between;
+      justify-content: space-between;
 
-      align-items:
-        flex-end;
+      align-items: flex-end;
 
       gap: 20px;
 
@@ -595,9 +482,7 @@
         3px solid var(--white);
     }
 
-
     .section-heading h2 {
-
       margin: 0;
 
       font-size:
@@ -614,9 +499,7 @@
       text-transform: uppercase;
     }
 
-
     .section-heading .label {
-
       color: var(--blue);
 
       font-size: 10px;
@@ -630,11 +513,9 @@
       white-space: nowrap;
     }
 
-
     /* CHAPTER CARD */
 
     .chapter-card {
-
       display: grid;
 
       grid-template-columns:
@@ -665,9 +546,7 @@
         rotate(-1deg);
     }
 
-
     .chapter-card:hover {
-
       transform:
         translateY(-8px)
         rotate(0deg);
@@ -676,11 +555,9 @@
         17px 17px 0 var(--blue);
     }
 
-
     /* CHAPTER IMAGE */
 
     .chapter-image {
-
       aspect-ratio:
         3 / 4;
 
@@ -691,9 +568,7 @@
       position: relative;
     }
 
-
     .chapter-image img {
-
       width: 100%;
 
       height: 100%;
@@ -706,17 +581,13 @@
         transform .4s ease;
     }
 
-
     .chapter-card:hover
     .chapter-image img {
-
       transform:
         scale(1.04);
     }
 
-
     .chapter-image::after {
-
       content: "";
 
       position: absolute;
@@ -729,26 +600,20 @@
       pointer-events: none;
     }
 
-
     /* CHAPTER INFO */
 
     .chapter-info {
-
       display: flex;
 
-      flex-direction:
-        column;
+      flex-direction: column;
 
-      justify-content:
-        center;
+      justify-content: center;
 
       padding:
         25px;
     }
 
-
     .chapter-number {
-
       color: var(--blue);
 
       font-size: 11px;
@@ -760,9 +625,7 @@
       text-transform: uppercase;
     }
 
-
     .chapter-title {
-
       margin-top: 12px;
 
       font-family:
@@ -783,9 +646,7 @@
       text-transform: uppercase;
     }
 
-
     .chapter-description {
-
       margin-top: 25px;
 
       font-size: 12px;
@@ -799,9 +660,7 @@
       max-width: 450px;
     }
 
-
     .read-button {
-
       display: inline-block;
 
       align-self: flex-start;
@@ -825,11 +684,9 @@
       text-transform: uppercase;
     }
 
-
     /* TRANSMISSION */
 
     .transmission {
-
       margin-top: 130px;
 
       padding:
@@ -845,9 +702,7 @@
       text-align: center;
     }
 
-
     .transmission-label {
-
       color: var(--blue);
 
       font-size: 10px;
@@ -859,9 +714,7 @@
       margin-bottom: 30px;
     }
 
-
     .transmission p {
-
       margin: 0;
 
       font-size:
@@ -880,42 +733,32 @@
       text-transform: uppercase;
     }
 
-
     .transmission .blue {
-
       color: var(--blue);
     }
-
 
     /* BACK */
 
     .back {
-
       display: flex;
 
-      justify-content:
-        center;
+      justify-content: center;
 
       margin-top: 80px;
     }
 
-
     .back a {
-
       display: inline-block;
 
       padding:
         13px
         20px;
 
-      background:
-        var(--white);
+      background: var(--white);
 
-      color:
-        var(--black);
+      color: var(--black);
 
-      text-decoration:
-        none;
+      text-decoration: none;
 
       font-size: 11px;
 
@@ -932,24 +775,18 @@
         all .2s ease;
     }
 
-
     .back a:hover {
+      background: var(--blue);
 
-      background:
-        var(--blue);
-
-      border-color:
-        var(--blue);
+      border-color: var(--blue);
 
       transform:
         translateY(-5px);
     }
 
-
     /* FOOTER */
 
     footer {
-
       margin-top: 70px;
 
       text-align: center;
@@ -965,30 +802,23 @@
       opacity: .5;
     }
 
-
     /* MOBILE */
 
     @media (max-width: 750px) {
 
-
       .page {
-
         padding:
           15px
           15px
           60px;
       }
 
-
       nav {
-
         align-items:
           flex-start;
       }
 
-
       .nav-links {
-
         gap: 12px;
 
         flex-wrap: wrap;
@@ -997,9 +827,7 @@
           flex-end;
       }
 
-
       .hero {
-
         padding:
           60px
           0
@@ -1009,14 +837,20 @@
           50px;
       }
 
+      .presented {
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 35px;
+      }
 
       .hero-title {
-
         font-size:
           clamp(
-            95px,
-            28vw,
-            170px
+            80px,
+            24vw,
+            145px
           );
 
         letter-spacing:
@@ -1031,9 +865,7 @@
           8px 8px 0 var(--blue);
       }
 
-
       .tagline {
-
         font-size: 9px;
 
         letter-spacing: 2.5px;
@@ -1043,11 +875,11 @@
         padding:
           0
           15px;
+
+        margin-top: 45px;
       }
 
-
       .teen-badge {
-
         font-size: 10px;
 
         padding:
@@ -1055,15 +887,12 @@
           12px;
       }
 
-
       .video-section {
-
-        margin-bottom: 70px;
+        margin-bottom:
+          70px;
       }
 
-
       .video-label {
-
         display: block;
 
         width: 100%;
@@ -1071,17 +900,13 @@
         max-width: none;
       }
 
-
       .video-label span:last-child {
-
         display: block;
 
         margin-top: 8px;
       }
 
-
       .video-frame {
-
         width: 100%;
 
         max-width: none;
@@ -1090,44 +915,32 @@
           8px 8px 0 var(--blue);
       }
 
-
       .video-corner {
-
         display: none;
       }
 
-
       .about-grid {
-
         grid-template-columns:
           1fr;
 
         gap: 35px;
       }
 
-
       .about p {
-
         font-size: 14px;
       }
 
-
       .section-heading {
-
         display: block;
       }
 
-
       .section-heading .label {
-
         display: block;
 
         margin-top: 15px;
       }
 
-
       .chapter-card {
-
         grid-template-columns:
           1fr;
 
@@ -1137,24 +950,18 @@
           8px 8px 0 var(--blue);
       }
 
-
       .chapter-info {
-
         padding:
           25px
           15px
           20px;
       }
 
-
       .chapter-title {
-
         font-size: 70px;
       }
 
-
       .transmission {
-
         margin-top: 90px;
 
         padding:
@@ -1162,9 +969,7 @@
           15px;
       }
 
-
       .transmission p {
-
         font-size:
           clamp(
             35px,
@@ -1193,43 +998,29 @@
 
   <nav>
 
-
     <a
       class="nav-logo"
       href="../"
     >
-
       SK6
-
     </a>
 
 
     <div class="nav-links">
 
-
       <a href="../#comics">
-
         Comics
-
       </a>
-
 
       <a href="../about/">
-
         About
-
       </a>
-
 
       <a href="../">
-
         Home
-
       </a>
 
-
     </div>
-
 
   </nav>
 
@@ -1285,20 +1076,13 @@
 
     <div class="video-label">
 
-
       <span>
-
         Freaky 1/2 // Trailer
-
       </span>
-
 
       <span>
-
         SK6 VIDEO
-
       </span>
-
 
     </div>
 
@@ -1307,9 +1091,7 @@
 
 
       <div class="video-corner">
-
         SK6 // VIDEO
-
       </div>
 
 
@@ -1397,16 +1179,12 @@
 
 
       <h2>
-
         Chapters
-
       </h2>
 
 
       <div class="label">
-
         Freaky 1/2 / SK6
-
       </div>
 
 
