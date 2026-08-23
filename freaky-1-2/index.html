@@ -340,7 +340,14 @@
       align-items:
         center;
 
-      margin-bottom: 15px;
+      width: 72%;
+
+      max-width: 850px;
+
+      margin:
+        0
+        auto
+        15px;
 
       padding-bottom: 10px;
 
@@ -381,10 +388,13 @@
 
       position: relative;
 
-      width: 100%;
+      width: 72%;
 
-      aspect-ratio:
-        16 / 9;
+      max-width: 850px;
+
+      aspect-ratio: 16 / 9;
+
+      margin: 0 auto;
 
       background: #000;
 
@@ -394,7 +404,7 @@
         4px solid var(--white);
 
       box-shadow:
-        14px 14px 0 var(--blue);
+        12px 12px 0 var(--blue);
     }
 
 
@@ -863,6 +873,10 @@
       .video-label {
 
         display: block;
+
+        width: 100%;
+
+        max-width: none;
       }
 
 
@@ -875,6 +889,10 @@
 
 
       .video-frame {
+
+        width: 100%;
+
+        max-width: none;
 
         box-shadow:
           8px 8px 0 var(--blue);
