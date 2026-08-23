@@ -1,600 +1,850 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>9mm Girls — Volume 1 — SK6</title>
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-    }
-
-    :root {
-      --black: #080808;
-      --white: #f2f2ee;
-      --red: #e10600;
-    }
-
-    body {
-      margin: 0;
-      background: var(--black);
-      color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
-    }
-
-    /* BACKGROUND GRAPHIC */
-
-    body::before {
-      content: "9MM 9MM 9MM 9MM 9MM 9MM";
-      position: fixed;
-      top: 42%;
-      left: -20%;
-      width: 140%;
-      font-size: 12vw;
-      font-weight: 900;
-      letter-spacing: -8px;
-      white-space: nowrap;
-      color: rgba(255,255,255,0.025);
-      transform: rotate(-7deg);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* RED SCAN LINE */
-
-    body::after {
-      content: "";
-      position: fixed;
-      width: 150%;
-      height: 4px;
-      left: -25%;
-      top: 45%;
-      background: var(--red);
-      opacity: .65;
-      transform: rotate(-2deg);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* MAIN */
-
-    .reader {
-      min-height: 100vh;
-      padding: 20px 20px 60px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* HEADER */
-
-    header {
-      max-width: 1500px;
-      margin: auto;
-      padding: 20px 0 25px;
-
-      border-top: 8px solid var(--white);
-      border-bottom: 8px solid var(--white);
-
-      text-align: center;
-      position: relative;
-    }
-
-    .sk6 {
-      position: absolute;
-      top: 10px;
-      left: 0;
-
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 3px;
-    }
-
-    .issue {
-      position: absolute;
-      top: 10px;
-      right: 0;
-
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      color: var(--red);
-    }
 
-    .title {
-      font-size: clamp(50px, 10vw, 100px);
-      font-weight: 900;
-      letter-spacing: -6px;
-      line-height: .8;
-      transform: skew(-5deg);
-    }
+<meta charset="UTF-8">
 
-    .subtitle {
-      margin-top: 20px;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: var(--red);
-    }
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-    /* COMIC */
+<title>9mm Girls — Volume 1 — SK6</title>
 
-    .spread {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+<style>
 
-      width: 100%;
-      max-width: 1500px;
+* {
+  box-sizing: border-box;
+}
 
-      margin: 45px auto 0;
-      gap: 4px;
-    }
+:root {
+  --black: #080808;
+  --white: #f2f2ee;
+  --red: #e10600;
+}
 
-    .spread img {
-      display: block;
+html,
+body {
+  margin: 0;
+  padding: 0;
 
-      max-width: 50%;
-      max-height: 75vh;
+  width: 100%;
+  min-height: 100%;
 
-      width: auto;
-      height: auto;
+  background: var(--black);
+  color: var(--white);
 
-      object-fit: contain;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
 
-      border: 3px solid var(--white);
-    }
+body {
+  overflow-x: hidden;
+}
 
-    /* CONTROLS */
 
-    .controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+/* BACKGROUND GRAPHIC */
 
-      gap: 15px;
+body::before {
 
-      margin: 30px auto 0;
-    }
+  content:
+    "9MM 9MM 9MM 9MM 9MM 9MM";
 
-    button {
-      background: var(--white);
-      color: var(--black);
+  position: fixed;
 
-      border: 0;
+  top: 42%;
+  left: -20%;
 
-      padding: 13px 22px;
+  width: 140%;
 
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+  font-size: 12vw;
 
-      cursor: pointer;
+  font-weight: 900;
 
-      transition:
-        background .15s ease,
-        color .15s ease,
-        transform .15s ease;
-    }
+  letter-spacing: -8px;
 
-    button:hover:not(:disabled) {
-      background: var(--red);
-      color: var(--white);
-      transform: translateY(-3px);
-    }
+  white-space: nowrap;
 
-    button:disabled {
-      opacity: .25;
-      cursor: default;
-    }
+  color:
+    rgba(255,255,255,0.025);
 
-    #spread-number {
-      min-width: 110px;
+  transform:
+    rotate(-7deg);
 
-      padding: 11px 10px;
+  pointer-events: none;
 
-      border-top: 3px solid var(--red);
-      border-bottom: 3px solid var(--red);
+  z-index: 0;
+}
 
-      text-align: center;
 
-      color: var(--white);
+/* RED SCAN LINE */
 
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+body::after {
 
-    /* BACK */
+  content: "";
 
-    .back {
-      display: block;
+  position: fixed;
 
-      max-width: 1500px;
+  width: 150%;
 
-      margin: 35px auto 0;
+  height: 4px;
 
-      padding: 15px;
+  left: -25%;
 
-      background: var(--red);
-      color: var(--white);
+  top: 45%;
 
-      text-decoration: none;
+  background: var(--red);
 
-      text-align: center;
+  opacity: .65;
 
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+  transform:
+    rotate(-2deg);
 
-      transition: transform .15s ease;
-    }
+  pointer-events: none;
 
-    .back:hover {
-      transform: translateY(-3px);
-    }
+  z-index: 0;
+}
 
-    /* BOTTOM MARK */
 
-    .bottom-mark {
-      max-width: 1500px;
-      margin: 25px auto 0;
+/* MAIN */
 
-      display: flex;
-      justify-content: space-between;
+.reader {
 
-      font-size: 9px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+  width: 100%;
 
-      opacity: .5;
-    }
+  min-height: 100vh;
 
-    .bottom-mark span:last-child {
-      color: var(--red);
-    }
+  padding:
+    20px
+    20px
+    60px;
 
-    /* MOBILE */
+  position: relative;
 
-    @media (max-width: 700px) {
+  z-index: 1;
+}
 
-      .reader {
-        padding: 15px 12px 40px;
-      }
 
-      header {
-        padding-top: 45px;
-      }
+/* HEADER */
 
-      .sk6 {
-        left: 5px;
-      }
+header {
 
-      .issue {
-        right: 5px;
-      }
+  max-width: 1500px;
 
-      .title {
-        letter-spacing: -4px;
-      }
+  margin: auto;
 
-      .spread {
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 30px;
-      }
+  padding:
+    20px
+    0
+    25px;
 
-      .spread img {
-        max-width: 100%;
-        max-height: 65vh;
-      }
+  border-top:
+    8px solid
+    var(--white);
 
-      .controls {
-        gap: 8px;
-      }
+  border-bottom:
+    8px solid
+    var(--white);
 
-      button {
-        padding: 12px 13px;
-        font-size: 10px;
-        letter-spacing: 1px;
-      }
+  text-align: center;
 
-      #spread-number {
-        min-width: 85px;
-        font-size: 9px;
-      }
+  position: relative;
+}
 
-      .bottom-mark {
-        padding: 0 5px;
-      }
+.sk6 {
 
-    }
+  position: absolute;
 
-  </style>
+  top: 10px;
+
+  left: 0;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.issue {
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 0;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  color: var(--red);
+}
+
+.title {
+
+  font-size:
+    clamp(
+      50px,
+      10vw,
+      100px
+    );
+
+  font-weight: 900;
+
+  letter-spacing: -6px;
+
+  line-height: .8;
+
+  transform:
+    skew(-5deg);
+}
+
+.subtitle {
+
+  margin-top: 20px;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  color: var(--red);
+}
+
+
+/* COMIC */
+
+.spread {
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin:
+    30px auto
+    0;
+
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+/*
+  THIS IS THE IMPORTANT CHANGE.
+
+  The pages now use the same
+  larger sizing approach as
+  the Freaky reader.
+*/
+
+.spread img {
+
+  display: block;
+
+  width: 50%;
+
+  max-width: 700px;
+
+  height: auto;
+
+  max-height: none;
+
+  object-fit: contain;
+
+  border:
+    3px solid
+    var(--white);
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* CONTROLS */
+
+.controls {
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin:
+    30px auto
+    0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+button {
+
+  background: var(--white);
+
+  color: var(--black);
+
+  border: 0;
+
+  padding:
+    13px
+    22px;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background .15s ease,
+    color .15s ease,
+    transform .15s ease;
+}
+
+button:hover:not(:disabled) {
+
+  background: var(--red);
+
+  color: var(--white);
+
+  transform:
+    translateY(-3px);
+}
+
+button:disabled {
+
+  opacity: .25;
+
+  cursor: default;
+}
+
+#spread-number {
+
+  min-width: 110px;
+
+  padding:
+    11px
+    10px;
+
+  border-top:
+    3px solid
+    var(--red);
+
+  border-bottom:
+    3px solid
+    var(--red);
+
+  text-align: center;
+
+  color: var(--white);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* BACK */
+
+.back {
+
+  display: block;
+
+  max-width: 1500px;
+
+  margin:
+    35px auto
+    0;
+
+  padding: 15px;
+
+  background: var(--red);
+
+  color: var(--white);
+
+  text-decoration: none;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  transition:
+    transform .15s ease;
+}
+
+.back:hover {
+
+  transform:
+    translateY(-3px);
+}
+
+
+/* BOTTOM MARK */
+
+.bottom-mark {
+
+  max-width: 1500px;
+
+  margin:
+    25px auto
+    0;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  opacity: .5;
+}
+
+.bottom-mark span:last-child {
+
+  color: var(--red);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .reader {
+
+    padding:
+      15px
+      12px
+      40px;
+  }
+
+  header {
+
+    padding-top: 45px;
+  }
+
+  .sk6 {
+
+    left: 5px;
+  }
+
+  .issue {
+
+    right: 5px;
+  }
+
+  .title {
+
+    letter-spacing: -4px;
+  }
+
+  .spread {
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 30px;
+  }
+
+  .spread img {
+
+    width: 100%;
+
+    max-width: none;
+
+    max-height: none;
+  }
+
+  .controls {
+
+    gap: 8px;
+  }
+
+  button {
+
+    padding:
+      12px
+      13px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+  }
+
+  #spread-number {
+
+    min-width: 85px;
+
+    font-size: 9px;
+  }
+
+  .bottom-mark {
+
+    padding:
+      0
+      5px;
+  }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
 
-  <div class="reader">
+
+<div class="reader">
 
 
-    <!-- HEADER -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-      <div class="sk6">
-        SK6
-      </div>
-
-      <div class="issue">
-        ISSUE // 001
-      </div>
-
-      <div class="title">
-        9MM GIRLS
-      </div>
-
-      <div class="subtitle">
-        Volume 01 / Read Online
-      </div>
-
-    </header>
-
-
-    <!-- COMIC PAGES -->
-
-    <div class="spread">
-
-      <img
-        id="page-left"
-        src="../Page-01%20Large.jpeg"
-        alt="9mm Girls — Page 1"
-      >
-
-      <img
-        id="page-right"
-        src="../Page-02%20Large.jpeg"
-        alt="9mm Girls — Page 2"
-      >
-
-    </div>
-
-
-    <!-- CONTROLS -->
-
-    <div class="controls">
-
-      <button id="previous" disabled>
-        ← Previous
-      </button>
-
-      <span id="spread-number">
-        Pages 1–2
-      </span>
-
-      <button id="next">
-        Next →
-      </button>
-
-    </div>
-
-
-    <!-- BACK -->
-
-    <a class="back" href="../">
-      ← Back to 9mm Girls
-    </a>
-
-
-    <!-- FOOTER MARK -->
-
-    <div class="bottom-mark">
-
-      <span>
-        SK6 // 9MM GIRLS
-      </span>
-
-      <span>
-        001 / 069
-      </span>
-
-    </div>
-
-
+  <div class="sk6">
+    SK6
   </div>
 
+  <div class="issue">
+    ISSUE // 001
+  </div>
 
-  <script>
+  <div class="title">
+    9MM GIRLS
+  </div>
 
-    let currentSpread = 0;
+  <div class="subtitle">
+    Volume 01 / Read Online
+  </div>
 
-    const totalPages = 69;
-
-    const pageLeft =
-      document.getElementById("page-left");
-
-    const pageRight =
-      document.getElementById("page-right");
-
-    const spreadNumber =
-      document.getElementById("spread-number");
-
-    const previousButton =
-      document.getElementById("previous");
-
-    const nextButton =
-      document.getElementById("next");
+</header>
 
 
-    function getFilename(page) {
+<!-- COMIC PAGES -->
 
-      const number =
-        String(page).padStart(2, "0");
+<div class="spread">
 
-      return "../Page-" +
-        number +
-        "%20Large.jpeg";
+  <img
+    id="page-left"
+    src="../Page-01%20Large.jpeg"
+    alt="9mm Girls — Page 1"
+  >
+
+  <img
+    id="page-right"
+    src="../Page-02%20Large.jpeg"
+    alt="9mm Girls — Page 2"
+  >
+
+</div>
+
+
+<!-- CONTROLS -->
+
+<div class="controls">
+
+  <button
+    id="previous"
+    disabled
+  >
+    ← Previous
+  </button>
+
+  <span id="spread-number">
+    Pages 1–2
+  </span>
+
+  <button id="next">
+    Next →
+  </button>
+
+</div>
+
+
+<!-- BACK -->
+
+<a
+  class="back"
+  href="../"
+>
+  ← Back to 9mm Girls
+</a>
+
+
+<!-- FOOTER MARK -->
+
+<div class="bottom-mark">
+
+  <span>
+    SK6 // 9MM GIRLS
+  </span>
+
+  <span>
+    001 / 069
+  </span>
+
+</div>
+
+
+</div>
+
+
+<script>
+
+let currentSpread = 0;
+
+const totalPages = 69;
+
+
+const pageLeft =
+  document.getElementById(
+    "page-left"
+  );
+
+const pageRight =
+  document.getElementById(
+    "page-right"
+  );
+
+const spreadNumber =
+  document.getElementById(
+    "spread-number"
+  );
+
+const previousButton =
+  document.getElementById(
+    "previous"
+  );
+
+const nextButton =
+  document.getElementById(
+    "next"
+  );
+
+
+function getFilename(page) {
+
+  const number =
+    String(page).padStart(2, "0");
+
+  return "../Page-" +
+    number +
+    "%20Large.jpeg";
+
+}
+
+
+function showSpread(spread) {
+
+  currentSpread = spread;
+
+
+  const leftPage =
+    currentSpread * 2 + 1;
+
+  const rightPage =
+    leftPage + 1;
+
+
+  pageLeft.src =
+    getFilename(leftPage);
+
+  pageLeft.alt =
+    "9mm Girls — Page " +
+    leftPage;
+
+
+  if (
+    rightPage <= totalPages
+  ) {
+
+    pageRight.src =
+      getFilename(rightPage);
+
+    pageRight.alt =
+      "9mm Girls — Page " +
+      rightPage;
+
+    pageRight.style.display =
+      "block";
+
+    spreadNumber.textContent =
+      "Pages " +
+      leftPage +
+      "–" +
+      rightPage;
+
+  }
+
+  else {
+
+    pageRight.style.display =
+      "none";
+
+    spreadNumber.textContent =
+      "Page " +
+      leftPage;
+
+  }
+
+
+  previousButton.disabled =
+    currentSpread === 0;
+
+
+  const lastSpread =
+    Math.floor(
+      (totalPages - 1) / 2
+    );
+
+
+  nextButton.disabled =
+    currentSpread === lastSpread;
+
+
+  window.scrollTo(
+    0,
+    0
+  );
+
+}
+
+
+/* PREVIOUS */
+
+previousButton.addEventListener(
+  "click",
+  function() {
+
+    if (
+      currentSpread > 0
+    ) {
+
+      showSpread(
+        currentSpread - 1
+      );
+
+    }
+
+  }
+);
+
+
+/* NEXT */
+
+nextButton.addEventListener(
+  "click",
+  function() {
+
+    const lastSpread =
+      Math.floor(
+        (totalPages - 1) / 2
+      );
+
+
+    if (
+      currentSpread <
+      lastSpread
+    ) {
+
+      showSpread(
+        currentSpread + 1
+      );
+
+    }
+
+  }
+);
+
+
+/* KEYBOARD */
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    const lastSpread =
+      Math.floor(
+        (totalPages - 1) / 2
+      );
+
+
+    if (
+      event.key === "ArrowRight" &&
+      currentSpread < lastSpread
+    ) {
+
+      showSpread(
+        currentSpread + 1
+      );
 
     }
 
 
-    function showSpread(spread) {
+    if (
+      event.key === "ArrowLeft" &&
+      currentSpread > 0
+    ) {
 
-      currentSpread = spread;
-
-      const leftPage =
-        currentSpread * 2 + 1;
-
-      const rightPage =
-        leftPage + 1;
-
-
-      pageLeft.src =
-        getFilename(leftPage);
-
-      pageLeft.alt =
-        "9mm Girls — Page " +
-        leftPage;
-
-
-      if (rightPage <= totalPages) {
-
-        pageRight.src =
-          getFilename(rightPage);
-
-        pageRight.alt =
-          "9mm Girls — Page " +
-          rightPage;
-
-        pageRight.style.display =
-          "block";
-
-        spreadNumber.textContent =
-          "Pages " +
-          leftPage +
-          "–" +
-          rightPage;
-
-      } else {
-
-        pageRight.style.display =
-          "none";
-
-        spreadNumber.textContent =
-          "Page " +
-          leftPage;
-
-      }
-
-
-      previousButton.disabled =
-        currentSpread === 0;
-
-
-      const lastSpread =
-        Math.floor(
-          (totalPages - 1) / 2
-        );
-
-
-      nextButton.disabled =
-        currentSpread === lastSpread;
-
-
-      window.scrollTo(0, 0);
+      showSpread(
+        currentSpread - 1
+      );
 
     }
 
-
-    previousButton.addEventListener(
-      "click",
-      function() {
-
-        if (currentSpread > 0) {
-
-          showSpread(
-            currentSpread - 1
-          );
-
-        }
-
-      }
-    );
+  }
+);
 
 
-    nextButton.addEventListener(
-      "click",
-      function() {
+/* START */
 
-        const lastSpread =
-          Math.floor(
-            (totalPages - 1) / 2
-          );
+showSpread(0);
 
-        if (
-          currentSpread <
-          lastSpread
-        ) {
+</script>
 
-          showSpread(
-            currentSpread + 1
-          );
-
-        }
-
-      }
-    );
-
-
-    document.addEventListener(
-      "keydown",
-      function(event) {
-
-        const lastSpread =
-          Math.floor(
-            (totalPages - 1) / 2
-          );
-
-
-        if (
-          event.key === "ArrowRight" &&
-          currentSpread < lastSpread
-        ) {
-
-          showSpread(
-            currentSpread + 1
-          );
-
-        }
-
-
-        if (
-          event.key === "ArrowLeft" &&
-          currentSpread > 0
-        ) {
-
-          showSpread(
-            currentSpread - 1
-          );
-
-        }
-
-      }
-    );
-
-
-    showSpread(0);
-
-  </script>
 
 </body>
+
 </html>
