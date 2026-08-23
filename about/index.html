@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SK6 — About</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #080808;
+      --white: #f2f2ee;
+      --green: #b7ff00;
+      --red: #e10600;
+      --blue: #5ecbff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      background: var(--black);
+
+      color: var(--white);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      overflow-x: hidden;
+    }
+
+    /* BACKGROUND */
+
+    body::before {
+
+      content:
+        "SK6  SK6  SK6  SK6  SK6";
+
+      position: fixed;
+
+      top: 40%;
+
+      left: -20%;
+
+      width: 140%;
+
+      font-size: 12vw;
+
+      font-weight: 900;
+
+      letter-spacing: -8px;
+
+      white-space: nowrap;
+
+      color:
+        rgba(255,255,255,0.025);
+
+      transform: rotate(-7deg);
+
+      pointer-events: none;
+
+      z-index: 0;
+    }
+
+    body::after {
+
+      content: "";
+
+      position: fixed;
+
+      width: 160%;
+
+      height: 4px;
+
+      left: -30%;
+
+      top: 43%;
+
+      background: var(--green);
+
+      opacity: .6;
+
+      transform: rotate(-2deg);
+
+      pointer-events: none;
+
+      z-index: 0;
+    }
+
+    .page {
+
+      max-width: 1250px;
+
+      margin: auto;
+
+      padding:
+        20px
+        25px
+        80px;
+
+      position: relative;
+
+      z-index: 1;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      padding:
+        12px
+        0
+        18px;
+
+      border-bottom:
+        2px solid var(--white);
+    }
+
+    .nav-logo {
+
+      color: var(--green);
+
+      text-decoration: none;
+
+      font-size: 18px;
+
+      font-weight: 900;
+
+      letter-spacing: 4px;
+    }
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 25px;
+    }
+
+    .nav-links a {
+
+      color: var(--white);
+
+      text-decoration: none;
+
+      font-size: 10px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      transition:
+        color .15s ease;
+    }
+
+    .nav-links a:hover {
+
+      color: var(--green);
+    }
+
+    /* HERO */
+
+    .hero {
+
+      min-height: 520px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      text-align: center;
+
+      position: relative;
+
+      border-bottom:
+        10px solid var(--white);
+
+      margin-bottom: 90px;
+
+      overflow: hidden;
+    }
+
+    .hero-number {
+
+      position: absolute;
+
+      top: 25px;
+
+      left: 0;
+
+      color: var(--green);
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+    }
+
+    .hero-title {
+
+      font-family:
+        "Teko",
+        sans-serif;
+
+      font-size:
+        clamp(
+          130px,
+          25vw,
+          290px
+        );
+
+      line-height: .6;
+
+      letter-spacing: -8px;
+
+      font-weight: 700;
+
+      transform:
+        skew(-7deg);
+
+      text-shadow:
+
+        7px 7px 0 var(--black),
+
+        -4px -4px 0 var(--black),
+
+        11px 11px 0 var(--green);
+    }
+
+    .hero-subtitle {
+
+      margin-top: 55px;
+
+      font-size: 14px;
+
+      font-weight: 900;
+
+      letter-spacing: 7px;
+
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle span {
+
+      color: var(--green);
+    }
+
+    /* INTRO */
+
+    .intro {
+
+      max-width: 950px;
+
+      margin:
+        0 auto
+        120px;
+
+      text-align: center;
+    }
+
+    .section-label {
+
+      color: var(--green);
+
+      font-size: 10px;
+
+      font-weight: 900;
+
+      letter-spacing: 4px;
+
+      margin-bottom: 25px;
+    }
+
+    .intro h2 {
+
+      margin: 0;
+
+      font-size:
+        clamp(
+          55px,
+          9vw,
+          105px
+        );
+
+      line-height: .78;
+
+      letter-spacing: -6px;
+
+      text-transform: uppercase;
+    }
+
+    .intro h2 span {
+
+      color: var(--green);
+    }
+
+    .intro p {
+
+      max-width: 760px;
+
+      margin:
+        40px auto
+        0;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      font-weight: 600;
+    }
+
+    /* ARTISTS */
+
+    .artists {
+
+      margin-top: 100px;
+    }
+
+    .artists-heading {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-end;
+
+      border-bottom:
+        3px solid var(--white);
+
+      padding-bottom: 15px;
+
+      margin-bottom: 50px;
+    }
+
+    .artists-heading h2 {
+
+      margin: 0;
+
+      font-size:
+        clamp(
+          55px,
+          9vw,
+          95px
+        );
+
+      line-height: .8;
+
+      letter-spacing: -6px;
+
+      text-transform: uppercase;
+    }
+
+    .artists-heading span {
+
+      color: var(--green);
+
+      font-size: 10px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .artist-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 30px;
+    }
+
+    .artist {
+
+      position: relative;
+
+      background:
+        var(--white);
+
+      color:
+        var(--black);
+
+      padding: 35px;
+
+      min-height: 300px;
+
+      border:
+        4px solid var(--white);
+
+      box-shadow:
+        12px 12px 0
+        var(--green);
+    }
+
+    .artist:nth-child(2) {
+
+      box-shadow:
+        12px 12px 0
+        var(--blue);
+    }
+
+    .artist-name {
+
+      font-family:
+        "Teko",
+        sans-serif;
+
+      font-size: 75px;
+
+      line-height: .7;
+
+      letter-spacing: -3px;
+
+      text-transform: uppercase;
+    }
+
+    .artist-role {
+
+      margin-top: 25px;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .artist-description {
+
+      margin-top: 30px;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      font-weight: 600;
+
+      max-width: 480px;
+    }
+
+    .artist-mark {
+
+      position: absolute;
+
+      right: 20px;
+
+      bottom: 10px;
+
+      font-size: 70px;
+
+      font-weight: 900;
+
+      opacity: .15;
+
+      transform: rotate(-10deg);
+    }
+
+    /* WHAT WE MAKE */
+
+    .make {
+
+      margin-top: 130px;
+
+      padding:
+        60px 25px;
+
+      border-top:
+        10px solid var(--white);
+
+      border-bottom:
+        10px solid var(--white);
+
+      text-align: center;
+    }
+
+    .make h2 {
+
+      margin: 0;
+
+      font-size:
+        clamp(
+          50px,
+          9vw,
+          95px
+        );
+
+      line-height: .8;
+
+      letter-spacing: -6px;
+
+      text-transform: uppercase;
+    }
+
+    .make h2 span {
+
+      color: var(--green);
+    }
+
+    .make-list {
+
+      margin-top: 45px;
+
+      display: flex;
+
+      justify-content:
+        center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+    .make-list span {
+
+      padding:
+        10px 15px;
+
+      background:
+        var(--green);
+
+      color:
+        var(--black);
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      transform:
+        rotate(-1deg);
+    }
+
+    .make-list span:nth-child(2) {
+
+      background:
+        var(--red);
+
+      color:
+        var(--white);
+
+      transform:
+        rotate(2deg);
+    }
+
+    .make-list span:nth-child(3) {
+
+      background:
+        var(--blue);
+
+      color:
+        var(--black);
+
+      transform:
+        rotate(-2deg);
+    }
+
+    /* MANIFESTO */
+
+    .manifesto {
+
+      margin-top: 110px;
+
+      padding:
+        60px 25px;
+
+      background:
+        var(--green);
+
+      color:
+        var(--black);
+
+      text-align: center;
+
+      transform:
+        rotate(-1deg);
+    }
+
+    .manifesto-label {
+
+      font-size: 10px;
+
+      font-weight: 900;
+
+      letter-spacing: 4px;
+
+      margin-bottom: 30px;
+    }
+
+    .manifesto p {
+
+      margin: 0;
+
+      font-size:
+        clamp(
+          30px,
+          6vw,
+          70px
+        );
+
+      font-weight: 900;
+
+      line-height: .85;
+
+      letter-spacing: -4px;
+
+      text-transform: uppercase;
+    }
+
+    /* BACK BUTTON */
+
+    .back {
+
+      display: flex;
+
+      justify-content: center;
+
+      margin-top: 80px;
+    }
+
+    .back a {
+
+      display: inline-block;
+
+      padding:
+        13px 20px;
+
+      background:
+        var(--white);
+
+      color:
+        var(--black);
+
+      text-decoration: none;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      border:
+        3px solid var(--white);
+
+      transition:
+        all .2s ease;
+    }
+
+    .back a:hover {
+
+      background:
+        var(--green);
+
+      border-color:
+        var(--green);
+
+      transform:
+        translateY(-5px);
+    }
+
+    /* FOOTER */
+
+    footer {
+
+      margin-top: 80px;
+
+      text-align: center;
+
+      font-size: 10px;
+
+      font-weight: 900;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      opacity: .5;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .page {
+
+        padding:
+          15px
+          15px
+          60px;
+      }
+
+      nav {
+
+        align-items:
+          flex-start;
+      }
+
+      .nav-links {
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content:
+          flex-end;
+      }
+
+      .hero {
+
+        min-height: 400px;
+
+        margin-bottom: 70px;
+      }
+
+      .hero-title {
+
+        font-size:
+          clamp(
+            110px,
+            30vw,
+            170px
+          );
+
+        letter-spacing: -5px;
+
+        text-shadow:
+
+          5px 5px 0 var(--black),
+
+          -3px -3px 0 var(--black),
+
+          8px 8px 0 var(--green);
+      }
+
+      .hero-subtitle {
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        margin-top: 45px;
+      }
+
+      .intro {
+
+        margin-bottom: 80px;
+      }
+
+      .intro p {
+
+        font-size: 15px;
+      }
+
+      .artists-heading {
+
+        display: block;
+      }
+
+      .artists-heading span {
+
+        display: block;
+
+        margin-top: 15px;
+      }
+
+      .artist-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .artist {
+
+        min-height: 280px;
+
+        padding: 25px;
+      }
+
+      .artist-name {
+
+        font-size: 65px;
+      }
+
+      .make {
+
+        margin-top: 90px;
+      }
+
+      .manifesto {
+
+        margin-top: 80px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a
+      class="nav-logo"
+      href="../"
+    >
+      SK6
+    </a>
+
+    <div class="nav-links">
+
+      <a href="../#comics">
+        Comics
+      </a>
+
+      <a href="index.html">
+        About
+      </a>
+
+      <a href="../">
+        Home
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-number">
+      SK6 // ABOUT
+    </div>
+
+    <div class="hero-title">
+      SK6
+    </div>
+
+    <div class="hero-subtitle">
+
+      Two artists
+      <span>/</span>
+      Too many stories
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="section-label">
+      WHO THE FUCK IS SK6?
+    </div>
+
+    <h2>
+
+      We make comics<br>
+
+      because we
+      <span>want to.</span>
+
+    </h2>
+
+    <p>
+
+      SK6 is an independent comics and art project
+      built by two artists who wanted to make their
+      own stories, their own way.
+
+      <br><br>
+
+      No publisher telling us what to make.
+      No algorithm deciding what a comic should be.
+      Just weird ideas, questionable decisions,
+      drawings, stories, and a lot of time spent
+      making things we actually want to exist.
+
+    </p>
+
+  </section>
+
+
+  <!-- ARTISTS -->
+
+  <section class="artists">
+
+    <div class="artists-heading">
+
+      <h2>
+        The Artists
+      </h2>
+
+      <span>
+        SK6 // 002
+      </span>
+
+    </div>
+
+
+    <div class="artist-grid">
+
+
+      <!-- ASH -->
+
+      <article class="artist">
+
+        <div class="artist-name">
+          Ash
+        </div>
+
+        <div class="artist-role">
+
+          Artist / Writer / Professional Overthinker
+
+        </div>
+
+        <div class="artist-description">
+
+          One half of SK6.
+
+          <br><br>
+
+          Draws things, writes things,
+          and occasionally decides that
+          making another comic is a good idea.
+
+        </div>
+
+        <div class="artist-mark">
+          X
+        </div>
+
+      </article>
+
+
+      <!-- VICE -->
+
+      <article class="artist">
+
+        <div class="artist-name">
+          Vice
+        </div>
+
+        <div class="artist-role">
+
+          Artist / Writer / Agent of Chaos
+
+        </div>
+
+        <div class="artist-description">
+
+          The other half of SK6.
+
+          <br><br>
+
+          Helps turn strange ideas into
+          actual stories and somehow makes
+          everything even more chaotic.
+
+        </div>
+
+        <div class="artist-mark">
+          X
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT WE MAKE -->
+
+  <section class="make">
+
+    <div class="section-label">
+      WHAT WE MAKE
+    </div>
+
+    <h2>
+
+      Comics.<br>
+
+      Art.<br>
+
+      <span>Weird shit.</span>
+
+    </h2>
+
+
+    <div class="make-list">
+
+      <span>
+        Comics
+      </span>
+
+      <span>
+        Illustration
+      </span>
+
+      <span>
+        Stories
+      </span>
+
+      <span>
+        Characters
+      </span>
+
+      <span>
+        Chaos
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- MANIFESTO -->
+
+  <section class="manifesto">
+
+    <div class="manifesto-label">
+      SK6 // MANIFESTO
+    </div>
+
+    <p>
+
+      Made by hand.<br>
+
+      Built from weird ideas.<br>
+
+      Made because we wanted to.
+
+    </p>
+
+  </section>
+
+
+  <!-- BACK -->
+
+  <div class="back">
+
+    <a href="../">
+
+      ← Back to SK6
+
+    </a>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    SK6 © 2026
+
+    <br><br>
+
+    Comics / Art / Chaos
+
+  </footer>
+
+
+</div>
+
+</body>
+</html>
