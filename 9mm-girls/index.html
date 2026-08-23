@@ -31,20 +31,16 @@
 
 <style>
 
-
 * {
   box-sizing: border-box;
 }
 
 
 :root {
-
   --black: #080808;
-
   --white: #f2f2ee;
-
+  --green: #b7ff00;
   --red: #e10600;
-
 }
 
 
@@ -54,22 +50,11 @@ html {
 
 
 body {
-
   margin: 0;
-
-  background:
-    var(--black);
-
-  color:
-    var(--white);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-
 }
 
 
@@ -78,26 +63,25 @@ body {
 body::before {
 
   content:
-    "9MM GIRLS  9MM GIRLS";
+    "9MM GIRLS  9MM GIRLS  9MM GIRLS";
 
   position: fixed;
 
   top: 42%;
-
   left: -20%;
 
   width: 150%;
 
-  font-size: 13vw;
+  font-size: 11vw;
 
   font-weight: 900;
 
-  letter-spacing: -8px;
+  letter-spacing: -6px;
 
   white-space: nowrap;
 
   color:
-    rgba(255,255,255,.025);
+    rgba(255,255,255,0.025);
 
   transform:
     rotate(-7deg);
@@ -105,7 +89,6 @@ body::before {
   pointer-events: none;
 
   z-index: 0;
-
 }
 
 
@@ -134,7 +117,6 @@ body::after {
   pointer-events: none;
 
   z-index: 0;
-
 }
 
 
@@ -154,7 +136,6 @@ body::after {
   position: relative;
 
   z-index: 1;
-
 }
 
 
@@ -178,7 +159,6 @@ nav {
   border-bottom:
     2px solid
     var(--white);
-
 }
 
 
@@ -195,7 +175,6 @@ nav {
   font-weight: 900;
 
   letter-spacing: 4px;
-
 }
 
 
@@ -204,7 +183,6 @@ nav {
   display: flex;
 
   gap: 25px;
-
 }
 
 
@@ -227,7 +205,6 @@ nav {
 
   transition:
     color .15s ease;
-
 }
 
 
@@ -235,13 +212,12 @@ nav {
 
   color:
     var(--red);
-
 }
 
 
 /* HERO */
 
-header {
+.hero {
 
   position: relative;
 
@@ -258,39 +234,19 @@ header {
     var(--white);
 
   margin-bottom:
-    75px;
+    65px;
 
   overflow:
-    hidden;
-
-}
-
-
-/* ISSUE NUMBER */
-
-.number {
-
-  position: absolute;
-
-  top: 20px;
-
-  left: 0;
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 3px;
-
-  color:
-    var(--red);
-
+    visible;
 }
 
 
 /* SK6 PRESENTS */
 
-.kicker {
+.presented {
+
+  color:
+    var(--red);
 
   font-size: 11px;
 
@@ -298,23 +254,17 @@ header {
 
   letter-spacing: 5px;
 
-  color:
-    var(--red);
-
   text-transform:
     uppercase;
 
   margin-bottom:
-    40px;
-
+    35px;
 }
 
 
 /* 9MM GIRLS LOGO */
 
-.logo {
-
-  margin: 0;
+.hero-title {
 
   font-family:
     "Teko",
@@ -322,17 +272,19 @@ header {
 
   font-size:
     clamp(
-      85px,
-      14vw,
-      175px
+      90px,
+      15vw,
+      190px
     );
 
-  font-weight: 700;
-
-  line-height: .65;
+  line-height:
+    .62;
 
   letter-spacing:
-    -6px;
+    -7px;
+
+  font-weight:
+    700;
 
   text-transform:
     uppercase;
@@ -350,16 +302,15 @@ header {
 
     9px 9px 0
     var(--red);
-
 }
 
 
-/* SUBTITLE */
+/* TAGLINE */
 
-.subtitle {
+.tagline {
 
   margin-top:
-    55px;
+    50px;
 
   font-size: 13px;
 
@@ -369,27 +320,25 @@ header {
 
   text-transform:
     uppercase;
-
 }
 
 
-.subtitle span {
+.tagline span {
 
   color:
     var(--red);
-
 }
 
 
-/* STAMP */
+/* 18+ BADGE */
 
-.stamp {
+.adult-badge {
 
   display:
     inline-block;
 
   margin-top:
-    25px;
+    28px;
 
   padding:
     9px
@@ -401,11 +350,11 @@ header {
   color:
     var(--white);
 
-  font-size: 11px;
+  font-size: 12px;
 
   font-weight: 900;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   text-transform:
     uppercase;
@@ -413,97 +362,59 @@ header {
   transform:
     rotate(-2deg);
 
-}
-
-
-/* 18+ */
-
-.adult-badge {
-
-  display:
-    inline-block;
-
-  margin-top:
-    15px;
-
-  padding:
-    7px
-    11px;
-
-  background:
-    var(--black);
-
-  color:
-    var(--red);
-
   border:
     3px solid
-    var(--red);
+    var(--black);
 
-  font-size: 12px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  transform:
-    rotate(2deg);
-
+  box-shadow:
+    4px 4px 0
+    var(--white);
 }
 
 
-/* SECTION */
+/* VIDEO */
 
-.section-heading {
+.video-section {
+
+  margin-top:
+    20px;
+
+  margin-bottom:
+    100px;
+}
+
+
+.video-label {
 
   display: flex;
-
-  align-items:
-    flex-end;
 
   justify-content:
     space-between;
 
-  gap: 20px;
+  align-items:
+    center;
 
-  margin-bottom:
-    45px;
+  width: 72%;
+
+  max-width:
+    850px;
+
+  margin:
+    0 auto 15px;
+
+  padding-bottom:
+    10px;
 
   border-bottom:
     3px solid
     var(--white);
-
-  padding-bottom:
-    15px;
-
 }
 
 
-.section-heading h2 {
+.video-label span:first-child {
 
-  margin: 0;
-
-  font-size:
-    clamp(
-      45px,
-      9vw,
-      90px
-    );
-
-  line-height: .8;
-
-  letter-spacing:
-    -6px;
-
-  font-weight: 900;
-
-  text-transform:
-    uppercase;
-
-}
-
-
-.issue {
+  color:
+    var(--red);
 
   font-size: 11px;
 
@@ -513,27 +424,273 @@ header {
 
   text-transform:
     uppercase;
+}
+
+
+.video-label span:last-child {
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  opacity: .5;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* VIDEO FRAME */
+
+.video-frame {
+
+  position: relative;
+
+  width: 72%;
+
+  max-width:
+    850px;
+
+  aspect-ratio:
+    16 / 9;
+
+  margin:
+    0 auto;
+
+  background:
+    #000;
+
+  overflow:
+    hidden;
+
+  border:
+    4px solid
+    var(--white);
+
+  box-shadow:
+    12px 12px 0
+    var(--red);
+}
+
+
+.video-frame iframe {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  border: 0;
+}
+
+
+.video-corner {
+
+  position: absolute;
+
+  right: 12px;
+
+  top: 12px;
+
+  z-index: 5;
+
+  padding:
+    7px
+    10px;
+
+  background:
+    var(--red);
+
+  color:
+    var(--white);
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform:
+    uppercase;
+
+  pointer-events:
+    none;
+}
+
+
+/* ABOUT */
+
+.about {
+
+  margin-top:
+    80px;
+
+  padding:
+    0
+    0
+    70px;
+
+  border-bottom:
+    3px solid
+    var(--white);
+}
+
+
+.about-label {
 
   color:
     var(--red);
 
-  white-space:
-    nowrap;
+  font-size: 10px;
 
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  text-transform:
+    uppercase;
+
+  margin-bottom:
+    25px;
 }
 
 
-/* CHAPTER GRID */
-
-.chapters {
+.about-grid {
 
   display: grid;
 
   grid-template-columns:
-    repeat(3, 1fr);
+    1fr
+    1fr;
 
-  gap: 25px;
+  gap: 60px;
 
+  align-items:
+    start;
+}
+
+
+.about-title {
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      55px,
+      8vw,
+      90px
+    );
+
+  line-height:
+    .78;
+
+  letter-spacing:
+    -5px;
+
+  text-transform:
+    uppercase;
+}
+
+
+.about-title span {
+
+  color:
+    var(--red);
+}
+
+
+.about p {
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height:
+    1.7;
+
+  font-weight: 600;
+
+  max-width:
+    600px;
+}
+
+
+/* CHAPTERS */
+
+.chapters {
+
+  margin-top:
+    90px;
+}
+
+
+.section-heading {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-end;
+
+  gap: 20px;
+
+  margin-bottom:
+    45px;
+
+  padding-bottom:
+    15px;
+
+  border-bottom:
+    3px solid
+    var(--white);
+}
+
+
+.section-heading h2 {
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      50px,
+      9vw,
+      90px
+    );
+
+  line-height:
+    .8;
+
+  letter-spacing:
+    -6px;
+
+  text-transform:
+    uppercase;
+}
+
+
+.section-heading .label {
+
+  color:
+    var(--red);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform:
+    uppercase;
+
+  white-space:
+    nowrap;
 }
 
 
@@ -541,17 +698,21 @@ header {
 
 .chapter-card {
 
-  position: relative;
+  display: grid;
 
-  display: block;
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 30px;
+
+  padding: 12px;
 
   background:
     var(--white);
 
   color:
     var(--black);
-
-  padding: 12px;
 
   text-decoration:
     none;
@@ -561,90 +722,33 @@ header {
     var(--white);
 
   box-shadow:
-    10px 10px 0
+    12px 12px 0
     var(--red);
 
   transition:
     transform .2s ease,
     box-shadow .2s ease;
 
-}
-
-
-.chapter-card:nth-child(1) {
-
   transform:
     rotate(-1deg);
-
-}
-
-
-.chapter-card:nth-child(2) {
-
-  transform:
-    rotate(0deg);
-
-}
-
-
-.chapter-card:nth-child(3) {
-
-  transform:
-    rotate(1deg);
-
 }
 
 
 .chapter-card:hover {
 
   transform:
-    translateY(-12px)
+    translateY(-8px)
     rotate(0deg);
 
   box-shadow:
-    15px 15px 0
+    17px 17px 0
     var(--red);
-
 }
 
 
-/* CHAPTER LABEL */
+/* CHAPTER IMAGE */
 
-.chapter-number {
-
-  position: absolute;
-
-  top: 18px;
-
-  left: 18px;
-
-  z-index: 5;
-
-  background:
-    var(--red);
-
-  color:
-    var(--white);
-
-  padding:
-    7px
-    9px;
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  text-transform:
-    uppercase;
-
-}
-
-
-/* PANEL AREA */
-
-.chapter-cover {
+.chapter-image {
 
   width: 100%;
 
@@ -660,32 +764,24 @@ header {
     transparent;
 
   padding:
-    45px
-    0
+    30px
     15px;
-
 }
 
 
-/* ACTUAL PANEL */
+/* ACTUAL MANGA PAGE */
 
-.chapter-cover img {
+.chapter-image img {
 
-  width: 88%;
+  width: 78%;
 
   height: auto;
-
-  aspect-ratio:
-    2.4 / 1;
-
-  object-fit:
-    cover;
 
   display:
     block;
 
   background:
-    transparent;
+    var(--black);
 
   border:
     4px solid
@@ -696,135 +792,112 @@ header {
 
   transition:
     transform .3s ease;
-
 }
 
 
 .chapter-card:hover
-.chapter-cover img {
+.chapter-image img {
 
   transform:
     rotate(0deg)
     scale(1.04);
-
 }
 
 
-/* PLACEHOLDERS */
-
-.placeholder {
-
-  color:
-    var(--red);
-
-  font-size: 32px;
-
-  font-weight: 900;
-
-  line-height: .8;
-
-  letter-spacing: -2px;
-
-  text-align:
-    center;
-
-  text-transform:
-    uppercase;
-
-}
-
-
-.coming {
-
-  position: absolute;
-
-  bottom: 18px;
-
-  right: 18px;
-
-  background:
-    var(--black);
-
-  color:
-    var(--red);
-
-  padding:
-    7px
-    9px;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  text-transform:
-    uppercase;
-
-  border:
-    2px solid
-    var(--red);
-
-  transform:
-    rotate(2deg);
-
-}
-
-
-/* INFO */
+/* CHAPTER INFO */
 
 .chapter-info {
 
-  padding:
-    17px
-    5px
-    8px;
+  display: flex;
 
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  padding:
+    25px;
+}
+
+
+.chapter-number {
+
+  color:
+    var(--red);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform:
+    uppercase;
 }
 
 
 .chapter-title {
 
-  font-size: 32px;
+  margin-top:
+    12px;
 
-  font-weight: 900;
+  font-family:
+    "Teko",
+    sans-serif;
 
-  line-height: .9;
+  font-size:
+    clamp(
+      55px,
+      8vw,
+      85px
+    );
 
-  letter-spacing: -2px;
+  line-height:
+    .7;
+
+  letter-spacing:
+    -3px;
 
   text-transform:
     uppercase;
-
 }
 
 
 .chapter-description {
 
-  margin-top: 10px;
+  margin-top:
+    25px;
 
-  font-size: 11px;
+  font-size: 12px;
 
-  font-weight: 900;
+  font-weight: 700;
 
-  line-height: 1.4;
+  line-height:
+    1.5;
 
   text-transform:
     uppercase;
 
+  max-width:
+    450px;
 }
 
 
-.read {
+.read-button {
 
   display:
     inline-block;
 
-  margin-top: 15px;
+  align-self:
+    flex-start;
+
+  margin-top:
+    30px;
 
   padding:
-    9px
-    14px;
+    14px
+    20px;
 
   background:
     var(--black);
@@ -836,11 +909,10 @@ header {
 
   font-weight: 900;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -849,10 +921,10 @@ header {
 .transmission {
 
   margin-top:
-    120px;
+    130px;
 
   padding:
-    55px
+    60px
     20px;
 
   border-top:
@@ -865,13 +937,6 @@ header {
 
   text-align:
     center;
-
-  position:
-    relative;
-
-  overflow:
-    hidden;
-
 }
 
 
@@ -887,8 +952,7 @@ header {
   letter-spacing: 4px;
 
   margin-bottom:
-    25px;
-
+    30px;
 }
 
 
@@ -905,14 +969,14 @@ header {
 
   font-weight: 900;
 
-  line-height: .83;
+  line-height:
+    .83;
 
   letter-spacing:
     -5px;
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -920,28 +984,72 @@ header {
 
   color:
     var(--red);
-
 }
 
 
-.transmission-mark {
+/* BACK */
 
-  position: absolute;
+.back {
 
-  right: 20px;
+  display: flex;
 
-  bottom: 10px;
+  justify-content:
+    center;
 
-  font-size: 70px;
+  margin-top:
+    80px;
+}
+
+
+.back a {
+
+  display:
+    inline-block;
+
+  padding:
+    13px
+    20px;
+
+  background:
+    var(--white);
+
+  color:
+    var(--black);
+
+  text-decoration:
+    none;
+
+  font-size: 11px;
 
   font-weight: 900;
 
-  color:
+  letter-spacing: 3px;
+
+  text-transform:
+    uppercase;
+
+  border:
+    3px solid
+    var(--white);
+
+  transition:
+    all .2s ease;
+}
+
+
+.back a:hover {
+
+  background:
     var(--red);
 
-  transform:
-    rotate(-10deg);
+  border-color:
+    var(--red);
 
+  color:
+    var(--white);
+
+  transform:
+    translateY(-5px);
 }
 
 
@@ -957,15 +1065,16 @@ footer {
 
   font-size: 10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 4px;
+  letter-spacing:
+    4px;
 
   text-transform:
     uppercase;
 
   opacity: .5;
-
 }
 
 
@@ -980,7 +1089,6 @@ footer {
       15px
       15px
       60px;
-
   }
 
 
@@ -988,34 +1096,35 @@ footer {
 
     align-items:
       flex-start;
-
   }
 
 
   .nav-links {
 
-    gap: 12px;
+    gap:
+      12px;
 
     flex-wrap:
       wrap;
 
     justify-content:
       flex-end;
-
   }
 
 
-  header {
+  .hero {
 
     padding:
       60px
       0
-      45px;
+      50px;
 
+    margin-bottom:
+      50px;
   }
 
 
-  .kicker {
+  .presented {
 
     font-size:
       10px;
@@ -1025,17 +1134,16 @@ footer {
 
     margin-bottom:
       35px;
-
   }
 
 
-  .logo {
+  .hero-title {
 
     font-size:
       clamp(
         80px,
-        24vw,
-        145px
+        25vw,
+        150px
       );
 
     letter-spacing:
@@ -1051,25 +1159,104 @@ footer {
 
       8px 8px 0
       var(--red);
-
   }
 
 
-  .subtitle {
+  .tagline {
 
     font-size:
-      10px;
+      9px;
 
     letter-spacing:
-      3px;
+      2.5px;
 
     line-height:
       1.6;
 
     padding:
-      0
-      15px;
+      0 15px;
 
+    margin-top:
+      45px;
+  }
+
+
+  .adult-badge {
+
+    font-size:
+      10px;
+
+    padding:
+      8px
+      12px;
+  }
+
+
+  .video-section {
+
+    margin-bottom:
+      70px;
+  }
+
+
+  .video-label {
+
+    display:
+      block;
+
+    width:
+      100%;
+
+    max-width:
+      none;
+  }
+
+
+  .video-label span:last-child {
+
+    display:
+      block;
+
+    margin-top:
+      8px;
+  }
+
+
+  .video-frame {
+
+    width:
+      100%;
+
+    max-width:
+      none;
+
+    box-shadow:
+      8px 8px 0
+      var(--red);
+  }
+
+
+  .video-corner {
+
+    display:
+      none;
+  }
+
+
+  .about-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      35px;
+  }
+
+
+  .about p {
+
+    font-size:
+      14px;
   }
 
 
@@ -1077,64 +1264,64 @@ footer {
 
     display:
       block;
-
   }
 
 
-  .issue {
+  .section-heading .label {
 
     display:
       block;
 
     margin-top:
       15px;
-
   }
 
 
-  .chapters {
+  /* MOBILE CHAPTER */
+
+  .chapter-card {
 
     grid-template-columns:
       1fr;
 
     gap:
-      40px;
+      0;
 
+    box-shadow:
+      8px 8px 0
+      var(--red);
   }
 
 
-  .chapter-card {
-
-    max-width:
-      430px;
-
-    width:
-      100%;
-
-    margin:
-      auto;
-
-  }
-
-
-  .chapter-cover {
+  .chapter-image {
 
     padding:
-      45px
+      35px
       0
       15px;
-
   }
 
 
-  .chapter-cover img {
+  .chapter-image img {
 
     width:
-      88%;
+      78%;
+  }
 
-    aspect-ratio:
-      2.4 / 1;
 
+  .chapter-info {
+
+    padding:
+      25px
+      15px
+      20px;
+  }
+
+
+  .chapter-title {
+
+    font-size:
+      70px;
   }
 
 
@@ -1143,18 +1330,26 @@ footer {
     margin-top:
       90px;
 
+    padding:
+      50px
+      15px;
   }
 
 
-  .transmission-mark {
+  .transmission p {
 
-    display:
-      none;
+    font-size:
+      clamp(
+        35px,
+        10vw,
+        60px
+      );
 
+    letter-spacing:
+      -3px;
   }
 
 }
-
 
 </style>
 
@@ -1171,89 +1366,67 @@ footer {
 
 <nav>
 
-
   <a
     class="nav-logo"
     href="../"
   >
-
     SK6
-
   </a>
 
 
   <div class="nav-links">
 
-
     <a href="#chapters">
-
       Chapters
-
     </a>
 
-
-    <a href="#transmission">
-
+    <a href="#about">
       About
-
     </a>
-
 
     <a href="../">
-
       SK6 Home
-
     </a>
 
-
   </div>
-
 
 </nav>
 
 
 <!-- HERO -->
 
-<header>
+<section class="hero">
 
 
-  <div class="number">
+  <div class="presented">
 
-    SK6 // 001
-
-  </div>
-
-
-  <div class="kicker">
-
-    SK6 Presents
+    SK6 PRESENTS
 
   </div>
 
 
-  <h1 class="logo">
+  <div class="hero-title">
 
     9MM GIRLS
 
-  </h1>
-
-
-  <div class="subtitle">
-
-    Guns
-    <span>/</span>
-
-    Girls
-    <span>/</span>
-
-    Bad Decisions
-
   </div>
 
 
-  <div class="stamp">
+  <div class="tagline">
 
-    18+ // 9MM GIRLS
+    Guns
+
+    <span>/</span>
+
+    Girls
+
+    <span>/</span>
+
+    Cars
+
+    <span>/</span>
+
+    Bad Decisions
 
   </div>
 
@@ -1265,12 +1438,109 @@ footer {
   </div>
 
 
-</header>
+</section>
+
+
+<!-- VIDEO -->
+
+<section class="video-section">
+
+
+  <div class="video-label">
+
+    <span>
+
+      9mm Girls // Intro
+
+    </span>
+
+    <span>
+
+      SK6 VIDEO
+
+    </span>
+
+  </div>
+
+
+  <div class="video-frame">
+
+
+    <div class="video-corner">
+
+      SK6 // VIDEO
+
+    </div>
+
+
+    <div id="player"></div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section
+  class="about"
+  id="about"
+>
+
+
+  <div class="about-label">
+
+    ABOUT 9MM GIRLS
+
+  </div>
+
+
+  <div class="about-grid">
+
+
+    <h2 class="about-title">
+
+      Guns.<br>
+
+      <span>Girls.</span>
+
+    </h2>
+
+
+    <p>
+
+      Welcome to the world of 9mm Girls.
+
+      <br><br>
+
+      Guns, girls, cars,
+      questionable decisions,
+      and enough chaos to make
+      things interesting.
+
+      <br><br>
+
+      Follow the girls through
+      their adventures, disasters,
+      and whatever happens next.
+
+    </p>
+
+
+  </div>
+
+
+</section>
 
 
 <!-- CHAPTERS -->
 
-<main id="chapters">
+<section
+  class="chapters"
+  id="chapters"
+>
 
 
   <div class="section-heading">
@@ -1283,9 +1553,9 @@ footer {
     </h2>
 
 
-    <div class="issue">
+    <div class="label">
 
-      9mm Girls / SK6-001
+      9mm Girls / SK6
 
     </div>
 
@@ -1293,249 +1563,131 @@ footer {
   </div>
 
 
-  <div class="chapters">
-
-
-    <!-- CHAPTER 01 -->
-
-    <a
-      class="chapter-card"
-      href="volume-1/"
-    >
-
-
-      <div class="chapter-number">
-
-        CHAPTER 01
-
-      </div>
-
-
-      <div class="chapter-cover">
-
-
-        <img
-          id="random9mm"
-          src="Page-01%20Large.jpeg"
-          alt="9mm Girls Chapter 01 preview"
-        >
-
-
-      </div>
-
-
-      <div class="chapter-info">
-
-
-        <div class="chapter-title">
-
-          Chapter 01
-
-        </div>
-
-
-        <div class="chapter-description">
-
-          The first chapter
-          of 9mm Girls.
-
-          Enter at your
-          own risk.
-
-        </div>
-
-
-        <div class="read">
-
-          Read →
-
-        </div>
-
-
-      </div>
-
-
-    </a>
-
-
-    <!-- CHAPTER 02 -->
-
-    <div class="chapter-card">
-
-
-      <div class="chapter-number">
-
-        CHAPTER 02
-
-      </div>
-
-
-      <div class="chapter-cover">
-
-
-        <div class="placeholder">
-
-          CHAPTER<br>
-          02
-
-        </div>
-
-
-        <div class="coming">
-
-          Coming Soon
-
-        </div>
-
-
-      </div>
-
-
-      <div class="chapter-info">
-
-
-        <div class="chapter-title">
-
-          Chapter 02
-
-        </div>
-
-
-        <div class="chapter-description">
-
-          More 9mm Girls
-          coming soon.
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-    <!-- MORE -->
-
-    <div class="chapter-card">
-
-
-      <div class="chapter-number">
-
-        SK6-003
-
-      </div>
-
-
-      <div class="chapter-cover">
-
-
-        <div class="placeholder">
-
-          MORE<br>
-          CHAPTERS<br>
-          SOON
-
-        </div>
-
-
-        <div class="coming">
-
-          Coming Soon
-
-        </div>
-
-
-      </div>
-
-
-      <div class="chapter-info">
-
-
-        <div class="chapter-title">
-
-          More
-
-        </div>
-
-
-        <div class="chapter-description">
-
-          More 9mm Girls
-          from SK6.
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-
-  <!-- TRANSMISSION -->
-
-  <section
-    class="transmission"
-    id="transmission"
+  <!-- CHAPTER 01 -->
+
+  <a
+    class="chapter-card"
+    href="volume-1/"
   >
 
 
-    <div class="transmission-label">
+    <div class="chapter-image">
 
-      9MM TRANSMISSION // 001
+
+      <img
+
+        src="Page-01%20Large.jpeg"
+
+        alt="9mm Girls Chapter 1 preview"
+
+      >
+
 
     </div>
 
 
-    <p>
-
-      Girls.<br>
+    <div class="chapter-info">
 
 
-      <span class="red">
+      <div class="chapter-number">
 
-        Guns. Trouble.
+        SK6-001 // CHAPTER 01
 
-      </span><br>
-
-
-      Let's go.
-
-    </p>
+      </div>
 
 
-    <div class="transmission-mark">
+      <div class="chapter-title">
 
-      X
+        Chapter 1
+
+      </div>
+
+
+      <div class="chapter-description">
+
+        The beginning of
+        9mm Girls.
+
+        <br><br>
+
+        Enter a world of guns,
+        girls, cars, chaos,
+        and questionable
+        life choices.
+
+      </div>
+
+
+      <div class="read-button">
+
+        Read Chapter 1 →
+
+      </div>
+
 
     </div>
 
 
-  </section>
+  </a>
 
 
-</main>
+</section>
+
+
+<!-- TRANSMISSION -->
+
+<section class="transmission">
+
+
+  <div class="transmission-label">
+
+    SK6 TRANSMISSION // 001
+
+  </div>
+
+
+  <p>
+
+    Guns.<br>
+
+    <span class="red">
+
+      Girls.
+
+    </span><br>
+
+    Cars.<br>
+
+    Bad decisions.
+
+  </p>
+
+
+</section>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+  <a href="../">
+
+    ← Back to SK6
+
+  </a>
+
+</div>
 
 
 <!-- FOOTER -->
 
 <footer>
 
-
   SK6 © 2026
 
   <br><br>
 
-  9mm Girls
-
-  <br><br>
-
   Comics / Art / Chaos
-
 
 </footer>
 
@@ -1543,46 +1695,97 @@ footer {
 </div>
 
 
-<!-- RANDOM PANEL -->
+<!-- YOUTUBE PLAYER API -->
 
 <script>
 
+var player;
 
-const total9mmPages = 69;
-
-
-const randomPage =
-
-  Math.floor(
-
-    Math.random() *
-    total9mmPages
-
-  ) + 1;
+var stopTime = 82;
 
 
-const randomImage =
+function onYouTubeIframeAPIReady() {
 
-  document.getElementById(
-    "random9mm"
+  player = new YT.Player('player', {
+
+    videoId: 'yh0lfYOxf3I',
+
+    playerVars: {
+
+      autoplay: 1,
+
+      mute: 1,
+
+      controls: 0,
+
+      rel: 0,
+
+      modestbranding: 1,
+
+      playsinline: 1,
+
+      start: 0
+
+    },
+
+    events: {
+
+      onReady: function(event) {
+
+        event.target.playVideo();
+
+      },
+
+      onStateChange: function(event) {
+
+        if (
+          event.data === YT.PlayerState.PLAYING
+        ) {
+
+          checkVideoTime();
+
+        }
+
+      }
+
+    }
+
+  });
+
+}
+
+
+function checkVideoTime() {
+
+  if (!player) {
+    return;
+  }
+
+
+  if (
+    player.getCurrentTime() >= stopTime
+  ) {
+
+    player.pauseVideo();
+
+    return;
+
+  }
+
+
+  setTimeout(
+    checkVideoTime,
+    250
   );
 
-
-randomImage.src =
-
-  "Page-" +
-
-  String(
-    randomPage
-  ).padStart(
-    2,
-    "0"
-  ) +
-
-  "%20Large.jpeg";
-
+}
 
 </script>
+
+
+<script
+  src="https://www.youtube.com/iframe_api"
+></script>
 
 
 </body>
