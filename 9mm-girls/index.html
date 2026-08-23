@@ -731,6 +731,14 @@ nav {
 
   transform:
     rotate(-1deg);
+
+  /*
+    MATCHES THE FREAKY
+    CHAPTER CARD SIZE
+  */
+
+  min-height:
+    390px;
 }
 
 
@@ -752,6 +760,11 @@ nav {
 
   width: 100%;
 
+  height: 100%;
+
+  min-height:
+    360px;
+
   display: flex;
 
   align-items:
@@ -769,13 +782,18 @@ nav {
 }
 
 
-/* ACTUAL MANGA PAGE */
+/* 9MM COVER */
 
 .chapter-image img {
 
-  width: 78%;
+  width:
+    78%;
 
-  height: auto;
+  height:
+    320px;
+
+  object-fit:
+    contain;
 
   display:
     block;
@@ -830,7 +848,8 @@ nav {
 
   font-weight: 900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
   text-transform:
     uppercase;
@@ -909,7 +928,8 @@ nav {
 
   font-weight: 900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
   text-transform:
     uppercase;
@@ -949,7 +969,8 @@ nav {
 
   font-weight: 900;
 
-  letter-spacing: 4px;
+  letter-spacing:
+    4px;
 
   margin-bottom:
     30px;
@@ -967,7 +988,8 @@ nav {
       75px
     );
 
-  font-weight: 900;
+  font-weight:
+    900;
 
   line-height:
     .83;
@@ -1021,9 +1043,11 @@ nav {
 
   font-size: 11px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
   text-transform:
     uppercase;
@@ -1074,7 +1098,8 @@ footer {
   text-transform:
     uppercase;
 
-  opacity: .5;
+  opacity:
+    .5;
 }
 
 
@@ -1287,6 +1312,9 @@ footer {
     gap:
       0;
 
+    min-height:
+      auto;
+
     box-shadow:
       8px 8px 0
       var(--red);
@@ -1294,6 +1322,12 @@ footer {
 
 
   .chapter-image {
+
+    height:
+      360px;
+
+    min-height:
+      360px;
 
     padding:
       35px
@@ -1306,6 +1340,12 @@ footer {
 
     width:
       78%;
+
+    height:
+      320px;
+
+    object-fit:
+      contain;
   }
 
 
@@ -1708,7 +1748,8 @@ function onYouTubeIframeAPIReady() {
 
   player = new YT.Player('player', {
 
-    videoId: 'yh0lfYOxf3I',
+    videoId:
+      'yh0lfYOxf3I',
 
     playerVars: {
 
@@ -1739,7 +1780,8 @@ function onYouTubeIframeAPIReady() {
       onStateChange: function(event) {
 
         if (
-          event.data === YT.PlayerState.PLAYING
+          event.data ===
+          YT.PlayerState.PLAYING
         ) {
 
           checkVideoTime();
@@ -1758,7 +1800,9 @@ function onYouTubeIframeAPIReady() {
 function checkVideoTime() {
 
   if (!player) {
+
     return;
+
   }
 
 
