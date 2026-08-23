@@ -50,785 +50,360 @@ body {
   overflow-x: hidden;
 }
 
-
 /* BACKGROUND */
 
 body::before {
-
-  content:
-    "SK6  SK6  SK6  SK6  SK6";
-
+  content: "SK6  SK6  SK6  SK6  SK6";
   position: fixed;
-
   top: 42%;
   left: -20%;
-
   width: 140%;
-
   font-size: 12vw;
-
   font-weight: 900;
-
   letter-spacing: -8px;
-
   white-space: nowrap;
-
-  color:
-    rgba(255,255,255,.025);
-
-  transform:
-    rotate(-7deg);
-
-  pointer-events:
-    none;
-
-  z-index:
-    0;
+  color: rgba(255,255,255,.025);
+  transform: rotate(-7deg);
+  pointer-events: none;
+  z-index: 0;
 }
-
 
 body::after {
-
   content: "";
-
   position: fixed;
-
   width: 160%;
-
   height: 4px;
-
   left: -30%;
-
   top: 43%;
-
-  background:
-    var(--green);
-
-  opacity:
-    .6;
-
-  transform:
-    rotate(-2deg);
-
-  pointer-events:
-    none;
-
-  z-index:
-    0;
+  background: var(--green);
+  opacity: .6;
+  transform: rotate(-2deg);
+  pointer-events: none;
+  z-index: 0;
 }
-
 
 /* PAGE */
 
 .page {
-
-  max-width:
-    1250px;
-
-  margin:
-    auto;
-
-  padding:
-    20px
-    25px
-    80px;
-
-  position:
-    relative;
-
-  z-index:
-    1;
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 25px 80px;
+  position: relative;
+  z-index: 1;
 }
-
 
 /* NAVIGATION */
 
 nav {
-
-  display:
-    flex;
-
-  justify-content:
-    space-between;
-
-  align-items:
-    center;
-
-  padding:
-    12px
-    0
-    18px;
-
-  border-bottom:
-    2px solid
-    var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 18px;
+  border-bottom: 2px solid var(--white);
 }
-
 
 .nav-logo {
-
-  color:
-    var(--green);
-
-  text-decoration:
-    none;
-
-  font-size:
-    18px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    4px;
+  color: var(--green);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 4px;
 }
-
 
 .nav-links {
-
-  display:
-    flex;
-
-  gap:
-    25px;
+  display: flex;
+  gap: 25px;
 }
-
 
 .nav-links a {
-
-  color:
-    var(--white);
-
-  text-decoration:
-    none;
-
-  font-size:
-    10px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    2px;
-
-  text-transform:
-    uppercase;
-
-  transition:
-    color .15s ease;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color .15s ease;
 }
-
 
 .nav-links a:hover {
-
-  color:
-    var(--green);
+  color: var(--green);
 }
-
 
 /* HERO */
 
 .hero {
-
-  text-align:
-    center;
-
-  padding:
-    100px
-    0
-    90px;
-
-  border-bottom:
-    10px solid
-    var(--white);
-
-  margin-bottom:
-    80px;
+  text-align: center;
+  padding: 100px 0 90px;
+  border-bottom: 10px solid var(--white);
+  margin-bottom: 80px;
 }
-
 
 .kicker {
-
-  color:
-    var(--green);
-
-  font-size:
-    11px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    5px;
-
-  text-transform:
-    uppercase;
-
-  margin-bottom:
-    25px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
-
 
 .hero-title {
-
-  margin:
-    0;
-
-  font-family:
-    "Teko",
-    sans-serif;
-
-  font-size:
-    clamp(
-      80px,
-      15vw,
-      190px
-    );
-
-  font-weight:
-    700;
-
-  line-height:
-    .62;
-
-  letter-spacing:
-    -7px;
-
-  transform:
-    skew(-7deg);
+  margin: 0;
+  font-family: "Teko", sans-serif;
+  font-size: clamp(80px, 15vw, 190px);
+  font-weight: 700;
+  line-height: .62;
+  letter-spacing: -7px;
+  transform: skew(-7deg);
 
   text-shadow:
-
-    7px 7px 0
-    var(--black),
-
-    -4px -4px 0
-    var(--black),
-
-    11px 11px 0
-    var(--green);
+    7px 7px 0 var(--black),
+    -4px -4px 0 var(--black),
+    11px 11px 0 var(--green);
 }
-
 
 .hero-subtitle {
-
-  margin-top:
-    45px;
-
-  font-size:
-    13px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    5px;
-
-  text-transform:
-    uppercase;
+  margin-top: 45px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
-
 
 .hero-subtitle span {
-
-  color:
-    var(--green);
+  color: var(--green);
 }
-
 
 /* CONTACT GRID */
 
 .contact-grid {
-
-  display:
-    grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap:
-    30px;
-
-  max-width:
-    1100px;
-
-  margin:
-    auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
 }
-
 
 /* CONTACT CARD */
 
 .contact-card {
-
-  display:
-    block;
-
-  background:
-    var(--white);
-
-  color:
-    var(--black);
-
-  padding:
-    35px;
-
-  text-decoration:
-    none;
-
-  border:
-    4px solid
-    var(--white);
-
-  box-shadow:
-    10px 10px 0
-    var(--green);
+  display: block;
+  background: var(--white);
+  color: var(--black);
+  padding: 35px;
+  text-decoration: none;
+  border: 4px solid var(--white);
+  box-shadow: 10px 10px 0 var(--green);
 
   transition:
     transform .2s ease,
     box-shadow .2s ease;
 }
 
-
 .contact-card:nth-child(1) {
-
-  transform:
-    rotate(-1deg);
+  transform: rotate(-1deg);
 }
-
 
 .contact-card:nth-child(2) {
-
-  transform:
-    rotate(1deg);
+  transform: rotate(1deg);
 }
-
 
 .contact-card:nth-child(3) {
-
-  transform:
-    rotate(-1deg);
+  transform: rotate(-1deg);
 }
 
-
 .contact-card:hover {
-
   transform:
     translateY(-10px)
     rotate(0deg);
 
   box-shadow:
-    15px 15px 0
-    var(--green);
+    15px 15px 0 var(--green);
 }
-
 
 /* VICE CARD */
 
 .contact-card.vice:hover {
-
   box-shadow:
-    15px 15px 0
-    var(--pink);
+    15px 15px 0 var(--pink);
 }
-
 
 /* NUMBER */
 
 .contact-number {
-
-  font-size:
-    10px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    3px;
-
-  color:
-    var(--green);
-
-  margin-bottom:
-    20px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--green);
+  margin-bottom: 20px;
 }
-
 
 .contact-card.vice .contact-number {
-
-  color:
-    var(--pink);
+  color: var(--pink);
 }
-
 
 /* TITLE */
 
 .contact-title {
-
-  font-family:
-    "Teko",
-    sans-serif;
-
-  font-size:
-    65px;
-
-  font-weight:
-    700;
-
-  line-height:
-    .7;
-
-  letter-spacing:
-    -3px;
-
-  text-transform:
-    uppercase;
+  font-family: "Teko", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: .7;
+  letter-spacing: -3px;
+  text-transform: uppercase;
 }
-
 
 /* TEXT */
 
 .contact-text {
-
-  margin-top:
-    25px;
-
-  font-size:
-    12px;
-
-  font-weight:
-    900;
-
-  line-height:
-    1.5;
-
-  text-transform:
-    uppercase;
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
-
 
 /* BUTTON */
 
 .contact-arrow {
-
-  display:
-    inline-block;
-
-  margin-top:
-    25px;
-
-  padding:
-    9px
-    14px;
-
-  background:
-    var(--black);
-
-  color:
-    var(--green);
-
-  font-size:
-    10px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    2px;
-
-  text-transform:
-    uppercase;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 9px 14px;
+  background: var(--black);
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
-
 
 .contact-card.vice .contact-arrow {
-
-  color:
-    var(--pink);
+  color: var(--pink);
 }
-
 
 /* MESSAGE */
 
 .message {
-
-  margin-top:
-    100px;
-
-  padding:
-    60px
-    25px;
-
-  background:
-    var(--green);
-
-  color:
-    var(--black);
-
-  text-align:
-    center;
-
-  transform:
-    rotate(-1deg);
+  margin-top: 100px;
+  padding: 60px 25px;
+  background: var(--green);
+  color: var(--black);
+  text-align: center;
+  transform: rotate(-1deg);
 }
-
 
 .message h2 {
-
-  margin:
-    0;
-
-  font-size:
-    clamp(
-      45px,
-      8vw,
-      85px
-    );
-
-  line-height:
-    .8;
-
-  letter-spacing:
-    -5px;
-
-  text-transform:
-    uppercase;
+  margin: 0;
+  font-size: clamp(45px, 8vw, 85px);
+  line-height: .8;
+  letter-spacing: -5px;
+  text-transform: uppercase;
 }
-
 
 .message p {
-
-  max-width:
-    700px;
-
-  margin:
-    30px
-    auto
-    0;
-
-  font-size:
-    14px;
-
-  font-weight:
-    900;
-
-  line-height:
-    1.6;
-
-  text-transform:
-    uppercase;
+  max-width: 700px;
+  margin: 30px auto 0;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.6;
+  text-transform: uppercase;
 }
-
 
 /* BACK BUTTON */
 
 .back {
-
-  display:
-    flex;
-
-  justify-content:
-    center;
-
-  margin-top:
-    90px;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
 }
-
 
 .back a {
-
-  display:
-    inline-block;
-
-  padding:
-    13px
-    20px;
-
-  background:
-    var(--white);
-
-  color:
-    var(--black);
-
-  text-decoration:
-    none;
-
-  font-size:
-    11px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    3px;
-
-  text-transform:
-    uppercase;
-
-  border:
-    3px solid
-    var(--white);
-
-  transition:
-    all .2s ease;
+  display: inline-block;
+  padding: 13px 20px;
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 3px solid var(--white);
+  transition: all .2s ease;
 }
-
 
 .back a:hover {
-
-  background:
-    var(--green);
-
-  border-color:
-    var(--green);
-
-  transform:
-    translateY(-5px);
+  background: var(--green);
+  border-color: var(--green);
+  transform: translateY(-5px);
 }
-
 
 /* FOOTER */
 
 footer {
-
-  margin-top:
-    70px;
-
-  text-align:
-    center;
-
-  font-size:
-    10px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    4px;
-
-  text-transform:
-    uppercase;
-
-  opacity:
-    .5;
+  margin-top: 70px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: .5;
 }
-
 
 /* MOBILE */
 
 @media (max-width: 750px) {
 
   .page {
-
-    padding:
-      15px
-      15px
-      60px;
+    padding: 15px 15px 60px;
   }
-
 
   nav {
-
-    align-items:
-      flex-start;
+    align-items: flex-start;
   }
-
 
   .nav-links {
-
-    gap:
-      12px;
-
-    flex-wrap:
-      wrap;
-
-    justify-content:
-      flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
-
 
   .hero {
-
-    padding:
-      75px
-      0
-      65px;
-
-    margin-bottom:
-      60px;
+    padding: 75px 0 65px;
+    margin-bottom: 60px;
   }
-
 
   .hero-title {
-
-    font-size:
-      clamp(
-        80px,
-        22vw,
-        150px
-      );
-
-    letter-spacing:
-      -5px;
+    font-size: clamp(80px, 22vw, 150px);
+    letter-spacing: -5px;
 
     text-shadow:
-
-      5px 5px 0
-      var(--black),
-
-      -3px -3px 0
-      var(--black),
-
-      8px 8px 0
-      var(--green);
+      5px 5px 0 var(--black),
+      -3px -3px 0 var(--black),
+      8px 8px 0 var(--green);
   }
-
 
   .hero-subtitle {
-
-    font-size:
-      10px;
-
-    letter-spacing:
-      3px;
-
-    line-height:
-      1.7;
-
-    padding:
-      0 15px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    line-height: 1.7;
+    padding: 0 15px;
   }
-
 
   .contact-grid {
-
-    grid-template-columns:
-      1fr;
-
-    gap:
-      35px;
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
-
 
   .contact-card {
-
-    padding:
-      30px;
+    padding: 30px;
   }
-
 
   .contact-title {
-
-    font-size:
-      60px;
+    font-size: 60px;
   }
 
-
   .message {
-
-    padding:
-      50px
-      20px;
+    padding: 50px 20px;
   }
 
 }
@@ -837,11 +412,9 @@ footer {
 
 </head>
 
-
 <body>
 
 <div class="page">
-
 
 <!-- NAVIGATION -->
 
@@ -853,7 +426,6 @@ footer {
   >
     SK6
   </a>
-
 
   <div class="nav-links">
 
@@ -905,7 +477,6 @@ footer {
 
 <main>
 
-
   <div class="contact-grid">
 
 
@@ -913,7 +484,7 @@ footer {
 
     <a
       class="contact-card"
-      href="mailto:YOUR-EMAIL-HERE@example.com"
+      href="mailto:solikoseisk6@gmail.com"
     >
 
       <div class="contact-number">
@@ -966,7 +537,7 @@ footer {
         for artwork,
         comics,
         characters
-        and more 
+        and more
         importantly, SHRIMPS.
 
       </div>
