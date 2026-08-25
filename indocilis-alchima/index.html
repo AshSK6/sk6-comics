@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,15 +42,15 @@
 
   --white: #f2f2ee;
 
-  --violet: #8f00ff;
+  --violet: #9b4dff;
 
 }
 
 
+/* PAGE */
+
 html {
-
   scroll-behavior: smooth;
-
 }
 
 
@@ -70,8 +69,8 @@ body {
     Helvetica,
     sans-serif;
 
-  overflow-x: hidden;
-
+  overflow-x:
+    hidden;
 }
 
 
@@ -82,21 +81,29 @@ body::before {
   content:
     "INDOCILIS ALCHIMIA  INDOCILIS ALCHIMIA";
 
-  position: fixed;
+  position:
+    fixed;
 
-  top: 42%;
+  top:
+    42%;
 
-  left: -20%;
+  left:
+    -25%;
 
-  width: 150%;
+  width:
+    160%;
 
-  font-size: 8vw;
+  font-size:
+    9vw;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: -5px;
+  letter-spacing:
+    -5px;
 
-  white-space: nowrap;
+  white-space:
+    nowrap;
 
   color:
     rgba(255,255,255,0.025);
@@ -104,39 +111,48 @@ body::before {
   transform:
     rotate(-7deg);
 
-  pointer-events: none;
+  pointer-events:
+    none;
 
-  z-index: 0;
-
+  z-index:
+    0;
 }
 
 
 body::after {
 
-  content: "";
+  content:
+    "";
 
-  position: fixed;
+  position:
+    fixed;
 
-  width: 160%;
+  width:
+    160%;
 
-  height: 4px;
+  height:
+    4px;
 
-  left: -30%;
+  left:
+    -30%;
 
-  top: 43%;
+  top:
+    43%;
 
   background:
     var(--violet);
 
-  opacity: .55;
+  opacity:
+    .55;
 
   transform:
     rotate(-2deg);
 
-  pointer-events: none;
+  pointer-events:
+    none;
 
-  z-index: 0;
-
+  z-index:
+    0;
 }
 
 
@@ -144,19 +160,22 @@ body::after {
 
 .page {
 
-  max-width: 1250px;
+  max-width:
+    1250px;
 
-  margin: auto;
+  margin:
+    auto;
 
   padding:
     20px
     25px
     80px;
 
-  position: relative;
+  position:
+    relative;
 
-  z-index: 1;
-
+  z-index:
+    1;
 }
 
 
@@ -164,7 +183,8 @@ body::after {
 
 nav {
 
-  display: flex;
+  display:
+    flex;
 
   justify-content:
     space-between;
@@ -180,7 +200,6 @@ nav {
   border-bottom:
     2px solid
     var(--white);
-
 }
 
 
@@ -192,21 +211,24 @@ nav {
   text-decoration:
     none;
 
-  font-size: 18px;
+  font-size:
+    18px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 4px;
-
+  letter-spacing:
+    4px;
 }
 
 
 .nav-links {
 
-  display: flex;
+  display:
+    flex;
 
-  gap: 25px;
-
+  gap:
+    25px;
 }
 
 
@@ -218,18 +240,20 @@ nav {
   text-decoration:
     none;
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 2px;
+  letter-spacing:
+    2px;
 
   text-transform:
     uppercase;
 
   transition:
     color .15s ease;
-
 }
 
 
@@ -237,7 +261,6 @@ nav {
 
   color:
     var(--violet);
-
 }
 
 
@@ -245,13 +268,14 @@ nav {
 
 .hero {
 
-  position: relative;
+  position:
+    relative;
 
   text-align:
     center;
 
   padding:
-    65px
+    70px
     0
     55px;
 
@@ -264,33 +288,34 @@ nav {
 
   overflow:
     visible;
-
 }
 
 
-/* SK6 PRESENTS */
+/* PRESENTED */
 
 .presented {
 
   color:
     var(--violet);
 
-  font-size: 11px;
+  font-size:
+    11px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 5px;
+  letter-spacing:
+    5px;
 
   text-transform:
     uppercase;
 
   margin-bottom:
     35px;
-
 }
 
 
-/* INDOCILIS ALCHIMIA TITLE */
+/* TITLE */
 
 .hero-title {
 
@@ -302,7 +327,7 @@ nav {
     clamp(
       75px,
       13vw,
-      175px
+      170px
     );
 
   line-height:
@@ -330,7 +355,6 @@ nav {
 
     9px 9px 0
     var(--violet);
-
 }
 
 
@@ -341,15 +365,17 @@ nav {
   margin-top:
     50px;
 
-  font-size: 13px;
+  font-size:
+    13px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 5px;
+  letter-spacing:
+    5px;
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -357,7 +383,51 @@ nav {
 
   color:
     var(--violet);
+}
 
+
+/* ONE SHOT BADGE */
+
+.adult-badge {
+
+  display:
+    inline-block;
+
+  margin-top:
+    28px;
+
+  padding:
+    9px
+    15px;
+
+  background:
+    var(--violet);
+
+  color:
+    var(--white);
+
+  font-size:
+    12px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    3px;
+
+  text-transform:
+    uppercase;
+
+  transform:
+    rotate(-2deg);
+
+  border:
+    3px solid
+    var(--black);
+
+  box-shadow:
+    4px 4px 0
+    var(--white);
 }
 
 
@@ -376,7 +446,6 @@ nav {
   border-bottom:
     3px solid
     var(--white);
-
 }
 
 
@@ -385,40 +454,44 @@ nav {
   color:
     var(--violet);
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 4px;
+  letter-spacing:
+    4px;
 
   text-transform:
     uppercase;
 
   margin-bottom:
     25px;
-
 }
 
 
 .about-grid {
 
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     1fr
     1fr;
 
-  gap: 60px;
+  gap:
+    60px;
 
   align-items:
     start;
-
 }
 
 
 .about-title {
 
-  margin: 0;
+  margin:
+    0;
 
   font-size:
     clamp(
@@ -435,7 +508,6 @@ nav {
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -443,40 +515,41 @@ nav {
 
   color:
     var(--violet);
-
 }
 
 
 .about p {
 
-  margin: 0;
+  margin:
+    0;
 
-  font-size: 15px;
+  font-size:
+    15px;
 
   line-height:
     1.7;
 
-  font-weight: 600;
+  font-weight:
+    600;
 
   max-width:
     600px;
-
 }
 
 
-/* ONE SHOT */
+/* ONE SHOT SECTION */
 
 .chapters {
 
   margin-top:
     90px;
-
 }
 
 
 .section-heading {
 
-  display: flex;
+  display:
+    flex;
 
   justify-content:
     space-between;
@@ -484,7 +557,8 @@ nav {
   align-items:
     flex-end;
 
-  gap: 20px;
+  gap:
+    20px;
 
   margin-bottom:
     45px;
@@ -495,13 +569,13 @@ nav {
   border-bottom:
     3px solid
     var(--white);
-
 }
 
 
 .section-heading h2 {
 
-  margin: 0;
+  margin:
+    0;
 
   font-size:
     clamp(
@@ -518,7 +592,6 @@ nav {
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -527,34 +600,39 @@ nav {
   color:
     var(--violet);
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
   text-transform:
     uppercase;
 
   white-space:
     nowrap;
-
 }
 
 
-/* ONE SHOT CARD */
+/* CHAPTER CARD */
 
 .chapter-card {
 
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     1fr
     1fr;
 
-  gap: 30px;
+  gap:
+    30px;
 
-  padding: 12px;
+  padding:
+    12px;
 
   background:
     var(--white);
@@ -582,7 +660,6 @@ nav {
 
   min-height:
     390px;
-
 }
 
 
@@ -595,22 +672,24 @@ nav {
   box-shadow:
     17px 17px 0
     var(--violet);
-
 }
 
 
-/* COVER IMAGE */
+/* CHAPTER IMAGE */
 
 .chapter-image {
 
-  width: 100%;
+  width:
+    100%;
 
-  height: 100%;
+  height:
+    100%;
 
   min-height:
     360px;
 
-  display: flex;
+  display:
+    flex;
 
   align-items:
     center;
@@ -622,10 +701,12 @@ nav {
     transparent;
 
   padding:
-    20px;
-
+    30px
+    15px;
 }
 
+
+/* CROPPED COVER PREVIEW */
 
 .chapter-image img {
 
@@ -633,13 +714,13 @@ nav {
     88%;
 
   height:
-    330px;
+    170px;
 
   object-fit:
-    contain;
+    cover;
 
   object-position:
-    center;
+    center 35%;
 
   display:
     block;
@@ -656,7 +737,6 @@ nav {
 
   transition:
     transform .3s ease;
-
 }
 
 
@@ -666,7 +746,6 @@ nav {
   transform:
     rotate(0deg)
     scale(1.04);
-
 }
 
 
@@ -674,7 +753,8 @@ nav {
 
 .chapter-info {
 
-  display: flex;
+  display:
+    flex;
 
   flex-direction:
     column;
@@ -684,7 +764,6 @@ nav {
 
   padding:
     25px;
-
 }
 
 
@@ -693,16 +772,17 @@ nav {
   color:
     var(--violet);
 
-  font-size: 11px;
+  font-size:
+    11px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
   letter-spacing:
     3px;
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -717,9 +797,9 @@ nav {
 
   font-size:
     clamp(
-      55px,
-      8vw,
-      85px
+      50px,
+      7vw,
+      82px
     );
 
   line-height:
@@ -730,7 +810,6 @@ nav {
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -739,9 +818,11 @@ nav {
   margin-top:
     25px;
 
-  font-size: 12px;
+  font-size:
+    12px;
 
-  font-weight: 700;
+  font-weight:
+    700;
 
   line-height:
     1.5;
@@ -751,9 +832,10 @@ nav {
 
   max-width:
     450px;
-
 }
 
+
+/* READ BUTTON */
 
 .read-button {
 
@@ -776,7 +858,8 @@ nav {
   color:
     var(--violet);
 
-  font-size: 11px;
+  font-size:
+    11px;
 
   font-weight:
     900;
@@ -787,6 +870,24 @@ nav {
   text-transform:
     uppercase;
 
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+.chapter-card:hover
+.read-button {
+
+  background:
+    var(--violet);
+
+  color:
+    var(--black);
+
+  transform:
+    translateY(-2px);
 }
 
 
@@ -811,7 +912,6 @@ nav {
 
   text-align:
     center;
-
 }
 
 
@@ -820,7 +920,8 @@ nav {
   color:
     var(--violet);
 
-  font-size: 10px;
+  font-size:
+    10px;
 
   font-weight:
     900;
@@ -830,13 +931,13 @@ nav {
 
   margin-bottom:
     30px;
-
 }
 
 
 .transmission p {
 
-  margin: 0;
+  margin:
+    0;
 
   font-size:
     clamp(
@@ -856,7 +957,6 @@ nav {
 
   text-transform:
     uppercase;
-
 }
 
 
@@ -864,7 +964,6 @@ nav {
 
   color:
     var(--violet);
-
 }
 
 
@@ -872,14 +971,14 @@ nav {
 
 .back {
 
-  display: flex;
+  display:
+    flex;
 
   justify-content:
     center;
 
   margin-top:
     80px;
-
 }
 
 
@@ -901,7 +1000,8 @@ nav {
   text-decoration:
     none;
 
-  font-size: 11px;
+  font-size:
+    11px;
 
   font-weight:
     900;
@@ -918,7 +1018,6 @@ nav {
 
   transition:
     all .2s ease;
-
 }
 
 
@@ -931,11 +1030,10 @@ nav {
     var(--violet);
 
   color:
-    var(--white);
+    var(--black);
 
   transform:
     translateY(-5px);
-
 }
 
 
@@ -949,7 +1047,8 @@ footer {
   text-align:
     center;
 
-  font-size: 10px;
+  font-size:
+    10px;
 
   font-weight:
     900;
@@ -962,7 +1061,6 @@ footer {
 
   opacity:
     .5;
-
 }
 
 
@@ -977,7 +1075,6 @@ footer {
       15px
       15px
       60px;
-
   }
 
 
@@ -985,7 +1082,6 @@ footer {
 
     align-items:
       flex-start;
-
   }
 
 
@@ -999,7 +1095,6 @@ footer {
 
     justify-content:
       flex-end;
-
   }
 
 
@@ -1012,7 +1107,6 @@ footer {
 
     margin-bottom:
       50px;
-
   }
 
 
@@ -1026,7 +1120,6 @@ footer {
 
     margin-bottom:
       35px;
-
   }
 
 
@@ -1035,12 +1128,12 @@ footer {
     font-size:
       clamp(
         65px,
-        20vw,
+        22vw,
         130px
       );
 
     letter-spacing:
-      -4px;
+      -5px;
 
     text-shadow:
 
@@ -1052,7 +1145,6 @@ footer {
 
       8px 8px 0
       var(--violet);
-
   }
 
 
@@ -1072,7 +1164,17 @@ footer {
 
     margin-top:
       45px;
+  }
 
+
+  .adult-badge {
+
+    font-size:
+      10px;
+
+    padding:
+      8px
+      12px;
   }
 
 
@@ -1083,7 +1185,6 @@ footer {
 
     gap:
       35px;
-
   }
 
 
@@ -1091,7 +1192,6 @@ footer {
 
     font-size:
       14px;
-
   }
 
 
@@ -1099,7 +1199,6 @@ footer {
 
     display:
       block;
-
   }
 
 
@@ -1110,11 +1209,10 @@ footer {
 
     margin-top:
       15px;
-
   }
 
 
-  /* MOBILE ONE SHOT */
+  /* MOBILE CHAPTER */
 
   .chapter-card {
 
@@ -1130,7 +1228,6 @@ footer {
     box-shadow:
       8px 8px 0
       var(--violet);
-
   }
 
 
@@ -1143,10 +1240,9 @@ footer {
       360px;
 
     padding:
-      25px
+      35px
       0
       15px;
-
   }
 
 
@@ -1156,11 +1252,13 @@ footer {
       88%;
 
     height:
-      320px;
+      170px;
 
     object-fit:
-      contain;
+      cover;
 
+    object-position:
+      center 35%;
   }
 
 
@@ -1170,7 +1268,6 @@ footer {
       25px
       15px
       20px;
-
   }
 
 
@@ -1178,7 +1275,6 @@ footer {
 
     font-size:
       70px;
-
   }
 
 
@@ -1190,7 +1286,6 @@ footer {
     padding:
       50px
       15px;
-
   }
 
 
@@ -1205,41 +1300,6 @@ footer {
 
     letter-spacing:
       -3px;
-
-  }
-
-}
-
-
-/* VERY SMALL SCREENS */
-
-@media (max-width: 500px) {
-
-
-  .hero-title {
-
-    font-size:
-      20vw;
-
-  }
-
-
-  .chapter-image {
-
-    height:
-      330px;
-
-    min-height:
-      330px;
-
-  }
-
-
-  .chapter-image img {
-
-    height:
-      290px;
-
   }
 
 }
@@ -1259,7 +1319,6 @@ footer {
 
 <nav>
 
-
   <a
     class="nav-logo"
     href="../"
@@ -1270,33 +1329,21 @@ footer {
 
   <div class="nav-links">
 
-
-    <a href="#one-shot">
-
+    <a href="#chapters">
       One Shot
-
     </a>
-
 
     <a href="#about">
-
       About
-
     </a>
-
 
     <a href="../">
-
       SK6 Home
-
     </a>
-
 
   </div>
 
-
 </nav>
-
 
 
 <!-- HERO -->
@@ -1314,7 +1361,6 @@ footer {
   <div class="hero-title">
 
     INDOCILIS<br>
-
     ALCHIMIA
 
   </div>
@@ -1322,15 +1368,15 @@ footer {
 
   <div class="tagline">
 
+    Magic
+
+    <span>/</span>
+
     Alchemy
 
     <span>/</span>
 
-    Madness
-
-    <span>/</span>
-
-    Secrets
+    Monsters
 
     <span>/</span>
 
@@ -1339,8 +1385,14 @@ footer {
   </div>
 
 
-</section>
+  <div class="adult-badge">
 
+    ONE SHOT
+
+  </div>
+
+
+</section>
 
 
 <!-- ABOUT -->
@@ -1363,9 +1415,9 @@ footer {
 
     <h2 class="about-title">
 
-      Alchemy.<br>
+      Magic.<br>
 
-      <span>Madness.</span>
+      <span>Alchemy.</span>
 
     </h2>
 
@@ -1377,15 +1429,14 @@ footer {
 
       <br><br>
 
-      A strange story of alchemy,
-      secrets, obsession, and the
-      things that should probably
-      remain buried.
+      A strange alchemical tale
+      from the SK6 universe.
 
       <br><br>
 
-      Some discoveries change the
-      world. Others change you.
+      This one shot is a small
+      glimpse into something
+      much bigger.
 
     </p>
 
@@ -1396,12 +1447,11 @@ footer {
 </section>
 
 
-
 <!-- ONE SHOT -->
 
 <section
   class="chapters"
-  id="one-shot"
+  id="chapters"
 >
 
 
@@ -1417,7 +1467,7 @@ footer {
 
     <div class="label">
 
-      Indocilis Alchimia / SK6
+      INDOCILIS ALCHIMIA / SK6
 
     </div>
 
@@ -1425,12 +1475,11 @@ footer {
   </div>
 
 
-
   <!-- ONE SHOT CARD -->
 
   <a
     class="chapter-card"
-    href="one-shot/"
+    href="ONE%20SHOT/"
   >
 
 
@@ -1439,9 +1488,9 @@ footer {
 
       <img
 
-        src="one-shot/Ia_01.jpeg"
+        src="ONE%20SHOT/Ia_01.jpeg"
 
-        alt="Indocilis Alchimia One Shot cover"
+        alt="Indocilis Alchimia preview"
 
       >
 
@@ -1449,13 +1498,12 @@ footer {
     </div>
 
 
-
     <div class="chapter-info">
 
 
       <div class="chapter-number">
 
-        SK6-IA-001 // ONE SHOT
+        SK6-003 // ONE SHOT
 
       </div>
 
@@ -1463,7 +1511,6 @@ footer {
       <div class="chapter-title">
 
         Indocilis<br>
-
         Alchimia
 
       </div>
@@ -1471,14 +1518,12 @@ footer {
 
       <div class="chapter-description">
 
-        Enter the world of
-        Indocilis Alchimia.
+        A strange alchemical story
+        from the world of SK6.
 
         <br><br>
 
-        One story.
-        One shot.
-        No turning back.
+        Enter the one shot.
 
       </div>
 
@@ -1499,7 +1544,6 @@ footer {
 </section>
 
 
-
 <!-- TRANSMISSION -->
 
 <section class="transmission">
@@ -1507,22 +1551,22 @@ footer {
 
   <div class="transmission-label">
 
-    SK6 TRANSMISSION // IA-001
+    SK6 TRANSMISSION // 003
 
   </div>
 
 
   <p>
 
-    Alchemy.<br>
+    Magic.<br>
 
     <span class="violet">
 
-      Madness.
+      Alchemy.
 
     </span><br>
 
-    Secrets.<br>
+    Monsters.<br>
 
     Chaos.
 
@@ -1532,11 +1576,9 @@ footer {
 </section>
 
 
-
 <!-- BACK -->
 
 <div class="back">
-
 
   <a href="../">
 
@@ -1544,9 +1586,7 @@ footer {
 
   </a>
 
-
 </div>
-
 
 
 <!-- FOOTER -->
