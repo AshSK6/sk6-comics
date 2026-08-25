@@ -836,41 +836,40 @@ nav {
 
 
 .read-button {
+  display: inline-block;
 
-  display:
-    inline-block;
+  align-self: flex-start;
 
-  align-self:
-    flex-start;
+  margin-top: 30px;
 
-  margin-top:
-    30px;
+  padding: 14px 20px;
 
-  padding:
-    14px
-    20px;
+  background: #080808;
 
-  background:
-    var(--black);
+  color: #b46cff;
 
-  color:
-    var(--green);
+  font-size: 11px;
 
-  font-size:
-    11px;
+  font-weight: 900;
 
-  font-weight:
-    900;
+  letter-spacing: 3px;
 
-  letter-spacing:
-    3px;
+  text-transform: uppercase;
 
-  text-transform:
-    uppercase;
+  border: 2px solid #080808;
 
   transition:
     background .2s ease,
-    color .2s ease;
+    color .2s ease,
+    transform .2s ease;
+}
+
+.read-button:hover {
+  background: #b46cff;
+
+  color: #080808;
+
+  transform: translateY(-3px);
 }
 
 
