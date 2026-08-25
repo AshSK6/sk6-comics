@@ -1,1 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>L’Héritage de la Nuit — SK6</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #080808;
+  --white: #f2f2ee;
+  --gold: #c9a45c;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  background: var(--black);
+  color: var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+/* TOP BAR */
+
+.topbar {
+
+  width: 100%;
+
+  padding:
+    15px
+    20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    2px solid
+    var(--white);
+
+  position: sticky;
+
+  top: 0;
+
+  background: var(--black);
+
+  z-index: 100;
+}
+
+
+/* SK6 */
+
+.logo {
+
+  color: var(--gold);
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  transition:
+    color .15s ease,
+    transform .15s ease;
+}
+
+.logo:hover {
+
+  color: var(--white);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* TOP TITLE */
+
+.top-title {
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+
+/* BACK */
+
+.back {
+
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  transition:
+    color .15s ease;
+}
+
+.back:hover {
+
+  color: var(--gold);
+}
+
+
+/* MAIN */
+
+.main {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding:
+    60px
+    25px
+    100px;
+}
+
+
+/* SERIES TITLE */
+
+.series-title {
+
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.series-title h1 {
+
+  margin: 0;
+
+  color: var(--gold);
+
+  font-size:
+    clamp(
+      34px,
+      7vw,
+      76px
+    );
+
+  font-weight: 900;
+
+  letter-spacing: 5px;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+.series-title p {
+
+  margin:
+    18px
+    0
+    0;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  opacity: .65;
+}
+
+
+/* CHAPTER CARD */
+
+.chapter {
+
+  width: 100%;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    42%
+    58%;
+
+  background:
+    #111;
+
+  border:
+    2px solid
+    rgba(242,242,238,.25);
+
+  overflow: hidden;
+
+  transition:
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.chapter:hover {
+
+  border-color: var(--gold);
+
+  transform:
+    translateY(-4px);
+}
+
+
+/* PREVIEW */
+
+.preview {
+
+  position: relative;
+
+  min-height: 500px;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+.preview img {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  filter:
+    brightness(.8);
+
+  transition:
+    transform .4s ease,
+    filter .4s ease;
+}
+
+.chapter:hover .preview img {
+
+  transform: scale(1.04);
+
+  filter:
+    brightness(1);
+}
+
+
+/* PREVIEW OVERLAY */
+
+.preview::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent 55%,
+      rgba(8,8,8,.75)
+    );
+
+  pointer-events: none;
+}
+
+
+/* CHAPTER INFO */
+
+.info {
+
+  padding:
+    55px
+    50px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+}
+
+
+/* CHAPTER NUMBER */
+
+.chapter-number {
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+
+/* CHAPTER TITLE */
+
+.info h2 {
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      26px,
+      4vw,
+      48px
+    );
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  line-height: 1.05;
+}
+
+
+/* DESCRIPTION */
+
+.description {
+
+  margin:
+    25px
+    0
+    30px;
+
+  max-width: 560px;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color:
+    rgba(242,242,238,.75);
+}
+
+
+/* BUTTON */
+
+.read-button {
+
+  display: inline-block;
+
+  padding:
+    14px
+    22px;
+
+  background: var(--gold);
+
+  color: var(--black);
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  transition:
+    background .15s ease,
+    color .15s ease,
+    transform .15s ease;
+}
+
+.read-button:hover {
+
+  background: var(--white);
+
+  color: var(--black);
+
+  transform:
+    translateY(-3px);
+}
+
+
+/* FOOTER */
+
+.footer {
+
+  width: 100%;
+
+  max-width: 1050px;
+
+  margin:
+    60px auto
+    0;
+
+  padding-top: 20px;
+
+  border-top:
+    2px solid
+    rgba(242,242,238,.2);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  opacity: .5;
+}
+
+.footer span:last-child {
+
+  color: var(--gold);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .topbar {
+
+    padding:
+      13px
+      15px;
+  }
+
+  .top-title {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+  .back {
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .main {
+
+    padding:
+      40px
+      15px
+      80px;
+  }
+
+  .series-title {
+
+    margin-bottom: 30px;
+  }
+
+  .series-title h1 {
+
+    letter-spacing: 3px;
+  }
+
+  .chapter {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .preview {
+
+    min-height: 420px;
+
+    height: 420px;
+  }
+
+  .preview img {
+
+    object-position:
+      center top;
+  }
+
+  .preview::after {
+
+    background:
+      linear-gradient(
+        to bottom,
+        transparent 45%,
+        rgba(8,8,8,.8)
+      );
+  }
+
+  .info {
+
+    padding:
+      35px
+      25px;
+  }
+
+  .description {
+
+    font-size: 13px;
+  }
+
+  .footer {
+
+    padding:
+      0
+      5px;
+
+    font-size: 8px;
+  }
+
+}
+
+
+/* VERY SMALL SCREENS */
+
+@media (max-width: 500px) {
+
+  .preview {
+
+    min-height: 330px;
+
+    height: 330px;
+  }
+
+  .info {
+
+    padding:
+      30px
+      20px;
+  }
+
+  .series-title h1 {
+
+    font-size: 30px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<header class="topbar">
+
+
+  <!-- RETURN TO SK6 -->
+
+  <a
+    class="logo"
+    href="../"
+  >
+    SK6
+  </a>
+
+
+  <!-- CENTER -->
+
+  <div class="top-title">
+
+    L’HÉRITAGE DE LA NUIT
+
+  </div>
+
+
+  <!-- RETURN TO SK6 WEBSITE -->
+
+  <a
+    class="back"
+    href="../"
+  >
+    SK6 HOME
+  </a>
+
+
+</header>
+
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+
+  <!-- SERIES TITLE -->
+
+  <section class="series-title">
+
+    <h1>
+      L’HÉRITAGE DE LA NUIT
+    </h1>
+
+    <p>
+      A new story from SK6
+    </p>
+
+  </section>
+
+
+
+  <!-- CHAPTER -->
+
+  <section class="chapter">
+
+
+    <!-- CROPPED FIRST PAGE -->
+
+    <div class="preview">
+
+      <img
+        src="chapter-1/H_c1_01%20Large.jpeg"
+        alt="L’Héritage de la Nuit — Chapter 01"
+      >
+
+    </div>
+
+
+
+    <!-- INFORMATION -->
+
+    <div class="info">
+
+
+      <div class="chapter-number">
+
+        CHAPTER 01
+
+      </div>
+
+
+      <h2>
+
+        THE CROWNED SHADOW
+
+      </h2>
+
+
+      <p class="description">
+
+        Beyond the walls, monsters rule the wild.
+        Hunters trained by the Church of Light
+        are humanity’s first line of defense.
+
+        <br><br>
+
+        But among all the horrors known to mankind,
+        none inspires more fear than the mysterious
+        entity known as the Crowned Shadow.
+
+      </p>
+
+
+      <a
+        class="read-button"
+        href="chapter-1/"
+      >
+
+        READ CHAPTER 01 →
+
+      </a>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <span>
+      SK6 // L’HÉRITAGE DE LA NUIT
+    </span>
+
+    <span>
+      CHAPTER 01
+    </span>
+
+  </footer>
+
+
+</main>
+
+
+</body>
+
+</html>
