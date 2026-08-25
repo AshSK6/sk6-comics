@@ -43,6 +43,7 @@
       --red: #e10600;
       --blue: #5ecbff;
       --purple: #9b4dff;
+      --gold: #c9a45c;
     }
 
 
@@ -791,6 +792,26 @@
     }
 
 
+    /* L'HÉRITAGE */
+
+    .comic-heritage:hover {
+
+      box-shadow:
+        15px 15px 0
+        var(--gold);
+    }
+
+
+    .comic-heritage:hover .read {
+
+      background:
+        var(--gold);
+
+      color:
+        var(--black);
+    }
+
+
     /* 18+ BADGE */
 
     .adult-badge {
@@ -916,6 +937,13 @@
 
       border-color:
         var(--purple);
+    }
+
+
+    .comic-heritage .cover::after {
+
+      border-color:
+        var(--gold);
     }
 
 
@@ -1103,6 +1131,16 @@
 
       color:
         var(--white);
+    }
+
+
+    .comic-heritage .issue-label {
+
+      background:
+        var(--gold);
+
+      color:
+        var(--black);
     }
 
 
@@ -2348,14 +2386,17 @@
       </a>
 
 
-      <!-- PLACEHOLDER 2 -->
+      <!-- L'HÉRITAGE DE LA NUIT -->
 
-      <div class="comic">
+      <a
+        class="comic comic-heritage"
+        href="lheritage-de-la-nuit/"
+      >
 
 
         <div class="issue-label">
 
-          CHAPTER // SK6-004
+          SK6-004
 
         </div>
 
@@ -2363,13 +2404,10 @@
         <div class="cover">
 
 
-          <div class="placeholder">
-
-            NEW<br>
-            STORY<br>
-            SOON
-
-          </div>
+          <img
+            src="lheritage-de-la-nuit/chapter-1/H_c1_01%20Large.jpeg"
+            alt="L’Héritage de la Nuit"
+          >
 
 
         </div>
@@ -2387,7 +2425,15 @@
 
           <div class="description">
 
-            Another SK6 comic is on the way.
+            Monsters. Hunters.
+            Ancient legends.
+
+          </div>
+
+
+          <div class="read">
+
+            Read →
 
           </div>
 
@@ -2395,7 +2441,7 @@
         </div>
 
 
-      </div>
+      </a>
 
 
       <!-- PLACEHOLDER 3 -->
