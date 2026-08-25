@@ -12,28 +12,49 @@
 
 <title>L’Héritage de la Nuit — SK6</title>
 
+
 <style>
 
 * {
   box-sizing: border-box;
 }
 
+
 :root {
+
   --black: #080808;
   --white: #f2f2ee;
   --gold: #c9a45c;
+
 }
+
 
 html {
-  scroll-behavior: smooth;
+
+  scroll-behavior:
+    smooth;
+
 }
 
+
 body {
+
   margin: 0;
-  background: var(--black);
-  color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+
+  background:
+    var(--black);
+
+  color:
+    var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  overflow-x:
+    hidden;
+
 }
 
 
@@ -41,14 +62,20 @@ body {
 
 .page {
 
-  max-width: 1100px;
+  width:
+    100%;
 
-  margin: auto;
+  max-width:
+    1100px;
+
+  margin:
+    0 auto;
 
   padding:
     20px
     25px
     80px;
+
 }
 
 
@@ -56,74 +83,75 @@ body {
 
 .topbar {
 
-  display: flex;
+  display:
+    flex;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
-  align-items: center;
+  align-items:
+    center;
 
   padding:
-    12px
+    15px
     0
-    18px;
+    20px;
 
   border-bottom:
     2px solid
     var(--white);
+
 }
 
-
-/* SK6 */
 
 .logo {
 
-  color: var(--gold);
+  color:
+    var(--gold);
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
-  font-size: 18px;
+  font-size:
+    18px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 4px;
+  letter-spacing:
+    4px;
 
-  transition:
-    color .15s ease,
-    transform .15s ease;
 }
 
-.logo:hover {
-
-  color: var(--white);
-
-  transform:
-    translateY(-2px);
-}
-
-
-/* BACK */
 
 .back {
 
-  color: var(--white);
+  color:
+    var(--white);
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 2px;
+  letter-spacing:
+    2px;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  transition:
-    color .15s ease;
 }
+
 
 .back:hover {
 
-  color: var(--gold);
+  color:
+    var(--gold);
+
 }
 
 
@@ -131,75 +159,222 @@ body {
 
 .hero {
 
-  padding:
-    70px
-    0
-    60px;
+  text-align:
+    center;
 
-  text-align: center;
+  padding:
+    80px
+    20px
+    60px;
 
   border-bottom:
     10px solid
     var(--white);
+
 }
 
-
-/* LABEL */
 
 .label {
 
-  color: var(--gold);
+  color:
+    var(--gold);
 
-  font-size: 10px;
+  font-size:
+    11px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 4px;
+  letter-spacing:
+    5px;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  margin-bottom: 25px;
+  margin-bottom:
+    25px;
+
 }
 
 
-/* TITLE */
-
 h1 {
 
-  margin: 0;
+  margin:
+    0;
 
   font-size:
     clamp(
       55px,
-      10vw,
-      110px
+      11vw,
+      120px
     );
 
-  line-height: .8;
+  line-height:
+    .8;
 
-  letter-spacing: -6px;
+  letter-spacing:
+    -6px;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  font-weight: 900;
 }
 
 
-/* SUBTITLE */
-
 .subtitle {
 
-  margin-top: 25px;
+  margin:
+    30px auto 0;
 
-  font-size: 12px;
+  max-width:
+    650px;
 
-  font-weight: 900;
+  font-size:
+    13px;
 
-  letter-spacing: 4px;
+  font-weight:
+    900;
 
-  text-transform: uppercase;
+  line-height:
+    1.5;
 
-  color: var(--gold);
+  text-transform:
+    uppercase;
+
+  opacity:
+    .75;
+
+}
+
+
+/* CHAPTER */
+
+.chapter-section {
+
+  margin-top:
+    70px;
+
+}
+
+
+.section-title {
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-end;
+
+  border-bottom:
+    3px solid
+    var(--white);
+
+  padding-bottom:
+    15px;
+
+  margin-bottom:
+    40px;
+
+}
+
+
+.section-title h2 {
+
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      40px,
+      8vw,
+      80px
+    );
+
+  line-height:
+    .8;
+
+  letter-spacing:
+    -5px;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.section-label {
+
+  color:
+    var(--gold);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    3px;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+/* CHAPTER CARD */
+
+.chapter-card {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap:
+    30px;
+
+  padding:
+    15px;
+
+  background:
+    var(--white);
+
+  color:
+    var(--black);
+
+  text-decoration:
+    none;
+
+  border:
+    5px solid
+    var(--white);
+
+  box-shadow:
+    12px 12px 0
+    var(--gold);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
+}
+
+
+.chapter-card:hover {
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    18px 18px 0
+    var(--gold);
+
 }
 
 
@@ -207,195 +382,238 @@ h1 {
 
 .preview {
 
-  width: 100%;
+  aspect-ratio:
+    3 / 4;
 
-  max-width: 650px;
+  background:
+    var(--black);
 
-  margin:
-    60px
-    auto
-    40px;
+  overflow:
+    hidden;
 
-  background: var(--black);
+  position:
+    relative;
 
-  border:
-    4px solid
-    var(--white);
-
-  box-shadow:
-    12px 12px 0
-    var(--gold);
-
-  overflow: hidden;
-
-  position: relative;
 }
 
 
 .preview img {
 
-  display: block;
+  width:
+    100%;
 
-  width: 100%;
+  height:
+    100%;
 
-  height: 520px;
+  object-fit:
+    cover;
 
-  object-fit: cover;
+  object-position:
+    center top;
 
-  object-position: top center;
+  display:
+    block;
 
   transition:
     transform .4s ease;
+
 }
 
 
-.preview:hover img {
+.chapter-card:hover .preview img {
 
   transform:
-    scale(1.03);
+    scale(1.04);
+
 }
 
 
-/* CHAPTER LABEL */
+.preview::after {
 
-.chapter-label {
+  content:
+    "";
 
-  position: absolute;
+  position:
+    absolute;
 
-  top: 15px;
+  inset:
+    0;
 
-  left: 15px;
+  border:
+    4px solid
+    var(--gold);
 
-  z-index: 5;
+  pointer-events:
+    none;
 
-  background: var(--gold);
-
-  color: var(--black);
-
-  padding:
-    7px
-    10px;
-
-  font-size: 9px;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
 }
 
 
 /* INFO */
 
-.info {
+.chapter-info {
 
-  max-width: 700px;
+  display:
+    flex;
 
-  margin:
-    50px
-    auto
-    0;
+  flex-direction:
+    column;
 
-  text-align: center;
-}
-
-
-.info p {
-
-  margin: 0;
-
-  font-size: 13px;
-
-  font-weight: 900;
-
-  line-height: 1.6;
-
-  text-transform: uppercase;
-}
-
-
-/* READ BUTTON */
-
-.read-button {
-
-  display: inline-block;
-
-  margin-top: 30px;
+  justify-content:
+    center;
 
   padding:
-    15px
-    24px;
+    20px;
 
-  background: var(--gold);
-
-  color: var(--black);
-
-  text-decoration: none;
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-
-  transition:
-    transform .15s ease,
-    background .15s ease,
-    color .15s ease;
 }
 
 
-.read-button:hover {
+.chapter-number {
 
-  transform:
-    translateY(-4px);
+  color:
+    var(--gold);
 
-  background: var(--white);
+  font-size:
+    11px;
 
-  color: var(--black);
+  font-weight:
+    900;
+
+  letter-spacing:
+    4px;
+
+  text-transform:
+    uppercase;
+
+  margin-bottom:
+    20px;
+
+}
+
+
+.chapter-info h3 {
+
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      35px,
+      6vw,
+      70px
+    );
+
+  line-height:
+    .8;
+
+  letter-spacing:
+    -4px;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.chapter-info p {
+
+  margin:
+    25px 0;
+
+  font-size:
+    11px;
+
+  font-weight:
+    900;
+
+  line-height:
+    1.5;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.read {
+
+  display:
+    inline-block;
+
+  width:
+    fit-content;
+
+  padding:
+    12px
+    18px;
+
+  background:
+    var(--gold);
+
+  color:
+    var(--black);
+
+  font-size:
+    11px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    2px;
+
+  text-transform:
+    uppercase;
+
 }
 
 
 /* FOOTER */
 
-.footer {
+footer {
 
-  margin-top: 100px;
+  margin-top:
+    90px;
 
-  padding-top: 20px;
+  padding-top:
+    20px;
 
   border-top:
     2px solid
     rgba(242,242,238,.25);
 
-  display: flex;
+  text-align:
+    center;
 
-  justify-content: space-between;
+  font-size:
+    9px;
 
-  font-size: 9px;
+  font-weight:
+    900;
 
-  font-weight: 900;
+  letter-spacing:
+    3px;
 
-  letter-spacing: 3px;
+  text-transform:
+    uppercase;
 
-  text-transform: uppercase;
+  opacity:
+    .5;
 
-  opacity: .5;
 }
 
 
-.footer span:last-child {
+footer span {
 
-  color: var(--gold);
+  color:
+    var(--gold);
+
 }
 
 
 /* MOBILE */
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 
   .page {
 
@@ -403,50 +621,57 @@ h1 {
       15px
       15px
       60px;
+
   }
 
 
   .hero {
 
     padding:
-      55px
-      0
+      60px
+      10px
       45px;
+
   }
 
 
-  h1 {
+  .chapter-card {
 
-    font-size:
-      clamp(
-        48px,
-        14vw,
-        75px
-      );
+    grid-template-columns:
+      1fr;
 
-    letter-spacing: -4px;
+    gap:
+      10px;
+
   }
 
 
-  .preview {
+  .chapter-info {
 
-    margin-top: 45px;
+    padding:
+      20px
+      10px
+      15px;
 
-    box-shadow:
-      8px 8px 0
-      var(--gold);
   }
 
 
-  .preview img {
+  .section-title {
 
-    height: 400px;
+    display:
+      block;
+
   }
 
 
-  .footer {
+  .section-label {
 
-    font-size: 8px;
+    display:
+      block;
+
+    margin-top:
+      15px;
+
   }
 
 }
@@ -462,72 +687,100 @@ h1 {
 <div class="page">
 
 
-  <!-- TOP BAR -->
+<!-- TOP BAR -->
 
-  <div class="topbar">
-
-
-    <a
-      class="logo"
-      href="../"
-    >
-      SK6
-    </a>
+<div class="topbar">
 
 
-    <a
-      class="back"
-      href="../"
-    >
-      Back to SK6
-    </a>
+  <a
+    class="logo"
+    href="../"
+  >
+
+    SK6
+
+  </a>
+
+
+  <a
+    class="back"
+    href="../"
+  >
+
+    ← Back to SK6
+
+  </a>
+
+
+</div>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+
+  <div class="label">
+
+    SK6 // SERIES // 004
+
+  </div>
+
+
+  <h1>
+
+    L’Héritage<br>
+    de la Nuit
+
+  </h1>
+
+
+  <p class="subtitle">
+
+    Beyond the walls, monsters rule the wild.
+    Hunters stand between humanity and the
+    creatures waiting in the darkness.
+
+  </p>
+
+
+</header>
+
+
+<!-- CHAPTER -->
+
+<main class="chapter-section">
+
+
+  <div class="section-title">
+
+
+    <h2>
+
+      Chapters
+
+    </h2>
+
+
+    <div class="section-label">
+
+      L’HÉRITAGE DE LA NUIT
+
+    </div>
 
 
   </div>
 
 
+  <!-- CHAPTER 01 -->
 
-  <!-- HERO -->
-
-  <main class="hero">
-
-
-    <div class="label">
-
-      SK6 // SERIES // 004
-
-    </div>
+  <a
+    class="chapter-card"
+    href="CHAPTER1/"
+  >
 
 
-    <h1>
-
-      L’Héritage<br>
-      de la Nuit
-
-    </h1>
-
-
-    <div class="subtitle">
-
-      Chapter 01 // Now Available
-
-    </div>
-
-
-
-    <!-- PREVIEW -->
-
-    <a
-      href="CHAPTER1/"
-      class="preview"
-    >
-
-
-      <div class="chapter-label">
-
-        CHAPTER 01
-
-      </div>
+    <div class="preview">
 
 
       <img
@@ -536,63 +789,69 @@ h1 {
       >
 
 
-    </a>
+    </div>
 
 
+    <div class="chapter-info">
 
-    <!-- INFO -->
 
-    <div class="info">
+      <div class="chapter-number">
+
+        CHAPTER 01
+
+      </div>
+
+
+      <h3>
+
+        The Shadow<br>
+        Crowned
+
+      </h3>
 
 
       <p>
 
-        Beyond the walls, monsters rule
-        the wild lands. The Church of Light
-        trains hunters to protect humanity
-        from the creatures that haunt the roads,
-        forests and villages.
+        The first chapter of
+        L’Héritage de la Nuit.
+
+        Enter the world.
+        Face the monsters.
 
       </p>
 
 
-      <a
-        class="read-button"
-        href="CHAPTER1/"
-      >
+      <div class="read">
 
-        Read Chapter 01 →
+        READ CHAPTER →
 
-      </a>
+      </div>
 
 
     </div>
 
 
-  </main>
+  </a>
 
 
-
-  <!-- FOOTER -->
-
-  <div class="footer">
+</main>
 
 
-    <span>
+<!-- FOOTER -->
 
-      SK6 // L’HÉRITAGE DE LA NUIT
+<footer>
 
-    </span>
+  <span>
+    SK6
+  </span>
 
+  // L’HÉRITAGE DE LA NUIT
 
-    <span>
+  <br><br>
 
-      001 / 019
+  COMICS / ART / CHAOS
 
-    </span>
-
-
-  </div>
+</footer>
 
 
 </div>
