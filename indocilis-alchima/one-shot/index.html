@@ -35,8 +35,11 @@ body {
   width: 100%;
   min-height: 100%;
 
-  background: var(--black);
-  color: var(--white);
+  background:
+    var(--black);
+
+  color:
+    var(--white);
 
   font-family:
     Arial,
@@ -62,26 +65,30 @@ body {
 
   display: flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
   border-bottom:
     2px solid
     var(--white);
 
-  position: sticky;
+  position:
+    sticky;
 
   top: 0;
 
   background:
     var(--black);
 
-  z-index: 100;
+  z-index:
+    100;
 }
 
 
-/* SK6 RETURN */
+/* SK6 */
 
 .logo {
 
@@ -137,7 +144,7 @@ body {
 }
 
 
-/* CHAPTER RETURN */
+/* BACK */
 
 .back {
 
@@ -175,7 +182,8 @@ body {
 
 .reader {
 
-  width: 100%;
+  width:
+    100%;
 
   max-width:
     1500px;
@@ -194,38 +202,33 @@ body {
 
 .spread {
 
-  width: 100%;
+  width:
+    100%;
 
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: row;
+  flex-direction:
+    row;
 
-  justify-content: center;
+  justify-content:
+    center;
 
-  align-items: flex-start;
+  align-items:
+    flex-start;
 
-  gap: 12px;
+  gap:
+    12px;
 
-  direction: ltr;
+  direction:
+    ltr;
 
   margin:
     0 auto;
 }
 
 
-/*
-  INDOCILIS ALCHIMIA
-  READING ORDER
-
-  Page 1 = LEFT
-  Page 2 = RIGHT
-
-  Page 3 = LEFT
-  Page 4 = RIGHT
-
-  etc.
-*/
-
+/* PAGES */
 
 .page {
 
@@ -349,7 +352,7 @@ body {
 }
 
 
-/* PAGE COUNTER */
+/* COUNTER */
 
 .counter {
 
@@ -429,7 +432,6 @@ body {
 /* MOBILE */
 
 @media (max-width: 800px) {
-
 
   .topbar {
 
@@ -527,7 +529,6 @@ body {
 
 @media (max-width: 500px) {
 
-
   .spread {
 
     gap:
@@ -545,7 +546,7 @@ body {
   .chapter-title {
 
     max-width:
-      150px;
+      120px;
   }
 
 }
@@ -563,34 +564,36 @@ body {
 <div class="topbar">
 
 
-  <!-- RETURNS TO INDOCILIS ALCHIMIA -->
+  <!-- BACK TO SK6 -->
 
   <a
     class="logo"
-    href="../"
+    href="../../"
   >
     SK6
   </a>
 
 
-  <!-- CENTER -->
+  <!-- TITLE -->
 
   <div class="chapter-title">
 
-    INDOCILIS ALCHIMIA
+    INDOCILIS ALCHEMIA
     //
     ONE SHOT
 
   </div>
 
 
-  <!-- RETURNS TO INDOCILIS LANDING -->
+  <!-- BACK TO LANDING PAGE -->
 
   <a
     class="back"
     href="../"
   >
+
     One Shot
+
   </a>
 
 
@@ -643,6 +646,8 @@ body {
   </div>
 
 
+  <!-- COUNTER -->
+
   <div
     class="counter"
     id="counter"
@@ -658,11 +663,11 @@ body {
   <div class="footer">
 
     <span>
-      SK6 // INDOCILIS ALCHIMIA
+      SK6 // INDOCILIS ALCHEMIA
     </span>
 
     <span>
-      ONE SHOT / 087
+      001 / 087
     </span>
 
   </div>
@@ -689,15 +694,18 @@ const spread =
     "spread"
   );
 
+
 const counter =
   document.getElementById(
     "counter"
   );
 
+
 const nextButton =
   document.getElementById(
     "nextButton"
   );
+
 
 const previousButton =
   document.getElementById(
@@ -705,14 +713,23 @@ const previousButton =
   );
 
 
-/* PAGE FILENAME */
+/*
+  INDOCILIS ALCHEMIA
+  PAGE FILENAME
+
+  Ia_01.jpeg
+  Ia_02.jpeg
+  Ia_03.jpeg
+  ...
+  Ia_87.jpeg
+*/
 
 function getFilename(page) {
 
   const number =
     String(page).padStart(2, "0");
 
-  return "../Ia_" +
+  return "Ia_" +
     number +
     ".jpeg";
 
@@ -729,31 +746,50 @@ function showSpread() {
   const firstPage =
     currentSpread * 2 + 1;
 
+
   const secondPage =
     firstPage + 1;
 
 
-  /* PAGE 1 */
+  /*
+    PAGE 1 = LEFT
+    PAGE 2 = RIGHT
+
+    PAGE 3 = LEFT
+    PAGE 4 = RIGHT
+
+    etc.
+  */
+
+
+  /* FIRST PAGE */
 
   if (
     firstPage <= totalPages
   ) {
 
     const leftPage =
-      document.createElement("img");
+      document.createElement(
+        "img"
+      );
+
 
     leftPage.className =
       "page";
 
+
     leftPage.src =
       getFilename(firstPage);
+
 
     leftPage.alt =
       "Indocilis Alchimia — Page " +
       firstPage;
 
+
     leftPage.loading =
       "eager";
+
 
     spread.appendChild(
       leftPage
@@ -762,27 +798,34 @@ function showSpread() {
   }
 
 
-  /* PAGE 2 */
+  /* SECOND PAGE */
 
   if (
     secondPage <= totalPages
   ) {
 
     const rightPage =
-      document.createElement("img");
+      document.createElement(
+        "img"
+      );
+
 
     rightPage.className =
       "page";
 
+
     rightPage.src =
       getFilename(secondPage);
+
 
     rightPage.alt =
       "Indocilis Alchimia — Page " +
       secondPage;
 
+
     rightPage.loading =
       "eager";
+
 
     spread.appendChild(
       rightPage
@@ -821,6 +864,7 @@ function showSpread() {
   previousButton.disabled =
     currentSpread === 0;
 
+
   nextButton.disabled =
     secondPage >= totalPages;
 
@@ -844,13 +888,17 @@ function nextSpread() {
 
     currentSpread++;
 
+
     showSpread();
+
 
     window.scrollTo({
 
-      top: 0,
+      top:
+        0,
 
-      behavior: "smooth"
+      behavior:
+        "smooth"
 
     });
 
@@ -869,13 +917,17 @@ function previousSpread() {
 
     currentSpread--;
 
+
     showSpread();
+
 
     window.scrollTo({
 
-      top: 0,
+      top:
+        0,
 
-      behavior: "smooth"
+      behavior:
+        "smooth"
 
     });
 
@@ -887,12 +939,15 @@ function previousSpread() {
 /* KEYBOARD */
 
 document.addEventListener(
+
   "keydown",
+
   function(event) {
 
 
     if (
-      event.key === "ArrowRight"
+      event.key ===
+      "ArrowRight"
     ) {
 
       nextSpread();
@@ -901,7 +956,8 @@ document.addEventListener(
 
 
     if (
-      event.key === "ArrowLeft"
+      event.key ===
+      "ArrowLeft"
     ) {
 
       previousSpread();
@@ -909,6 +965,7 @@ document.addEventListener(
     }
 
   }
+
 );
 
 
