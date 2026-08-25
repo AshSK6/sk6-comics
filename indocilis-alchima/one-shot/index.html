@@ -10,7 +10,7 @@
   content="width=device-width, initial-scale=1.0"
 >
 
-<title>SK6 — One Shot</title>
+<title>Indocilis Alchimia — One Shot — SK6</title>
 
 
 <style>
@@ -23,24 +23,20 @@
 :root {
   --black: #080808;
   --white: #f2f2ee;
-  --red: #e10600;
+  --purple: #9b5cff;
 }
 
 
 html,
 body {
-
   margin: 0;
   padding: 0;
 
   width: 100%;
   min-height: 100%;
 
-  background:
-    var(--black);
-
-  color:
-    var(--white);
+  background: var(--black);
+  color: var(--white);
 
   font-family:
     Arial,
@@ -85,21 +81,24 @@ body {
 }
 
 
-/* SK6 LOGO */
+/* SK6 RETURN */
 
 .logo {
 
   color:
-    var(--red);
+    var(--purple);
 
   text-decoration:
     none;
 
-  font-size: 18px;
+  font-size:
+    18px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 4px;
+  letter-spacing:
+    4px;
 
   transition:
     color .15s ease,
@@ -121,11 +120,14 @@ body {
 
 .chapter-title {
 
-  font-size: 11px;
+  font-size:
+    11px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
   text-transform:
     uppercase;
@@ -135,7 +137,7 @@ body {
 }
 
 
-/* BACK */
+/* CHAPTER RETURN */
 
 .back {
 
@@ -145,11 +147,14 @@ body {
   text-decoration:
     none;
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 2px;
+  letter-spacing:
+    2px;
 
   text-transform:
     uppercase;
@@ -162,7 +167,7 @@ body {
 .back:hover {
 
   color:
-    var(--red);
+    var(--purple);
 }
 
 
@@ -193,19 +198,15 @@ body {
 
   display: flex;
 
-  flex-direction:
-    row;
+  flex-direction: row;
 
-  justify-content:
-    center;
+  justify-content: center;
 
-  align-items:
-    flex-start;
+  align-items: flex-start;
 
   gap: 12px;
 
-  direction:
-    ltr;
+  direction: ltr;
 
   margin:
     0 auto;
@@ -213,6 +214,7 @@ body {
 
 
 /*
+  INDOCILIS ALCHIMIA
   READING ORDER
 
   Page 1 = LEFT
@@ -223,6 +225,7 @@ body {
 
   etc.
 */
+
 
 .page {
 
@@ -260,16 +263,17 @@ body {
 
 .controls {
 
-  width: 100%;
+  width:
+    100%;
 
   max-width:
     900px;
 
   margin:
-    35px auto
-    0;
+    35px auto 0;
 
-  display: flex;
+  display:
+    flex;
 
   justify-content:
     space-between;
@@ -288,16 +292,17 @@ body {
     none;
 
   background:
-    var(--red);
+    var(--purple);
 
   color:
-    var(--white);
+    var(--black);
 
   padding:
     12px
     18px;
 
-  font-size: 11px;
+  font-size:
+    11px;
 
   font-weight:
     900;
@@ -361,7 +366,7 @@ body {
     3px;
 
   color:
-    var(--red);
+    var(--purple);
 
   text-transform:
     uppercase;
@@ -375,14 +380,14 @@ body {
 
 .footer {
 
-  width: 100%;
+  width:
+    100%;
 
   max-width:
     900px;
 
   margin:
-    50px auto
-    0;
+    50px auto 0;
 
   padding-top:
     20px;
@@ -391,7 +396,8 @@ body {
     2px solid
     rgba(242,242,238,.25);
 
-  display: flex;
+  display:
+    flex;
 
   justify-content:
     space-between;
@@ -416,13 +422,14 @@ body {
 .footer span:last-child {
 
   color:
-    var(--red);
+    var(--purple);
 }
 
 
 /* MOBILE */
 
 @media (max-width: 800px) {
+
 
   .topbar {
 
@@ -520,6 +527,7 @@ body {
 
 @media (max-width: 500px) {
 
+
   .spread {
 
     gap:
@@ -537,7 +545,7 @@ body {
   .chapter-title {
 
     max-width:
-      120px;
+      150px;
   }
 
 }
@@ -555,7 +563,7 @@ body {
 <div class="topbar">
 
 
-  <!-- BACK TO SK6 -->
+  <!-- RETURNS TO INDOCILIS ALCHIMIA -->
 
   <a
     class="logo"
@@ -565,26 +573,24 @@ body {
   </a>
 
 
-  <!-- TITLE -->
+  <!-- CENTER -->
 
   <div class="chapter-title">
 
-    SK6
+    INDOCILIS ALCHIMIA
     //
     ONE SHOT
 
   </div>
 
 
-  <!-- BACK TO LANDING PAGE -->
+  <!-- RETURNS TO INDOCILIS LANDING -->
 
   <a
     class="back"
     href="../"
   >
-
-    Back
-
+    One Shot
   </a>
 
 
@@ -596,8 +602,6 @@ body {
 
 <main class="reader">
 
-
-  <!-- PAGE SPREAD -->
 
   <div
     class="spread"
@@ -639,8 +643,6 @@ body {
   </div>
 
 
-  <!-- COUNTER -->
-
   <div
     class="counter"
     id="counter"
@@ -656,11 +658,11 @@ body {
   <div class="footer">
 
     <span>
-      SK6 // ONE SHOT
+      SK6 // INDOCILIS ALCHIMIA
     </span>
 
     <span>
-      001 / 087
+      ONE SHOT / 087
     </span>
 
   </div>
@@ -673,39 +675,29 @@ body {
 <script>
 
 
-/* =========================================
-   SETTINGS
-========================================= */
-
+/* SETTINGS */
 
 const totalPages = 87;
 
 let currentSpread = 0;
 
 
-
-/* =========================================
-   ELEMENTS
-========================================= */
-
+/* ELEMENTS */
 
 const spread =
   document.getElementById(
     "spread"
   );
 
-
 const counter =
   document.getElementById(
     "counter"
   );
 
-
 const nextButton =
   document.getElementById(
     "nextButton"
   );
-
 
 const previousButton =
   document.getElementById(
@@ -713,82 +705,55 @@ const previousButton =
   );
 
 
-
-/* =========================================
-   PAGE FILENAME
-========================================= */
-
+/* PAGE FILENAME */
 
 function getFilename(page) {
 
   const number =
     String(page).padStart(2, "0");
 
-  return "Ia_" +
+  return "../Ia_" +
     number +
     ".jpeg";
 
 }
 
 
-
-/* =========================================
-   SHOW SPREAD
-========================================= */
-
+/* SHOW SPREAD */
 
 function showSpread() {
-
-
-  /* Clear current pages */
 
   spread.innerHTML = "";
 
 
-  /* Calculate pages */
-
   const firstPage =
     currentSpread * 2 + 1;
-
 
   const secondPage =
     firstPage + 1;
 
 
-
-  /*
-    PAGE 1
-  */
+  /* PAGE 1 */
 
   if (
     firstPage <= totalPages
   ) {
 
-
     const leftPage =
-      document.createElement(
-        "img"
-      );
-
+      document.createElement("img");
 
     leftPage.className =
       "page";
 
-
     leftPage.src =
-      getFilename(
-        firstPage
-      );
-
+      getFilename(firstPage);
 
     leftPage.alt =
-      "SK6 One Shot — Page " +
+      "Indocilis Alchimia — Page " +
       firstPage;
-
 
     leftPage.loading =
       "eager";
-
 
     spread.appendChild(
       leftPage
@@ -797,40 +762,27 @@ function showSpread() {
   }
 
 
-
-  /*
-    PAGE 2
-  */
+  /* PAGE 2 */
 
   if (
     secondPage <= totalPages
   ) {
 
-
     const rightPage =
-      document.createElement(
-        "img"
-      );
-
+      document.createElement("img");
 
     rightPage.className =
       "page";
 
-
     rightPage.src =
-      getFilename(
-        secondPage
-      );
-
+      getFilename(secondPage);
 
     rightPage.alt =
-      "SK6 One Shot — Page " +
+      "Indocilis Alchimia — Page " +
       secondPage;
-
 
     rightPage.loading =
       "eager";
-
 
     spread.appendChild(
       rightPage
@@ -839,16 +791,11 @@ function showSpread() {
   }
 
 
-
-  /* =========================================
-     COUNTER
-  ========================================= */
-
+  /* COUNTER */
 
   if (
     secondPage <= totalPages
   ) {
-
 
     counter.textContent =
       "PAGES " +
@@ -858,9 +805,7 @@ function showSpread() {
       " / " +
       totalPages;
 
-
   } else {
-
 
     counter.textContent =
       "PAGE " +
@@ -871,15 +816,10 @@ function showSpread() {
   }
 
 
-
-  /* =========================================
-     BUTTON STATES
-  ========================================= */
-
+  /* BUTTON STATES */
 
   previousButton.disabled =
     currentSpread === 0;
-
 
   nextButton.disabled =
     secondPage >= totalPages;
@@ -887,14 +827,9 @@ function showSpread() {
 }
 
 
-
-/* =========================================
-   NEXT
-========================================= */
-
+/* NEXT */
 
 function nextSpread() {
-
 
   const lastSpread =
     Math.ceil(
@@ -907,19 +842,15 @@ function nextSpread() {
     lastSpread
   ) {
 
-
     currentSpread++;
 
-
     showSpread();
-
 
     window.scrollTo({
 
       top: 0,
 
-      behavior:
-        "smooth"
+      behavior: "smooth"
 
     });
 
@@ -928,32 +859,23 @@ function nextSpread() {
 }
 
 
-
-/* =========================================
-   PREVIOUS
-========================================= */
-
+/* PREVIOUS */
 
 function previousSpread() {
-
 
   if (
     currentSpread > 0
   ) {
 
-
     currentSpread--;
 
-
     showSpread();
-
 
     window.scrollTo({
 
       top: 0,
 
-      behavior:
-        "smooth"
+      behavior: "smooth"
 
     });
 
@@ -962,26 +884,15 @@ function previousSpread() {
 }
 
 
-
-/* =========================================
-   KEYBOARD CONTROLS
-========================================= */
-
+/* KEYBOARD */
 
 document.addEventListener(
-
   "keydown",
-
   function(event) {
 
 
-    /*
-      RIGHT ARROW = NEXT
-    */
-
     if (
-      event.key ===
-      "ArrowRight"
+      event.key === "ArrowRight"
     ) {
 
       nextSpread();
@@ -989,13 +900,8 @@ document.addEventListener(
     }
 
 
-    /*
-      LEFT ARROW = PREVIOUS
-    */
-
     if (
-      event.key ===
-      "ArrowLeft"
+      event.key === "ArrowLeft"
     ) {
 
       previousSpread();
@@ -1003,18 +909,12 @@ document.addEventListener(
     }
 
   }
-
 );
 
 
-
-/* =========================================
-   START READER
-========================================= */
-
+/* START */
 
 showSpread();
-
 
 </script>
 
