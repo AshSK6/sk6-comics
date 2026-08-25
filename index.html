@@ -42,6 +42,7 @@
       --green: #b7ff00;
       --red: #e10600;
       --blue: #5ecbff;
+      --violet: #9b4dff;
     }
 
 
@@ -774,6 +775,26 @@
     }
 
 
+    /* INDOCILIS ALCHIMIA */
+
+    .comic-indocilis:hover {
+
+      box-shadow:
+        15px 15px 0
+        var(--violet);
+    }
+
+
+    .comic-indocilis:hover .read {
+
+      background:
+        var(--violet);
+
+      color:
+        var(--white);
+    }
+
+
     /* 18+ BADGE */
 
     .adult-badge {
@@ -892,6 +913,13 @@
 
       border-color:
         var(--blue);
+    }
+
+
+    .comic-indocilis .cover::after {
+
+      border-color:
+        var(--violet);
     }
 
 
@@ -1076,6 +1104,16 @@
 
       color:
         var(--black);
+    }
+
+
+    .comic-indocilis .issue-label {
+
+      background:
+        var(--violet);
+
+      color:
+        var(--white);
     }
 
 
@@ -2264,14 +2302,17 @@
       </a>
 
 
-      <!-- PLACEHOLDER 1 -->
+      <!-- INDOCILIS ALCHIMIA -->
 
-      <div class="comic">
+      <a
+        class="comic comic-indocilis"
+        href="indocilis/"
+      >
 
 
         <div class="issue-label">
 
-          CHAPTER // SK6-003
+          SK6-003 // ONE SHOT
 
         </div>
 
@@ -2279,13 +2320,10 @@
         <div class="cover">
 
 
-          <div class="placeholder">
-
-            NEW<br>
-            COMIC<br>
-            SOON
-
-          </div>
+          <img
+            src="indocilis/ONE%20SHOT/IA_01.jpeg"
+            alt="Indocilis Alchimia"
+          >
 
 
         </div>
@@ -2303,7 +2341,14 @@
 
           <div class="description">
 
-            Another story is coming to SK6.
+            A new one-shot from SK6.
+
+          </div>
+
+
+          <div class="read">
+
+            Read →
 
           </div>
 
@@ -2311,10 +2356,10 @@
         </div>
 
 
-      </div>
+      </a>
 
 
-      <!-- PLACEHOLDER 2 -->
+      <!-- L'HÉRITAGE DE LA NUIT -->
 
       <div class="comic">
 
@@ -2364,7 +2409,7 @@
       </div>
 
 
-      <!-- PLACEHOLDER 3 -->
+      <!-- FINDING MY VOICE -->
 
       <div class="comic">
 
