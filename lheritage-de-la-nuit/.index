@@ -24,25 +24,31 @@
   --gold: #c9a45c;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-
-  width: 100%;
-  min-height: 100%;
-
-  background: var(--black);
-  color: var(--white);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+}
+
+
+/* PAGE */
+
+.page {
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding:
+    20px
+    25px
+    80px;
 }
 
 
@@ -50,29 +56,20 @@ body {
 
 .topbar {
 
-  width: 100%;
-
-  padding:
-    15px
-    20px;
-
   display: flex;
+
+  justify-content: space-between;
 
   align-items: center;
 
-  justify-content: space-between;
+  padding:
+    12px
+    0
+    18px;
 
   border-bottom:
     2px solid
     var(--white);
-
-  position: sticky;
-
-  top: 0;
-
-  background: var(--black);
-
-  z-index: 100;
 }
 
 
@@ -104,22 +101,6 @@ body {
 }
 
 
-/* TOP TITLE */
-
-.top-title {
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-
-  text-align: center;
-}
-
-
 /* BACK */
 
 .back {
@@ -146,62 +127,30 @@ body {
 }
 
 
-/* MAIN */
+/* HERO */
 
-.main {
-
-  width: 100%;
-
-  max-width: 1200px;
-
-  margin: 0 auto;
+.hero {
 
   padding:
-    60px
-    25px
-    100px;
-}
-
-
-/* SERIES TITLE */
-
-.series-title {
+    70px
+    0
+    60px;
 
   text-align: center;
 
-  margin-bottom: 45px;
+  border-bottom:
+    10px solid
+    var(--white);
 }
 
-.series-title h1 {
 
-  margin: 0;
+/* LABEL */
+
+.label {
 
   color: var(--gold);
 
-  font-size:
-    clamp(
-      34px,
-      7vw,
-      76px
-    );
-
-  font-weight: 900;
-
-  letter-spacing: 5px;
-
-  line-height: 1;
-
-  text-transform: uppercase;
-}
-
-.series-title p {
-
-  margin:
-    18px
-    0
-    0;
-
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 900;
 
@@ -209,46 +158,48 @@ body {
 
   text-transform: uppercase;
 
-  opacity: .65;
+  margin-bottom: 25px;
 }
 
 
-/* CHAPTER CARD */
+/* TITLE */
 
-.chapter {
+h1 {
 
-  width: 100%;
+  margin: 0;
 
-  max-width: 1050px;
+  font-size:
+    clamp(
+      55px,
+      10vw,
+      110px
+    );
 
-  margin: 0 auto;
+  line-height: .8;
 
-  display: grid;
+  letter-spacing: -6px;
 
-  grid-template-columns:
-    42%
-    58%;
+  text-transform: uppercase;
 
-  background:
-    #111;
-
-  border:
-    2px solid
-    rgba(242,242,238,.25);
-
-  overflow: hidden;
-
-  transition:
-    border-color .2s ease,
-    transform .2s ease;
+  font-weight: 900;
 }
 
-.chapter:hover {
 
-  border-color: var(--gold);
+/* SUBTITLE */
 
-  transform:
-    translateY(-4px);
+.subtitle {
+
+  margin-top: 25px;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: var(--gold);
 }
 
 
@@ -256,153 +207,125 @@ body {
 
 .preview {
 
-  position: relative;
+  width: 100%;
 
-  min-height: 500px;
+  max-width: 650px;
+
+  margin:
+    60px
+    auto
+    40px;
+
+  background: var(--black);
+
+  border:
+    4px solid
+    var(--white);
+
+  box-shadow:
+    12px 12px 0
+    var(--gold);
 
   overflow: hidden;
 
-  background: #000;
+  position: relative;
 }
+
 
 .preview img {
 
+  display: block;
+
   width: 100%;
 
-  height: 100%;
-
-  display: block;
+  height: 520px;
 
   object-fit: cover;
 
-  object-position: center top;
-
-  filter:
-    brightness(.8);
+  object-position: top center;
 
   transition:
-    transform .4s ease,
-    filter .4s ease;
-}
-
-.chapter:hover .preview img {
-
-  transform: scale(1.04);
-
-  filter:
-    brightness(1);
+    transform .4s ease;
 }
 
 
-/* PREVIEW OVERLAY */
+.preview:hover img {
 
-.preview::after {
+  transform:
+    scale(1.03);
+}
 
-  content: "";
+
+/* CHAPTER LABEL */
+
+.chapter-label {
 
   position: absolute;
 
-  inset: 0;
+  top: 15px;
 
-  background:
-    linear-gradient(
-      to right,
-      transparent 55%,
-      rgba(8,8,8,.75)
-    );
+  left: 15px;
 
-  pointer-events: none;
-}
+  z-index: 5;
 
+  background: var(--gold);
 
-/* CHAPTER INFO */
-
-.info {
+  color: var(--black);
 
   padding:
-    55px
-    50px;
+    7px
+    10px;
 
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: flex-start;
-}
-
-
-/* CHAPTER NUMBER */
-
-.chapter-number {
-
-  color: var(--gold);
-
-  font-size: 11px;
-
-  font-weight: 900;
-
-  letter-spacing: 4px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 18px;
-}
-
-
-/* CHAPTER TITLE */
-
-.info h2 {
-
-  margin: 0;
-
-  font-size:
-    clamp(
-      26px,
-      4vw,
-      48px
-    );
+  font-size: 9px;
 
   font-weight: 900;
 
   letter-spacing: 2px;
 
   text-transform: uppercase;
-
-  line-height: 1.05;
 }
 
 
-/* DESCRIPTION */
+/* INFO */
 
-.description {
+.info {
+
+  max-width: 700px;
 
   margin:
-    25px
-    0
-    30px;
+    50px
+    auto
+    0;
 
-  max-width: 560px;
-
-  font-size: 14px;
-
-  line-height: 1.7;
-
-  color:
-    rgba(242,242,238,.75);
+  text-align: center;
 }
 
 
-/* BUTTON */
+.info p {
+
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  line-height: 1.6;
+
+  text-transform: uppercase;
+}
+
+
+/* READ BUTTON */
 
 .read-button {
 
   display: inline-block;
 
+  margin-top: 30px;
+
   padding:
-    14px
-    22px;
+    15px
+    24px;
 
   background: var(--gold);
 
@@ -414,24 +337,25 @@ body {
 
   font-weight: 900;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   text-transform: uppercase;
 
   transition:
+    transform .15s ease,
     background .15s ease,
-    color .15s ease,
-    transform .15s ease;
+    color .15s ease;
 }
 
+
 .read-button:hover {
+
+  transform:
+    translateY(-4px);
 
   background: var(--white);
 
   color: var(--black);
-
-  transform:
-    translateY(-3px);
 }
 
 
@@ -439,19 +363,13 @@ body {
 
 .footer {
 
-  width: 100%;
-
-  max-width: 1050px;
-
-  margin:
-    60px auto
-    0;
+  margin-top: 100px;
 
   padding-top: 20px;
 
   border-top:
     2px solid
-    rgba(242,242,238,.2);
+    rgba(242,242,238,.25);
 
   display: flex;
 
@@ -468,6 +386,7 @@ body {
   opacity: .5;
 }
 
+
 .footer span:last-child {
 
   color: var(--gold);
@@ -476,121 +395,58 @@ body {
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 
-  .topbar {
-
-    padding:
-      13px
-      15px;
-  }
-
-  .top-title {
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-  }
-
-  .back {
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-  }
-
-  .main {
+  .page {
 
     padding:
-      40px
       15px
-      80px;
+      15px
+      60px;
   }
 
-  .series-title {
 
-    margin-bottom: 30px;
+  .hero {
+
+    padding:
+      55px
+      0
+      45px;
   }
 
-  .series-title h1 {
 
-    letter-spacing: 3px;
+  h1 {
+
+    font-size:
+      clamp(
+        48px,
+        14vw,
+        75px
+      );
+
+    letter-spacing: -4px;
   }
 
-  .chapter {
-
-    grid-template-columns:
-      1fr;
-  }
 
   .preview {
 
-    min-height: 420px;
+    margin-top: 45px;
 
-    height: 420px;
+    box-shadow:
+      8px 8px 0
+      var(--gold);
   }
+
 
   .preview img {
 
-    object-position:
-      center top;
+    height: 400px;
   }
 
-  .preview::after {
-
-    background:
-      linear-gradient(
-        to bottom,
-        transparent 45%,
-        rgba(8,8,8,.8)
-      );
-  }
-
-  .info {
-
-    padding:
-      35px
-      25px;
-  }
-
-  .description {
-
-    font-size: 13px;
-  }
 
   .footer {
 
-    padding:
-      0
-      5px;
-
     font-size: 8px;
-  }
-
-}
-
-
-/* VERY SMALL SCREENS */
-
-@media (max-width: 500px) {
-
-  .preview {
-
-    min-height: 330px;
-
-    height: 330px;
-  }
-
-  .info {
-
-    padding:
-      30px
-      20px;
-  }
-
-  .series-title h1 {
-
-    font-size: 30px;
   }
 
 }
@@ -603,123 +459,109 @@ body {
 <body>
 
 
-<!-- TOP BAR -->
-
-<header class="topbar">
+<div class="page">
 
 
-  <!-- RETURN TO SK6 -->
+  <!-- TOP BAR -->
 
-  <a
-    class="logo"
-    href="../"
-  >
-    SK6
-  </a>
+  <div class="topbar">
 
 
-  <!-- CENTER -->
+    <a
+      class="logo"
+      href="../"
+    >
+      SK6
+    </a>
 
-  <div class="top-title">
 
-    L’HÉRITAGE DE LA NUIT
+    <a
+      class="back"
+      href="../"
+    >
+      Back to SK6
+    </a>
+
 
   </div>
 
 
-  <!-- RETURN TO SK6 WEBSITE -->
 
-  <a
-    class="back"
-    href="../"
-  >
-    SK6 HOME
-  </a>
+  <!-- HERO -->
+
+  <main class="hero">
 
 
-</header>
+    <div class="label">
 
+      SK6 // SERIES // 004
 
+    </div>
 
-<!-- MAIN -->
-
-<main class="main">
-
-
-  <!-- SERIES TITLE -->
-
-  <section class="series-title">
 
     <h1>
-      L’HÉRITAGE DE LA NUIT
+
+      L’Héritage<br>
+      de la Nuit
+
     </h1>
 
-    <p>
-      A new story from SK6
-    </p>
 
-  </section>
+    <div class="subtitle">
 
-
-
-  <!-- CHAPTER -->
-
-  <section class="chapter">
-
-
-    <!-- CROPPED FIRST PAGE -->
-
-    <div class="preview">
-
-      <img
-        src="chapter-1/H_c1_01%20Large.jpeg"
-        alt="L’Héritage de la Nuit — Chapter 01"
-      >
+      Chapter 01 // Now Available
 
     </div>
 
 
 
-    <!-- INFORMATION -->
+    <!-- PREVIEW -->
 
-    <div class="info">
+    <a
+      href="CHAPTER1/"
+      class="preview"
+    >
 
 
-      <div class="chapter-number">
+      <div class="chapter-label">
 
         CHAPTER 01
 
       </div>
 
 
-      <h2>
+      <img
+        src="CHAPTER1/H_c1_01%20Large.jpeg"
+        alt="L’Héritage de la Nuit — Chapter 01"
+      >
 
-        THE CROWNED SHADOW
 
-      </h2>
+    </a>
 
 
-      <p class="description">
 
-        Beyond the walls, monsters rule the wild.
-        Hunters trained by the Church of Light
-        are humanity’s first line of defense.
+    <!-- INFO -->
 
-        <br><br>
+    <div class="info">
 
-        But among all the horrors known to mankind,
-        none inspires more fear than the mysterious
-        entity known as the Crowned Shadow.
+
+      <p>
+
+        Beyond the walls, monsters rule
+        the wild lands. The Church of Light
+        trains hunters to protect humanity
+        from the creatures that haunt the roads,
+        forests and villages.
 
       </p>
 
 
       <a
         class="read-button"
-        href="chapter-1/"
+        href="CHAPTER1/"
       >
 
-        READ CHAPTER 01 →
+        Read Chapter 01 →
 
       </a>
 
@@ -727,26 +569,33 @@ body {
     </div>
 
 
-  </section>
+  </main>
 
 
 
   <!-- FOOTER -->
 
-  <footer class="footer">
+  <div class="footer">
+
 
     <span>
+
       SK6 // L’HÉRITAGE DE LA NUIT
+
     </span>
+
 
     <span>
-      CHAPTER 01
+
+      001 / 019
+
     </span>
 
-  </footer>
+
+  </div>
 
 
-</main>
+</div>
 
 
 </body>
