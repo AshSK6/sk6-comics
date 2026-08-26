@@ -26,13 +26,23 @@
 
 html,
 body {
+
   margin: 0;
   padding: 0;
+
   width: 100%;
   min-height: 100%;
-  background: var(--black);
-  color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
+
+  background:
+    var(--black);
+
+  color:
+    var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 body {
@@ -49,8 +59,7 @@ body {
   width: 100%;
 
   padding:
-    15px
-    20px;
+    15px 20px;
 
   display: flex;
 
@@ -73,72 +82,72 @@ body {
 }
 
 
-/* SK6 */
-
 .logo {
 
   color:
     var(--gold);
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
-  font-size: 18px;
+  font-size:
+    18px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 4px;
-
-  transition:
-    color .15s ease,
-    transform .15s ease;
+  letter-spacing:
+    4px;
 }
+
 
 .logo:hover {
 
   color:
     var(--white);
-
-  transform:
-    translateY(-2px);
 }
 
-
-/* CENTER TITLE */
 
 .chapter-title {
 
-  font-size: 11px;
+  font-size:
+    11px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  text-align: center;
+  text-align:
+    center;
 }
 
-
-/* BACK TO SERIES */
 
 .back {
 
   color:
     var(--white);
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 2px;
+  letter-spacing:
+    2px;
 
-  text-transform: uppercase;
-
-  transition:
-    color .15s ease;
+  text-transform:
+    uppercase;
 }
+
 
 .back:hover {
 
@@ -153,16 +162,17 @@ body {
 
 .reader {
 
-  width: 100%;
+  width:
+    100%;
 
-  max-width: 1500px;
+  max-width:
+    1500px;
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
   padding:
-    30px
-    20px
-    100px;
+    30px 20px 100px;
 }
 
 
@@ -170,21 +180,23 @@ body {
 
 .spread {
 
-  width: 100%;
+  width:
+    100%;
 
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: row;
+  flex-direction:
+    row;
 
-  justify-content: center;
+  justify-content:
+    center;
 
-  align-items: flex-start;
+  align-items:
+    flex-start;
 
-  gap: 12px;
-
-  direction: ltr;
-
-  margin: 0 auto;
+  gap:
+    12px;
 }
 
 
@@ -192,15 +204,20 @@ body {
 
 .page {
 
-  width: 50%;
+  width:
+    50%;
 
-  display: block;
+  max-width:
+    700px;
 
-  max-width: 700px;
+  height:
+    auto;
 
-  height: auto;
+  display:
+    block;
 
-  object-fit: contain;
+  object-fit:
+    contain;
 
   background:
     var(--black);
@@ -208,41 +225,39 @@ body {
   border:
     3px solid
     var(--white);
-
-  margin: 0;
-
-  padding: 0;
 }
 
 
 /* ========================= */
-/* NAVIGATION */
+/* CONTROLS */
 /* ========================= */
 
 .controls {
 
-  width: 100%;
+  width:
+    100%;
 
-  max-width: 900px;
+  max-width:
+    900px;
 
   margin:
-    35px auto
-    0;
+    35px auto 0;
 
-  display: flex;
+  display:
+    flex;
 
   justify-content:
     space-between;
 
-  align-items: center;
-
-  gap: 20px;
+  align-items:
+    center;
 }
 
 
 .control {
 
-  border: none;
+  border:
+    none;
 
   background:
     var(--gold);
@@ -251,46 +266,39 @@ body {
     var(--black);
 
   padding:
-    12px
-    18px;
+    12px 18px;
 
-  font-size: 11px;
+  font-size:
+    11px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 2px;
+  letter-spacing:
+    2px;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  cursor: pointer;
-
-  transition:
-    transform .15s ease,
-    background .15s ease,
-    color .15s ease;
+  cursor:
+    pointer;
 }
 
 
 .control:hover {
 
-  transform:
-    translateY(-3px);
-
   background:
     var(--white);
-
-  color:
-    var(--black);
 }
 
 
 .control:disabled {
 
-  opacity: .25;
+  opacity:
+    .25;
 
-  cursor: default;
-
-  transform: none;
+  cursor:
+    default;
 }
 
 
@@ -300,20 +308,26 @@ body {
 
 .counter {
 
-  text-align: center;
+  text-align:
+    center;
 
-  font-size: 10px;
+  font-size:
+    10px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
   color:
     var(--gold);
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  margin-top: 18px;
+  margin-top:
+    18px;
 }
 
 
@@ -323,34 +337,42 @@ body {
 
 .footer {
 
-  width: 100%;
+  width:
+    100%;
 
-  max-width: 900px;
+  max-width:
+    900px;
 
   margin:
-    50px auto
-    0;
+    50px auto 0;
 
-  padding-top: 20px;
+  padding-top:
+    20px;
 
   border-top:
     2px solid
     rgba(242,242,238,.25);
 
-  display: flex;
+  display:
+    flex;
 
   justify-content:
     space-between;
 
-  font-size: 9px;
+  font-size:
+    9px;
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 3px;
+  letter-spacing:
+    3px;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  opacity: .5;
+  opacity:
+    .5;
 }
 
 
@@ -370,103 +392,109 @@ body {
   .topbar {
 
     padding:
-      13px
-      15px;
+      13px 15px;
   }
 
 
   .chapter-title {
 
-    font-size: 9px;
+    font-size:
+      9px;
 
-    letter-spacing: 2px;
+    letter-spacing:
+      2px;
   }
 
 
   .back {
 
-    font-size: 9px;
+    font-size:
+      9px;
 
-    letter-spacing: 1px;
+    letter-spacing:
+      1px;
   }
 
 
   .reader {
 
     padding:
-      15px
-      8px
-      80px;
+      15px 8px 80px;
   }
 
 
   .spread {
 
-    gap: 4px;
+    gap:
+      4px;
   }
 
 
   .page {
 
-    width: 50%;
+    width:
+      50%;
 
-    max-width: none;
+    max-width:
+      none;
   }
 
 
   .controls {
 
-    margin-top: 25px;
+    margin-top:
+      25px;
 
     padding:
-      0
-      5px;
+      0 5px;
   }
 
 
   .control {
 
     padding:
-      11px
-      12px;
+      11px 12px;
 
-    font-size: 9px;
+    font-size:
+      9px;
 
-    letter-spacing: 1px;
+    letter-spacing:
+      1px;
   }
 
 
   .footer {
 
     padding:
-      0
-      5px;
+      0 5px;
 
-    font-size: 8px;
+    font-size:
+      8px;
   }
 
 }
 
 
-/* VERY SMALL SCREENS */
-
 @media (max-width: 500px) {
 
   .spread {
 
-    gap: 2px;
+    gap:
+      2px;
   }
 
 
   .page {
 
-    width: 50%;
+    width:
+      50%;
   }
 
 
   .chapter-title {
 
-    max-width: 120px;
+    max-width:
+      120px;
   }
 
 }
@@ -486,7 +514,7 @@ body {
 <div class="topbar">
 
 
-  <!-- BACK TO SK6 FRONT PAGE -->
+  <!-- TWO LEVELS UP = MAIN SK6 -->
 
   <a
     class="logo"
@@ -498,8 +526,6 @@ body {
   </a>
 
 
-  <!-- TITLE -->
-
   <div class="chapter-title">
 
     L’HÉRITAGE DE LA NUIT
@@ -509,7 +535,7 @@ body {
   </div>
 
 
-  <!-- BACK TO SERIES -->
+  <!-- ONE LEVEL UP = SERIES LANDING PAGE -->
 
   <a
     class="back"
@@ -537,13 +563,11 @@ body {
     id="spread"
   >
 
-    <!-- Pages inserted by JavaScript -->
-
   </div>
 
 
 
-  <!-- CONTROLS -->
+  <!-- NAVIGATION -->
 
   <div class="controls">
 
@@ -554,7 +578,7 @@ body {
       onclick="previousSpread()"
     >
 
-      ← PREVIOUS
+      ← Previous
 
     </button>
 
@@ -565,7 +589,7 @@ body {
       onclick="nextSpread()"
     >
 
-      NEXT →
+      Next →
 
     </button>
 
@@ -630,51 +654,46 @@ let currentSpread = 0;
 /* ========================= */
 
 const spread =
-  document.getElementById("spread");
+  document.getElementById(
+    "spread"
+  );
 
 const counter =
-  document.getElementById("counter");
+  document.getElementById(
+    "counter"
+  );
 
 const nextButton =
-  document.getElementById("nextButton");
+  document.getElementById(
+    "nextButton"
+  );
 
 const previousButton =
-  document.getElementById("previousButton");
+  document.getElementById(
+    "previousButton"
+  );
 
 
 /* ========================= */
-/* PAGE FILENAME */
+/* FILENAMES */
 /* ========================= */
-
-/*
-
-Your files are:
-
-H_c1_01 Large.jpeg
-H_c1_02 Large.jpeg
-H_c1_03 Large.jpeg
-
-etc.
-
-The %20 represents the space
-between the page number and "Large".
-
-*/
 
 function getFilename(page) {
 
   const number =
     String(page).padStart(2, "0");
 
-  return "H_c1_" +
+  return (
+    "H_c1_" +
     number +
-    "%20Large.jpeg";
+    "%20Large.jpeg"
+  );
 
 }
 
 
 /* ========================= */
-/* SHOW SPREAD */
+/* DISPLAY SPREAD */
 /* ========================= */
 
 function showSpread() {
@@ -689,71 +708,67 @@ function showSpread() {
     firstPage + 1;
 
 
-  /* ========================= */
   /* FIRST PAGE */
-  /* ========================= */
 
   if (
     firstPage <= totalPages
   ) {
 
-    const leftPage =
-      document.createElement("img");
+    const img1 =
+      document.createElement(
+        "img"
+      );
 
-    leftPage.className =
+    img1.className =
       "page";
 
-    leftPage.src =
-      getFilename(firstPage);
+    img1.src =
+      getFilename(
+        firstPage
+      );
 
-    leftPage.alt =
+    img1.alt =
       "L’Héritage de la Nuit — Page " +
       firstPage;
 
-    leftPage.loading =
-      "eager";
-
     spread.appendChild(
-      leftPage
+      img1
     );
 
   }
 
 
-  /* ========================= */
   /* SECOND PAGE */
-  /* ========================= */
 
   if (
     secondPage <= totalPages
   ) {
 
-    const rightPage =
-      document.createElement("img");
+    const img2 =
+      document.createElement(
+        "img"
+      );
 
-    rightPage.className =
+    img2.className =
       "page";
 
-    rightPage.src =
-      getFilename(secondPage);
+    img2.src =
+      getFilename(
+        secondPage
+      );
 
-    rightPage.alt =
+    img2.alt =
       "L’Héritage de la Nuit — Page " +
       secondPage;
 
-    rightPage.loading =
-      "eager";
-
     spread.appendChild(
-      rightPage
+      img2
     );
 
   }
 
 
-  /* ========================= */
   /* COUNTER */
-  /* ========================= */
 
   if (
     secondPage <= totalPages
@@ -778,13 +793,10 @@ function showSpread() {
   }
 
 
-  /* ========================= */
-  /* BUTTON STATES */
-  /* ========================= */
+  /* BUTTONS */
 
   previousButton.disabled =
     currentSpread === 0;
-
 
   nextButton.disabled =
     secondPage >= totalPages;
@@ -855,9 +867,9 @@ document.addEventListener(
   "keydown",
   function(event) {
 
-
     if (
-      event.key === "ArrowRight"
+      event.key ===
+      "ArrowRight"
     ) {
 
       nextSpread();
@@ -866,7 +878,8 @@ document.addEventListener(
 
 
     if (
-      event.key === "ArrowLeft"
+      event.key ===
+      "ArrowLeft"
     ) {
 
       previousSpread();
