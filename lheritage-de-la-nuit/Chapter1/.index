@@ -28,17 +28,11 @@ html,
 body {
   margin: 0;
   padding: 0;
-
   width: 100%;
   min-height: 100%;
-
   background: var(--black);
   color: var(--white);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -46,7 +40,9 @@ body {
 }
 
 
+/* ========================= */
 /* TOP BAR */
+/* ========================= */
 
 .topbar {
 
@@ -70,17 +66,19 @@ body {
 
   top: 0;
 
-  background: var(--black);
+  background:
+    var(--black);
 
   z-index: 100;
 }
 
 
-/* SK6 RETURN */
+/* SK6 */
 
 .logo {
 
-  color: var(--gold);
+  color:
+    var(--gold);
 
   text-decoration: none;
 
@@ -97,7 +95,8 @@ body {
 
 .logo:hover {
 
-  color: var(--white);
+  color:
+    var(--white);
 
   transform:
     translateY(-2px);
@@ -120,11 +119,12 @@ body {
 }
 
 
-/* CHAPTER RETURN */
+/* BACK TO SERIES */
 
 .back {
 
-  color: var(--white);
+  color:
+    var(--white);
 
   text-decoration: none;
 
@@ -142,11 +142,14 @@ body {
 
 .back:hover {
 
-  color: var(--gold);
+  color:
+    var(--gold);
 }
 
 
+/* ========================= */
 /* READER */
+/* ========================= */
 
 .reader {
 
@@ -185,17 +188,7 @@ body {
 }
 
 
-/*
-  L'HÉRITAGE DE LA NUIT READING ORDER
-
-  Page 1 = LEFT
-  Page 2 = RIGHT
-
-  Page 3 = LEFT
-  Page 4 = RIGHT
-
-  etc.
-*/
+/* PAGE */
 
 .page {
 
@@ -209,7 +202,8 @@ body {
 
   object-fit: contain;
 
-  background: var(--black);
+  background:
+    var(--black);
 
   border:
     3px solid
@@ -221,7 +215,9 @@ body {
 }
 
 
+/* ========================= */
 /* NAVIGATION */
+/* ========================= */
 
 .controls {
 
@@ -235,7 +231,8 @@ body {
 
   display: flex;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
   align-items: center;
 
@@ -247,9 +244,11 @@ body {
 
   border: none;
 
-  background: var(--gold);
+  background:
+    var(--gold);
 
-  color: var(--black);
+  color:
+    var(--black);
 
   padding:
     12px
@@ -271,15 +270,19 @@ body {
     color .15s ease;
 }
 
+
 .control:hover {
 
   transform:
     translateY(-3px);
 
-  background: var(--white);
+  background:
+    var(--white);
 
-  color: var(--black);
+  color:
+    var(--black);
 }
+
 
 .control:disabled {
 
@@ -291,7 +294,9 @@ body {
 }
 
 
-/* PAGE COUNTER */
+/* ========================= */
+/* COUNTER */
+/* ========================= */
 
 .counter {
 
@@ -303,7 +308,8 @@ body {
 
   letter-spacing: 3px;
 
-  color: var(--gold);
+  color:
+    var(--gold);
 
   text-transform: uppercase;
 
@@ -311,7 +317,9 @@ body {
 }
 
 
+/* ========================= */
 /* FOOTER */
+/* ========================= */
 
 .footer {
 
@@ -331,7 +339,8 @@ body {
 
   display: flex;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
   font-size: 9px;
 
@@ -344,13 +353,17 @@ body {
   opacity: .5;
 }
 
+
 .footer span:last-child {
 
-  color: var(--gold);
+  color:
+    var(--gold);
 }
 
 
+/* ========================= */
 /* MOBILE */
+/* ========================= */
 
 @media (max-width: 800px) {
 
@@ -361,6 +374,7 @@ body {
       15px;
   }
 
+
   .chapter-title {
 
     font-size: 9px;
@@ -368,12 +382,14 @@ body {
     letter-spacing: 2px;
   }
 
+
   .back {
 
     font-size: 9px;
 
     letter-spacing: 1px;
   }
+
 
   .reader {
 
@@ -383,10 +399,12 @@ body {
       80px;
   }
 
+
   .spread {
 
     gap: 4px;
   }
+
 
   .page {
 
@@ -394,6 +412,7 @@ body {
 
     max-width: none;
   }
+
 
   .controls {
 
@@ -403,6 +422,7 @@ body {
       0
       5px;
   }
+
 
   .control {
 
@@ -414,6 +434,7 @@ body {
 
     letter-spacing: 1px;
   }
+
 
   .footer {
 
@@ -436,10 +457,12 @@ body {
     gap: 2px;
   }
 
+
   .page {
 
     width: 50%;
   }
+
 
   .chapter-title {
 
@@ -456,22 +479,26 @@ body {
 <body>
 
 
+<!-- ========================= -->
 <!-- TOP BAR -->
+<!-- ========================= -->
 
 <div class="topbar">
 
 
-  <!-- RETURNS TO L'HÉRITAGE DE LA NUIT -->
+  <!-- BACK TO SK6 FRONT PAGE -->
 
   <a
     class="logo"
-    href="../"
+    href="../../"
   >
+
     SK6
+
   </a>
 
 
-  <!-- CENTER -->
+  <!-- TITLE -->
 
   <div class="chapter-title">
 
@@ -482,13 +509,15 @@ body {
   </div>
 
 
-  <!-- RETURNS TO SERIES PAGE -->
+  <!-- BACK TO SERIES -->
 
   <a
     class="back"
     href="../"
   >
+
     Series
+
   </a>
 
 
@@ -496,7 +525,9 @@ body {
 
 
 
+<!-- ========================= -->
 <!-- READER -->
+<!-- ========================= -->
 
 <main class="reader">
 
@@ -509,6 +540,7 @@ body {
     <!-- Pages inserted by JavaScript -->
 
   </div>
+
 
 
   <!-- CONTROLS -->
@@ -541,6 +573,9 @@ body {
   </div>
 
 
+
+  <!-- COUNTER -->
+
   <div
     class="counter"
     id="counter"
@@ -551,17 +586,25 @@ body {
   </div>
 
 
+
   <!-- FOOTER -->
 
   <div class="footer">
 
-    <span>
-      SK6 // L’HÉRITAGE DE LA NUIT
-    </span>
 
     <span>
-      001 / 019
+
+      SK6 // L’HÉRITAGE DE LA NUIT
+
     </span>
+
+
+    <span>
+
+      001 / 019
+
+    </span>
+
 
   </div>
 
@@ -573,37 +616,50 @@ body {
 <script>
 
 
+/* ========================= */
 /* SETTINGS */
+/* ========================= */
 
 const totalPages = 19;
 
 let currentSpread = 0;
 
 
+/* ========================= */
 /* ELEMENTS */
+/* ========================= */
 
 const spread =
-  document.getElementById(
-    "spread"
-  );
+  document.getElementById("spread");
 
 const counter =
-  document.getElementById(
-    "counter"
-  );
+  document.getElementById("counter");
 
 const nextButton =
-  document.getElementById(
-    "nextButton"
-  );
+  document.getElementById("nextButton");
 
 const previousButton =
-  document.getElementById(
-    "previousButton"
-  );
+  document.getElementById("previousButton");
 
 
+/* ========================= */
 /* PAGE FILENAME */
+/* ========================= */
+
+/*
+
+Your files are:
+
+H_c1_01 Large.jpeg
+H_c1_02 Large.jpeg
+H_c1_03 Large.jpeg
+
+etc.
+
+The %20 represents the space
+between the page number and "Large".
+
+*/
 
 function getFilename(page) {
 
@@ -617,7 +673,9 @@ function getFilename(page) {
 }
 
 
+/* ========================= */
 /* SHOW SPREAD */
+/* ========================= */
 
 function showSpread() {
 
@@ -631,18 +689,9 @@ function showSpread() {
     firstPage + 1;
 
 
-  /*
-    L'HÉRITAGE DE LA NUIT
-
-    Page 1 = LEFT
-    Page 2 = RIGHT
-
-    Page 3 = LEFT
-    Page 4 = RIGHT
-  */
-
-
-  /* PAGE 1 */
+  /* ========================= */
+  /* FIRST PAGE */
+  /* ========================= */
 
   if (
     firstPage <= totalPages
@@ -651,7 +700,8 @@ function showSpread() {
     const leftPage =
       document.createElement("img");
 
-    leftPage.className = "page";
+    leftPage.className =
+      "page";
 
     leftPage.src =
       getFilename(firstPage);
@@ -660,7 +710,8 @@ function showSpread() {
       "L’Héritage de la Nuit — Page " +
       firstPage;
 
-    leftPage.loading = "eager";
+    leftPage.loading =
+      "eager";
 
     spread.appendChild(
       leftPage
@@ -669,7 +720,9 @@ function showSpread() {
   }
 
 
-  /* PAGE 2 */
+  /* ========================= */
+  /* SECOND PAGE */
+  /* ========================= */
 
   if (
     secondPage <= totalPages
@@ -678,7 +731,8 @@ function showSpread() {
     const rightPage =
       document.createElement("img");
 
-    rightPage.className = "page";
+    rightPage.className =
+      "page";
 
     rightPage.src =
       getFilename(secondPage);
@@ -687,7 +741,8 @@ function showSpread() {
       "L’Héritage de la Nuit — Page " +
       secondPage;
 
-    rightPage.loading = "eager";
+    rightPage.loading =
+      "eager";
 
     spread.appendChild(
       rightPage
@@ -696,7 +751,9 @@ function showSpread() {
   }
 
 
+  /* ========================= */
   /* COUNTER */
+  /* ========================= */
 
   if (
     secondPage <= totalPages
@@ -721,7 +778,9 @@ function showSpread() {
   }
 
 
+  /* ========================= */
   /* BUTTON STATES */
+  /* ========================= */
 
   previousButton.disabled =
     currentSpread === 0;
@@ -733,7 +792,9 @@ function showSpread() {
 }
 
 
+/* ========================= */
 /* NEXT */
+/* ========================= */
 
 function nextSpread() {
 
@@ -762,7 +823,9 @@ function nextSpread() {
 }
 
 
+/* ========================= */
 /* PREVIOUS */
+/* ========================= */
 
 function previousSpread() {
 
@@ -784,17 +847,14 @@ function previousSpread() {
 }
 
 
+/* ========================= */
 /* KEYBOARD */
+/* ========================= */
 
 document.addEventListener(
   "keydown",
   function(event) {
 
-
-    /*
-      RIGHT ARROW = NEXT
-      LEFT ARROW = PREVIOUS
-    */
 
     if (
       event.key === "ArrowRight"
@@ -817,7 +877,9 @@ document.addEventListener(
 );
 
 
+/* ========================= */
 /* START */
+/* ========================= */
 
 showSpread();
 
