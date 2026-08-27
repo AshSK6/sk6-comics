@@ -79,7 +79,6 @@ body::before {
   position: fixed;
 
   top: 42%;
-
   left: -20%;
 
   width: 140%;
@@ -464,10 +463,6 @@ header:hover .character-vice {
 }
 
 
-/* ========================= */
-/* TAGLINE */
-/* ========================= */
-
 .tagline {
 
   position:
@@ -499,10 +494,6 @@ header:hover .character-vice {
     var(--green);
 }
 
-
-/* ========================= */
-/* STAMP */
-/* ========================= */
 
 .stamp {
 
@@ -718,7 +709,7 @@ header:hover .character-vice {
 
 
 /* ========================= */
-/* 9MM GIRLS */
+/* 9MM */
 /* ========================= */
 
 .comic-9mm:hover {
@@ -740,7 +731,7 @@ header:hover .character-vice {
 
 
 /* ========================= */
-/* FREAKY 1/2 */
+/* FREAKY */
 /* ========================= */
 
 .comic-freaky:hover {
@@ -784,26 +775,26 @@ header:hover .character-vice {
 
 
 /* ========================= */
-/* L'HÉRITAGE DE LA NUIT */
+/* HERITAGE */
 /* ========================= */
+
+/*
+   DEFAULT:
+   GREEN — same as the other cards.
+
+   HOVER:
+   GOLD — Heritage's signature color.
+*/
 
 .comic-heritage {
 
   box-shadow:
     10px 10px 0
-    var(--gold);
-
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease;
+    var(--green);
 }
 
 
 .comic-heritage:hover {
-
-  transform:
-    translateY(-12px)
-    rotate(0deg);
 
   box-shadow:
     15px 15px 0
@@ -821,15 +812,8 @@ header:hover .character-vice {
 }
 
 
-.comic-heritage:hover .cover img {
-
-  transform:
-    scale(1.04);
-}
-
-
 /* ========================= */
-/* 18+ BADGE */
+/* 18+ */
 /* ========================= */
 
 .adult-badge {
@@ -1594,7 +1578,11 @@ footer {
   .logo {
 
     font-size:
-      clamp(105px,29vw,170px);
+      clamp(
+        105px,
+        29vw,
+        170px
+      );
 
     letter-spacing:
       -5px;
@@ -2076,9 +2064,7 @@ footer {
 
 
 <div class="description">
-
   More comics from SK6.
-
 </div>
 
 </div>
@@ -2097,7 +2083,6 @@ footer {
   class="latest"
   id="latest"
 >
-
 
 <div class="latest-heading">
 
@@ -2154,7 +2139,6 @@ footer {
   class="support"
   id="support"
 >
-
 
 <div class="support-label">
   SK6 // SUPPORT // TRANSMISSION
