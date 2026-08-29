@@ -1,2045 +1,1330 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 
 <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+name=“viewport”
+content=“width=device-width, initial-scale=1.0”
 
 <title>SK6 — Comics / Art / Chaos</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link
   rel="preconnect"
   href="https://fonts.gstatic.com"
   crossorigin
 >
-
 <link
   href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap"
   rel="stylesheet"
 >
-
 <style>
-
 * {
   box-sizing: border-box;
 }
-
 :root {
-
   --black: #080808;
   --white: #f2f2ee;
-
   --green: #b7ff00;
   --red: #e10600;
   --blue: #5ecbff;
   --purple: #9b4dff;
-
   --gold: #c9a45c;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
-
   margin: 0;
-
   background:
     var(--black);
-
   color:
     var(--white);
-
   font-family:
     Arial,
     Helvetica,
     sans-serif;
-
   overflow-x: hidden;
 }
-
-
 /* ========================= */
 /* BACKGROUND */
 /* ========================= */
-
 body::before {
-
   content:
     "SK6  SK6  SK6  SK6  SK6";
-
   position: fixed;
-
   top: 42%;
   left: -20%;
-
   width: 140%;
-
   font-size: 12vw;
-
   font-weight: 900;
-
   letter-spacing: -8px;
-
   white-space: nowrap;
-
   color:
     rgba(255,255,255,0.025);
-
   transform:
     rotate(-7deg);
-
   pointer-events: none;
-
   z-index: 0;
 }
-
-
 body::after {
-
   content: "";
-
   position: fixed;
-
   width: 160%;
-
   height: 4px;
-
   left: -30%;
-
   top: 43%;
-
   background:
     var(--green);
-
   opacity: .6;
-
   transform:
     rotate(-2deg);
-
   pointer-events: none;
-
   z-index: 0;
 }
-
-
 /* ========================= */
 /* PAGE */
 /* ========================= */
-
 .page {
-
   max-width: 1250px;
-
   margin: auto;
-
   padding:
     20px
     25px
     80px;
-
   position: relative;
-
   z-index: 1;
 }
-
-
 /* ========================= */
 /* NAVIGATION */
 /* ========================= */
-
 nav {
-
   display: flex;
-
   justify-content:
     space-between;
-
   align-items:
     center;
-
   padding:
     12px
     0
     18px;
-
   border-bottom:
     2px solid
     var(--white);
 }
-
-
 .nav-logo {
-
   color:
     var(--green);
-
   text-decoration:
     none;
-
   font-size:
     18px;
-
   font-weight:
     900;
-
   letter-spacing:
     4px;
 }
-
-
 .nav-links {
-
   display:
     flex;
-
   gap:
     25px;
 }
-
-
 .nav-links a {
-
   color:
     var(--white);
-
   text-decoration:
     none;
-
   font-size:
     10px;
-
   font-weight:
     900;
-
   letter-spacing:
     2px;
-
   text-transform:
     uppercase;
-
   transition:
     color .15s ease;
 }
-
-
 .nav-links a:hover {
-
   color:
     var(--green);
 }
-
-
 /* ========================= */
 /* HEADER */
 /* ========================= */
-
 header {
-
   position:
     relative;
-
   text-align:
     center;
-
   padding:
     50px
     0
     45px;
-
   border-bottom:
     10px solid
     var(--white);
-
   margin-bottom:
     70px;
-
   min-height:
     560px;
-
   display:
     flex;
-
   flex-direction:
     column;
-
   justify-content:
     center;
-
   align-items:
     center;
 }
-
-
 .number {
-
   position:
     absolute;
-
   top:
     15px;
-
   left:
     0;
-
   font-size:
     11px;
-
   font-weight:
     900;
-
   letter-spacing:
     3px;
-
   color:
     var(--green);
 }
-
-
 /* ========================= */
 /* CHARACTERS */
 /* ========================= */
-
 .character {
-
   position:
     absolute;
-
   width:
     480px;
-
   max-width:
     42vw;
-
   height:
     auto;
-
   pointer-events:
     none;
-
   z-index:
     4;
-
   transition:
     transform .4s ease;
 }
-
-
 .character-ash {
-
   left:
     -30px;
-
   top:
     35px;
-
   transform:
     rotate(-3deg);
 }
-
-
 .character-vice {
-
   right:
     -20px;
-
   top:
     35px;
-
   width:
     420px;
-
   max-width:
     38vw;
-
   transform:
     rotate(3deg);
 }
-
-
 header:hover .character-ash {
-
   transform:
     translateY(-8px)
     rotate(-4deg);
 }
-
-
 header:hover .character-vice {
-
   transform:
     translateY(-8px)
     rotate(4deg);
 }
-
-
 /* ========================= */
 /* SK6 LOGO */
 /* ========================= */
-
 .logo {
-
   position:
     relative;
-
   z-index:
     5;
-
   font-family:
     "Teko",
     sans-serif;
-
   font-size:
     clamp(145px,25vw,285px);
-
   font-weight:
     700;
-
   line-height:
     .62;
-
   letter-spacing:
     -8px;
-
   text-align:
     center;
-
   transform:
     skew(-7deg)
     scaleX(1.05);
-
   color:
     var(--white);
-
   text-shadow:
-
     7px 7px 0
     var(--black),
-
     -4px -4px 0
     var(--black),
-
     11px 11px 0
     var(--green);
 }
-
-
 .logo::before {
-
   content:
     "";
-
   position:
     absolute;
-
   left:
     -5%;
-
   right:
     -5%;
-
   bottom:
     5%;
-
   height:
     8px;
-
   background:
     var(--green);
-
   transform:
     skew(-20deg);
-
   z-index:
     -1;
 }
-
-
 .tagline {
-
   position:
     relative;
-
   z-index:
     6;
-
   margin-top:
     40px;
-
   font-size:
     14px;
-
   font-weight:
     900;
-
   letter-spacing:
     7px;
-
   text-transform:
     uppercase;
 }
-
-
 .tagline span {
-
   color:
     var(--green);
 }
-
-
 .stamp {
-
   position:
     relative;
-
   z-index:
     6;
-
   display:
     inline-block;
-
   margin-top:
     25px;
-
   padding:
     9px
     15px;
-
   background:
     var(--green);
-
   color:
     var(--black);
-
   font-size:
     12px;
-
   font-weight:
     900;
-
   letter-spacing:
     2px;
-
   text-transform:
     uppercase;
-
   transform:
     rotate(-2deg);
 }
-
-
 /* ========================= */
 /* SECTION */
 /* ========================= */
-
 .section-heading {
-
   display:
     flex;
-
   align-items:
     flex-end;
-
   justify-content:
     space-between;
-
   gap:
     20px;
-
   margin-bottom:
     45px;
-
   border-bottom:
     3px solid
     var(--white);
-
   padding-bottom:
     15px;
 }
-
-
 .section-heading h2 {
-
   margin:
     0;
-
   font-size:
     clamp(45px,9vw,90px);
-
   line-height:
     .8;
-
   letter-spacing:
     -6px;
-
   font-weight:
     900;
-
   text-transform:
     uppercase;
 }
-
-
 .issue {
-
   font-size:
     11px;
-
   font-weight:
     900;
-
   letter-spacing:
     3px;
-
   text-transform:
     uppercase;
-
   color:
     var(--green);
-
   white-space:
     nowrap;
 }
-
-
 /* ========================= */
 /* COMICS */
 /* ========================= */
-
 .comics {
-
   display:
     grid;
-
   grid-template-columns:
     repeat(3,1fr);
-
   gap:
     25px;
 }
-
-
 .comic {
-
   background:
     var(--white);
-
   color:
     var(--black);
-
   padding:
     10px;
-
   text-decoration:
     none;
-
   display:
     block;
-
   position:
     relative;
-
   border:
     4px solid
     var(--white);
-
   box-shadow:
     10px 10px 0
     var(--green);
-
   transition:
     transform .2s ease,
     box-shadow .2s ease;
 }
-
-
 .comic:nth-child(1) {
-
   transform:
     rotate(-1deg);
 }
-
-
 .comic:nth-child(2) {
-
   transform:
     rotate(0deg);
 }
-
-
 .comic:nth-child(3) {
-
   transform:
     rotate(1deg);
 }
-
-
 .comic:nth-child(4) {
-
   transform:
     rotate(-1deg);
 }
-
-
 .comic:nth-child(5) {
-
   transform:
     rotate(1deg);
 }
-
-
 .comic:hover {
-
   transform:
     translateY(-12px)
     rotate(0deg);
-
   box-shadow:
     15px 15px 0
     var(--green);
 }
-
-
 /* ========================= */
 /* 9MM */
 /* ========================= */
-
 .comic-9mm:hover {
-
   box-shadow:
     15px 15px 0
     var(--red);
 }
-
-
 .comic-9mm:hover .read {
-
   background:
     var(--red);
-
   color:
     var(--white);
 }
-
-
 /* ========================= */
 /* FREAKY */
 /* ========================= */
-
 .comic-freaky:hover {
-
   box-shadow:
     15px 15px 0
     var(--blue);
 }
-
-
 .comic-freaky:hover .read {
-
   background:
     var(--blue);
-
   color:
     var(--black);
 }
-
-
 /* ========================= */
 /* INDOCILIS */
 /* ========================= */
-
 .comic-indocilis:hover {
-
   box-shadow:
     15px 15px 0
     var(--purple);
 }
-
-
 .comic-indocilis:hover .read {
-
   background:
     var(--purple);
-
   color:
     var(--white);
 }
-
-
 /* ========================= */
 /* HERITAGE */
 /* ========================= */
-
-/*
-   DEFAULT:
-   GREEN — same as the other cards.
-
-   HOVER:
-   GOLD — Heritage's signature color.
-*/
-
 .comic-heritage {
-
   box-shadow:
     10px 10px 0
     var(--green);
 }
-
-
 .comic-heritage:hover {
-
   box-shadow:
     15px 15px 0
     var(--gold);
 }
-
-
 .comic-heritage:hover .read {
-
   background:
     var(--gold);
-
   color:
     var(--black);
 }
-
-
 /* ========================= */
 /* 18+ */
 /* ========================= */
-
 .adult-badge {
-
   position:
     absolute;
-
   top:
     18px;
-
   right:
     18px;
-
   z-index:
     10;
-
   background:
     var(--red);
-
   color:
     var(--white);
-
   padding:
     8px
     10px;
-
   font-size:
     15px;
-
   font-weight:
     900;
-
   letter-spacing:
     1px;
-
   border:
     3px solid
     var(--black);
-
   transform:
     rotate(3deg);
-
   box-shadow:
     4px 4px 0
     var(--black);
 }
-
-
 /* ========================= */
 /* COVER */
 /* ========================= */
-
 .cover {
-
   width:
     100%;
-
   aspect-ratio:
     3 / 4;
-
   background:
     var(--black);
-
   display:
     flex;
-
   align-items:
     center;
-
   justify-content:
     center;
-
   overflow:
     hidden;
-
   position:
     relative;
 }
-
-
 .cover::after {
-
   content:
     "";
-
   position:
     absolute;
-
   inset:
     0;
-
   border:
     3px solid
     var(--green);
-
   pointer-events:
     none;
 }
-
-
 .comic-9mm .cover::after {
-
   border-color:
     var(--red);
 }
-
-
 .comic-freaky .cover::after {
-
   border-color:
     var(--blue);
 }
-
-
 .comic-indocilis .cover::after {
-
   border-color:
     var(--purple);
 }
-
-
 .comic-heritage .cover::after {
-
   border-color:
     var(--gold);
 }
-
-
 .cover img {
-
   width:
     100%;
-
   height:
     100%;
-
   object-fit:
     cover;
-
   object-position:
     top center;
-
   transition:
     transform .4s ease;
 }
-
-
 .comic:hover .cover img {
-
   transform:
     scale(1.04);
 }
-
-
 /* ========================= */
 /* ISSUE LABEL */
 /* ========================= */
-
 .issue-label {
-
   position:
     absolute;
-
   top:
     15px;
-
   left:
     15px;
-
   z-index:
     5;
-
   background:
     var(--green);
-
   color:
     var(--black);
-
   padding:
     6px
     8px;
-
   font-size:
     9px;
-
   font-weight:
     900;
-
   letter-spacing:
     2px;
-
   text-transform:
     uppercase;
 }
-
-
 .comic-9mm .issue-label {
-
   background:
     var(--red);
-
   color:
     var(--white);
 }
-
-
 .comic-freaky .issue-label {
-
   background:
     var(--blue);
-
   color:
     var(--black);
 }
-
-
 .comic-indocilis .issue-label {
-
   background:
     var(--purple);
-
   color:
     var(--white);
 }
-
-
 .comic-heritage .issue-label {
-
   background:
     var(--gold);
-
   color:
     var(--black);
 }
-
-
 /* ========================= */
 /* INFO */
 /* ========================= */
-
 .info {
-
   padding:
     15px
     5px
     8px;
 }
-
-
 .title {
-
   font-size:
     31px;
-
   font-weight:
     900;
-
   text-transform:
     uppercase;
-
   letter-spacing:
     -2px;
-
   line-height:
     .9;
 }
-
-
 .description {
-
   margin-top:
     9px;
-
   font-size:
     11px;
-
   font-weight:
     900;
-
   line-height:
     1.4;
-
   text-transform:
     uppercase;
 }
-
-
 .read {
-
   display:
     inline-block;
-
   margin-top:
     14px;
-
   padding:
     9px
     14px;
-
   background:
     var(--black);
-
   color:
     var(--green);
-
   font-size:
     11px;
-
   font-weight:
     900;
-
   letter-spacing:
     2px;
-
   text-transform:
     uppercase;
 }
-
-
 /* ========================= */
 /* LATEST */
 /* ========================= */
-
 .latest {
-
   margin-top:
     100px;
-
   padding:
     35px 0;
 }
-
-
 .latest-heading {
-
   display:
     flex;
-
   justify-content:
     space-between;
-
   align-items:
     flex-end;
-
   gap:
     20px;
-
   margin-bottom:
     30px;
-
   padding-bottom:
     15px;
-
   border-bottom:
     3px solid
     var(--white);
 }
-
-
 .latest-heading h2 {
-
   margin:
     0;
-
   font-size:
     clamp(45px,8vw,80px);
-
   line-height:
     .8;
-
   letter-spacing:
     -5px;
-
   text-transform:
     uppercase;
 }
-
-
 .latest-label {
-
   color:
     var(--green);
-
   font-size:
     10px;
-
   font-weight:
     900;
-
   letter-spacing:
     3px;
-
   text-transform:
     uppercase;
 }
-
-
+/* ========================= */
+/* UPDATE */
+/* ========================= */
 .update {
-
   display:
     grid;
-
   grid-template-columns:
     150px 1fr auto;
-
   gap:
     30px;
-
   align-items:
     center;
-
   padding:
     22px 20px;
-
   background:
     var(--white);
-
   color:
     var(--black);
-
   border-left:
     8px solid
     var(--green);
-
   box-shadow:
     10px 10px 0
     var(--green);
+  text-decoration:
+    none;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
 }
-
-
+.update:hover {
+  transform:
+    translateY(-5px);
+  box-shadow:
+    14px 14px 0
+    var(--green);
+}
 .update-number {
-
   color:
     var(--green);
-
   background:
     var(--black);
-
   padding:
     8px
     10px;
-
   font-size:
     10px;
-
   font-weight:
     900;
-
   letter-spacing:
     2px;
 }
-
-
 .update-content h3 {
-
   margin:
     0;
-
   font-size:
     clamp(24px,4vw,40px);
-
   line-height:
     .9;
-
   letter-spacing:
     -2px;
-
   text-transform:
     uppercase;
 }
-
-
 .update-content p {
-
   margin:
     10px 0 0;
-
   font-size:
     11px;
-
   font-weight:
     900;
-
   line-height:
     1.4;
-
   text-transform:
     uppercase;
 }
-
-
 .update-date {
-
   font-size:
     9px;
-
   font-weight:
     900;
-
   letter-spacing:
     2px;
-
   opacity:
     .5;
 }
-
-
 /* ========================= */
 /* SUPPORT */
 /* ========================= */
-
 .support {
-
   margin-top:
     90px;
-
   padding:
     45px 25px;
-
   background:
     var(--white);
-
   color:
     var(--black);
-
   text-align:
     center;
-
   border:
     5px solid
     var(--black);
-
   box-shadow:
     12px 12px 0
     var(--green);
-
   transform:
     rotate(.7deg);
 }
-
-
 .support-label {
-
   font-size:
     10px;
-
   font-weight:
     900;
-
   letter-spacing:
     4px;
-
   margin-bottom:
     20px;
 }
-
-
 .support h2 {
-
   margin:
     0;
-
   font-size:
     clamp(45px,8vw,80px);
-
   line-height:
     .8;
-
   letter-spacing:
     -5px;
-
   text-transform:
     uppercase;
 }
-
-
 .support p {
-
   max-width:
     600px;
-
   margin:
     20px auto 25px;
-
   font-size:
     11px;
-
   font-weight:
     900;
-
   line-height:
     1.5;
-
   text-transform:
     uppercase;
 }
-
-
 .support-button {
-
   display:
     inline-block;
-
   padding:
     13px 22px;
-
   background:
     var(--black);
-
   color:
     var(--white);
-
   text-decoration:
     none;
-
   font-size:
     11px;
-
   font-weight:
     900;
-
   letter-spacing:
     2px;
-
   text-transform:
     uppercase;
 }
-
-
 .support-button:hover {
-
   background:
     var(--green);
-
   color:
     var(--black);
 }
-
-
 /* ========================= */
 /* MANIFESTO */
 /* ========================= */
-
 .manifesto {
-
   margin-top:
     90px;
-
   padding:
     40px 20px;
-
   background:
     var(--green);
-
   color:
     var(--black);
-
   text-align:
     center;
-
   transform:
     rotate(-1deg);
 }
-
-
 .manifesto p {
-
   margin:
     0;
-
   font-size:
     clamp(22px,4vw,45px);
-
   font-weight:
     900;
-
   line-height:
     .9;
-
   letter-spacing:
     -2px;
-
   text-transform:
     uppercase;
 }
-
-
 /* ========================= */
 /* FOOTER */
 /* ========================= */
-
 footer {
-
   margin-top:
     70px;
-
   text-align:
     center;
-
   font-size:
     10px;
-
   font-weight:
     900;
-
   letter-spacing:
     4px;
-
   text-transform:
     uppercase;
-
   opacity:
     .5;
 }
-
-
 /* ========================= */
 /* MOBILE */
 /* ========================= */
-
 @media (max-width:750px) {
-
   .page {
-
     padding:
       15px
       15px
       60px;
   }
-
-
   nav {
-
     align-items:
       flex-start;
   }
-
-
   .nav-links {
-
     gap:
       12px;
-
     flex-wrap:
       wrap;
-
     justify-content:
       flex-end;
   }
-
-
   header {
-
     min-height:
       400px;
-
     padding-top:
       55px;
   }
-
-
   .logo {
-
     font-size:
       clamp(
         105px,
         29vw,
         170px
       );
-
     letter-spacing:
       -5px;
   }
-
-
   .character {
-
     width:
       300px;
-
     max-width:
       48vw;
   }
-
-
   .character-ash {
-
     left:
       -35px;
-
     top:
       55px;
   }
-
-
   .character-vice {
-
     right:
       -10px;
-
     top:
       55px;
-
     width:
       270px;
   }
-
-
   .tagline {
-
     font-size:
       10px;
-
     letter-spacing:
       4px;
-
     margin-top:
       30px;
   }
-
-
   .comics {
-
     grid-template-columns:
       1fr;
-
     gap:
       40px;
   }
-
-
   .comic {
-
     max-width:
       430px;
-
     margin:
       auto;
-
     width:
       100%;
   }
-
-
   .section-heading {
-
     display:
       block;
   }
-
-
   .issue {
-
     display:
       block;
-
     margin-top:
       15px;
   }
-
-
   .latest-heading {
-
     display:
       block;
   }
-
-
   .latest-label {
-
     display:
       block;
-
     margin-top:
       15px;
   }
-
-
   .update {
-
     grid-template-columns:
       1fr;
-
     gap:
       15px;
   }
-
 }
-
 </style>
-
 </head>
-
-
 <body>
-
-
 <div class="page">
-
-
 <!-- ========================= -->
 <!-- NAVIGATION -->
 <!-- ========================= -->
-
 <nav>
 
 <a
-  class="nav-logo"
-  href="#"
->
-  SK6
-</a>
+class=“nav-logo”
+href=”#”
 
-
+SK6
 <div class="nav-links">
-
 <a href="#comics">
   Comics
 </a>
-
 <a href="#latest">
   Latest News
 </a>
-
 <a href="about/">
   About
 </a>
-
 <a href="#support">
   Support Us
 </a>
-
 <a href="contact/">
   Contact Us
 </a>
-
 </div>
-
 </nav>
-
-
 <!-- ========================= -->
 <!-- HEADER -->
 <!-- ========================= -->
-
 <header>
-
 <div class="number">
   // Sierra Kilo Juliett
 </div>
 
+<img
+class=“character character-ash”
+src=“images/Ash1.png”
+alt=””
 
 <img
-  class="character character-ash"
-  src="images/Ash1.png"
-  alt=""
->
-
-
-<img
-  class="character character-vice"
-  src="images/Vice1.png"
-  alt=""
->
-
+class=“character character-vice”
+src=“images/Vice1.png”
+alt=””
 
 <div class="logo">
   SK6
 </div>
-
-
 <div class="tagline">
 
-  Comics
-  <span>/</span>
-  Art
-  <span>/</span>
-  Chaos
+Comics
+/
+Art
+/
+Chaos
 
 </div>
-
-
 <div class="stamp">
 
-  No Rules. Just Comics.
+No Rules. Just Comics.
 
 </div>
-
 </header>
-
-
 <!-- ========================= -->
 <!-- COMICS -->
 <!-- ========================= -->
-
 <main id="comics">
-
-
 <div class="section-heading">
-
 <h2>
   Our Comics
 </h2>
-
 <div class="issue">
 
-  Independent /
-  Underground /
-  SK6
+Independent /
+Underground /
+SK6
 
 </div>
-
 </div>
-
-
 <div class="comics">
-
-
 <!-- ========================= -->
 <!-- 9MM GIRLS -->
 <!-- ========================= -->
 
 <a
-  class="comic comic-9mm"
-  href="9mm-girls/"
->
+class=“comic comic-9mm”
+href=“9mm-girls/”
 
 <div class="adult-badge">
   18+
 </div>
-
-
 <div class="issue-label">
   SK6-001
 </div>
-
-
 <div class="cover">
 
 <img
-  src="9mm-girls/Page-01%20Large.jpeg"
-  alt="9mm Girls"
->
+src=“9mm-girls/Page-01%20Large.jpeg”
+alt=“9mm Girls”
 
 </div>
-
-
 <div class="info">
-
 <div class="title">
   9mm Girls
 </div>
-
-
 <div class="description">
 
-  Guns. Girls. Demons.
-  Questionable life choices.
+Guns. Girls. Demons.
+Questionable life choices.
 
 </div>
-
-
 <div class="read">
   Read →
 </div>
-
 </div>
-
 </a>
-
-
 <!-- ========================= -->
 <!-- FREAKY 1/2 -->
 <!-- ========================= -->
 
 <a
-  class="comic comic-freaky"
-  href="freaky-1-2/"
->
+class=“comic comic-freaky”
+href=“freaky-1-2/”
 
 <div class="issue-label">
   SK6-002
 </div>
-
-
 <div class="cover">
 
 <img
-  src="freaky-1-2/volume-1/Fr1-01.jpeg"
-  alt="Freaky 1/2"
->
+src=“freaky-1-2/volume-1/Fr1-01.jpeg”
+alt=“Freaky 1/2”
 
 </div>
-
-
 <div class="info">
-
 <div class="title">
   Freaky 1/2
 </div>
-
-
 <div class="description">
 
-  Volume 1 now available.
+Volume 1 now available.
 
 </div>
-
-
 <div class="read">
   Read →
 </div>
-
 </div>
-
 </a>
-
-
 <!-- ========================= -->
 <!-- INDOCILIS -->
 <!-- ========================= -->
 
 <a
-  class="comic comic-indocilis"
-  href="indocilis-alchima/"
->
+class=“comic comic-indocilis”
+href=“indocilis-alchima/”
 
 <div class="issue-label">
   SK6-003
 </div>
-
-
 <div class="cover">
 
 <img
-  src="indocilis-alchima/one-shot/Ia_01.jpeg"
-  alt="Indocilis Alchimia"
->
+src=“indocilis-alchima/one-shot/Ia_01.jpeg”
+alt=“Indocilis Alchimia”
 
 </div>
-
-
 <div class="info">
-
 <div class="title">
   Indocilis Alchimia
 </div>
-
-
 <div class="description">
 
-  One Shot.
+One Shot.
 
 </div>
-
-
 <div class="read">
   Read →
 </div>
-
 </div>
-
 </a>
-
-
 <!-- ========================= -->
 <!-- L'HÉRITAGE DE LA NUIT -->
 <!-- ========================= -->
 
 <a
-  class="comic comic-heritage"
-  href="lheritage-de-la-nuit/"
->
+class=“comic comic-heritage”
+href=“lheritage-de-la-nuit/”
 
 <div class="issue-label">
   SK6-004
 </div>
-
-
 <div class="cover">
 
 <img
-  src="lheritage-de-la-nuit/Chapter1/H_c1_01%20Large.jpeg"
-  alt="L’Héritage de la Nuit"
->
+src=“lheritage-de-la-nuit/Chapter1/H_c1_01%20Large.jpeg”
+alt=“L’Héritage de la Nuit”
 
 </div>
-
-
 <div class="info">
-
 <div class="title">
   L’Héritage de la Nuit
 </div>
-
-
 <div class="description">
 
-  Beyond the walls,
-  monsters rule the wild.
+Beyond the walls,
+monsters rule the wild.
 
 </div>
-
-
 <div class="read">
   Read →
 </div>
-
 </div>
-
 </a>
-
-
 <!-- ========================= -->
 <!-- FINDING MY VOICE -->
 <!-- ========================= -->
-
 <div class="comic">
-
 <div class="issue-label">
   SK6-005
 </div>
-
-
 <div class="cover">
-
 <div style="
   color: var(--green);
   font-size: 30px;
@@ -2047,167 +1332,141 @@ footer {
   text-align: center;
 ">
 
-  MORE<br>
-  COMING<br>
-  SOON
+MORE
+COMING
+SOON
 
 </div>
-
 </div>
-
-
 <div class="info">
-
 <div class="title">
   Finding My Voice
 </div>
-
-
 <div class="description">
   More comics from SK6.
 </div>
-
 </div>
-
 </div>
-
-
 </div>
-
-
 <!-- ========================= -->
 <!-- LATEST -->
 <!-- ========================= -->
-
 <section
   class="latest"
   id="latest"
 >
-
 <div class="latest-heading">
-
 <h2>
   Latest Transmission
 </h2>
-
-
 <div class="latest-label">
   SK6 // NEWS // UPDATES
 </div>
+</div>
+<!-- ========================= -->
+<!-- UPDATE 002 — 9MM GIRLS -->
+<!-- ========================= -->
+
+<a
+class=“update”
+href=“9mm-girls/”
+
+<div class="update-number">
+  UPDATE // 002
+</div>
+<div class="update-content">
+<h3>
+  9mm Girls — Chapter 02 Is Live
+</h3>
+<p>
+
+The Hunt is now available
+to read on the SK6 website.
+
+</p>
+</div>
+<div class="update-date">
+
+NEW CHAPTER
 
 </div>
-
-
+</a>
+<!-- ========================= -->
+<!-- UPDATE 001 — HERITAGE -->
+<!-- ========================= -->
 <div class="update">
-
 <div class="update-number">
   UPDATE // 001
 </div>
-
-
 <div class="update-content">
-
 <h3>
   L’Héritage de la Nuit Is Live
 </h3>
-
-
 <p>
 
-  Chapter 01 is now available
-  to read on the SK6 website.
+Chapter 01 is now available
+to read on the SK6 website.
 
 </p>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- ========================= -->
 <!-- SUPPORT -->
 <!-- ========================= -->
-
 <section
   class="support"
   id="support"
 >
-
 <div class="support-label">
   SK6 // SUPPORT // TRANSMISSION
 </div>
-
-
 <h2>
   Keep The Chaos Alive
 </h2>
-
-
 <p>
 
-  Early pages, sketches,
-  behind-the-scenes work,
-  exclusive art and whatever
-  strange idea we're working
-  on next.
+Early pages, sketches,
+behind-the-scenes work,
+exclusive art and whatever
+strange idea we’re working
+on next.
 
 </p>
 
-
 <a
-  class="support-button"
-  href="https://www.patreon.com/c/sk6"
-  target="_blank"
-  rel="noopener noreferrer"
->
+class=“support-button”
+href=“https://www.patreon.com/c/sk6”
+target=”_blank”
+rel=“noopener noreferrer”
 
-  Patreon →
+Patreon →
 
 </a>
-
 </section>
-
-
 <!-- ========================= -->
 <!-- MANIFESTO -->
 <!-- ========================= -->
-
 <section class="manifesto">
-
 <p>
 
-  Made by hand.<br>
-  Built from weird ideas.<br>
-  Made because we wanted to.
+Made by hand.
+Built from weird ideas.
+Made because we wanted to.
 
 </p>
-
 </section>
-
-
 </main>
-
-
 <!-- ========================= -->
 <!-- FOOTER -->
 <!-- ========================= -->
-
 <footer>
 
 SK6 © 2026
 
-<br><br>
-
 Comics / Art / Chaos
 
 </footer>
-
-
 </div>
-
-
 </body>
-
 </html>
