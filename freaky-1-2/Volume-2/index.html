@@ -1,1 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 
+<meta
+name=“viewport”
+content=“width=device-width, initial-scale=1.0”
+
+<title>Freaky 1/2 — Chapter 02 — SK6</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+:root {
+  --black: #080808;
+  --white: #f2f2ee;
+  --blue: #5ecbff;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: var(--black);
+  color: var(--white);
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+/* TOP BAR */
+.topbar {
+  width: 100%;
+  padding:
+    15px
+    20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:
+    2px solid
+    var(--white);
+  position: sticky;
+  top: 0;
+  background: var(--black);
+  z-index: 100;
+}
+.logo {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+.chapter-title {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.back {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.back:hover {
+  color: var(--blue);
+}
+/* READER */
+.reader {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding:
+    30px
+    20px
+    100px;
+}
+/* PAGE SPREAD */
+.spread {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  direction: ltr;
+  margin: 0 auto;
+}
+/*
+  MANGA ORDER
+  Page 1 = RIGHT
+  Page 2 = LEFT
+  Page 3 = RIGHT
+  Page 4 = LEFT
+  etc.
+*/
+.page {
+  width: 50%;
+  display: block;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  background: var(--black);
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* NAVIGATION */
+.controls {
+  width: 100%;
+  max-width: 900px;
+  margin:
+    35px
+    auto
+    0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.control {
+  border: none;
+  background: var(--blue);
+  color: var(--black);
+  padding:
+    12px
+    18px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform .15s ease,
+    background .15s ease;
+}
+.control:hover {
+  transform:
+    translateY(-3px);
+  background: var(--white);
+}
+.control:disabled {
+  opacity: .25;
+  cursor: default;
+  transform: none;
+}
+/*
+  MANGA NAVIGATION
+  NEXT is on the LEFT
+  PREVIOUS is on the RIGHT
+  because the manga reads
+  from RIGHT to LEFT.
+*/
+.previous {
+  order: 2;
+}
+.next {
+  order: 1;
+}
+/* PAGE COUNTER */
+.counter {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-top: 18px;
+}
+/* MOBILE */
+@media (max-width: 800px) {
+  .topbar {
+    padding:
+      13px
+      15px;
+  }
+  .chapter-title {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .back {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .reader {
+    padding:
+      15px
+      8px
+      80px;
+  }
+  .spread {
+    gap: 4px;
+  }
+  .page {
+    width: 50%;
+  }
+  .controls {
+    margin-top: 25px;
+    padding:
+      0
+      5px;
+  }
+  .control {
+    padding:
+      11px
+      12px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+}
+/* VERY SMALL SCREENS */
+@media (max-width: 500px) {
+  .spread {
+    gap: 2px;
+  }
+  .page {
+    width: 50%;
+  }
+  .chapter-title {
+    max-width: 120px;
+  }
+}
+</style>
+</head>
+<body>
+<!-- TOP BAR -->
+<div class="topbar">
+
+<a
+class=“logo”
+href=”../”
+
+SK6
+  </a>
+  <div class="chapter-title">
+FREAKY 1/2
+//
+CHAPTER 02
+  </div>
+
+<a
+class=“back”
+href=”../”
+
+Chapters
+  </a>
+</div>
+<!-- READER -->
+<main class="reader">
+  <div
+    class="spread"
+    id="spread"
+  >
+<!-- Pages are inserted by JavaScript -->
+  </div>
+  <!-- CONTROLS -->
+  <div class="controls">
+<!-- NEXT = LEFT -->
+<button
+  class="control next"
+  id="nextButton"
+  onclick="nextSpread()"
+>
+  ← NEXT
+</button>
+<!-- PREVIOUS = RIGHT -->
+<button
+  class="control previous"
+  id="previousButton"
+  onclick="previousSpread()"
+>
+  PREVIOUS →
+</button>
+  </div>
+  <div
+    class="counter"
+    id="counter"
+  >
+PAGES 1–2 / 54
+  </div>
+</main>
+<script>
+/* SETTINGS */
+const totalPages = 54;
+let currentSpread = 0;
+const pagesPerSpread = 2;
+/*
+  CHAPTER 02 FILE NAMING
+  Fr_2_01.jpeg
+  Fr_2_02.jpeg
+  Fr_2_03.jpeg
+  ...
+  Fr_2_54.jpeg
+*/
+/*
+  Page order:
+  Spread 0:
+    Page 1 = RIGHT
+    Page 2 = LEFT
+  Spread 1:
+    Page 3 = RIGHT
+    Page 4 = LEFT
+  Spread 2:
+    Page 5 = RIGHT
+    Page 6 = LEFT
+  etc.
+*/
+/* ELEMENTS */
+const spread =
+  document.getElementById(
+    "spread"
+  );
+const counter =
+  document.getElementById(
+    "counter"
+  );
+const nextButton =
+  document.getElementById(
+    "nextButton"
+  );
+const previousButton =
+  document.getElementById(
+    "previousButton"
+  );
+/* CREATE PAGE PATH */
+function pagePath(pageNumber) {
+  return "Fr_2_" +
+    String(pageNumber).padStart(2, "0") +
+    ".jpeg";
+}
+/* SHOW SPREAD */
+function showSpread() {
+  spread.innerHTML = "";
+  /*
+    First page of the spread
+    goes on the RIGHT.
+    Second page goes on the LEFT.
+  */
+  const firstPage =
+    currentSpread * 2 + 1;
+  const secondPage =
+    firstPage + 1;
+  /*
+    PAGE 2 / LEFT
+    We add the second page first
+    so it appears on the LEFT.
+  */
+  if (
+    secondPage <= totalPages
+  ) {
+    const leftPage =
+      document.createElement("img");
+    leftPage.className = "page";
+    leftPage.src =
+      pagePath(secondPage);
+    leftPage.alt =
+      "Freaky 1/2 Page " +
+      secondPage;
+    leftPage.loading = "eager";
+    spread.appendChild(
+      leftPage
+    );
+  }
+  /*
+    PAGE 1 / RIGHT
+  */
+  if (
+    firstPage <= totalPages
+  ) {
+    const rightPage =
+      document.createElement("img");
+    rightPage.className = "page";
+    rightPage.src =
+      pagePath(firstPage);
+    rightPage.alt =
+      "Freaky 1/2 Page " +
+      firstPage;
+    rightPage.loading = "eager";
+    spread.appendChild(
+      rightPage
+    );
+  }
+  /* COUNTER */
+  if (
+    secondPage <= totalPages
+  ) {
+    counter.textContent =
+      "PAGES " +
+      firstPage +
+      "–" +
+      secondPage +
+      " / " +
+      totalPages;
+  } else {
+    counter.textContent =
+      "PAGE " +
+      firstPage +
+      " / " +
+      totalPages;
+  }
+  /* BUTTON STATES */
+  previousButton.disabled =
+    currentSpread === 0;
+  nextButton.disabled =
+    secondPage >= totalPages;
+}
+/* NEXT */
+function nextSpread() {
+  if (
+    currentSpread <
+    Math.ceil(totalPages / 2) - 1
+  ) {
+    currentSpread++;
+    showSpread();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+}
+/* PREVIOUS */
+function previousSpread() {
+  if (
+    currentSpread > 0
+  ) {
+    currentSpread--;
+    showSpread();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+}
+/*
+  KEYBOARD CONTROLS
+  LEFT ARROW  = NEXT
+  RIGHT ARROW = PREVIOUS
+  This matches the manga
+  right-to-left reading direction.
+*/
+document.addEventListener(
+  "keydown",
+  function(event) {
+    if (
+      event.key === "ArrowLeft"
+    ) {
+      nextSpread();
+    }
+    if (
+      event.key === "ArrowRight"
+    ) {
+      previousSpread();
+    }
+  }
+);
+/* START */
+showSpread();
+</script>
+</body>
+</html>
