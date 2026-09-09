@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
 <meta
-name=“viewport”
-content=“width=device-width, initial-scale=1.0”
-
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 <title>Freaky 1/2 — Chapter 02 — SK6</title>
 <style>
 * {
@@ -235,24 +234,22 @@ body {
 <body>
 <!-- TOP BAR -->
 <div class="topbar">
-
-<a
-class=“logo”
-href=”../”
-
-SK6
+  <a
+    class="logo"
+    href="../"
+  >
+    SK6
   </a>
   <div class="chapter-title">
-FREAKY 1/2
-//
-CHAPTER 02
+    FREAKY 1/2
+    //
+    CHAPTER 02
   </div>
-
-<a
-class=“back”
-href=”../”
-
-Chapters
+  <a
+    class="back"
+    href="../"
+  >
+    Chapters
   </a>
 </div>
 <!-- READER -->
@@ -261,32 +258,32 @@ Chapters
     class="spread"
     id="spread"
   >
-<!-- Pages are inserted by JavaScript -->
+    <!-- Pages are inserted by JavaScript -->
   </div>
   <!-- CONTROLS -->
   <div class="controls">
-<!-- NEXT = LEFT -->
-<button
-  class="control next"
-  id="nextButton"
-  onclick="nextSpread()"
->
-  ← NEXT
-</button>
-<!-- PREVIOUS = RIGHT -->
-<button
-  class="control previous"
-  id="previousButton"
-  onclick="previousSpread()"
->
-  PREVIOUS →
-</button>
+    <!-- NEXT = LEFT -->
+    <button
+      class="control next"
+      id="nextButton"
+      onclick="nextSpread()"
+    >
+      ← NEXT
+    </button>
+    <!-- PREVIOUS = RIGHT -->
+    <button
+      class="control previous"
+      id="previousButton"
+      onclick="previousSpread()"
+    >
+      PREVIOUS →
+    </button>
   </div>
   <div
     class="counter"
     id="counter"
   >
-PAGES 1–2 / 54
+    PAGES 1–2 / 54
   </div>
 </main>
 <script>
@@ -294,14 +291,6 @@ PAGES 1–2 / 54
 const totalPages = 54;
 let currentSpread = 0;
 const pagesPerSpread = 2;
-/*
-  CHAPTER 02 FILE NAMING
-  Fr_2_01.jpeg
-  Fr_2_02.jpeg
-  Fr_2_03.jpeg
-  ...
-  Fr_2_54.jpeg
-*/
 /*
   Page order:
   Spread 0:
@@ -332,12 +321,6 @@ const previousButton =
   document.getElementById(
     "previousButton"
   );
-/* CREATE PAGE PATH */
-function pagePath(pageNumber) {
-  return "Fr_2_" +
-    String(pageNumber).padStart(2, "0") +
-    ".jpeg";
-}
 /* SHOW SPREAD */
 function showSpread() {
   spread.innerHTML = "";
@@ -362,7 +345,9 @@ function showSpread() {
       document.createElement("img");
     leftPage.className = "page";
     leftPage.src =
-      pagePath(secondPage);
+      "Fr_2_" +
+      String(secondPage).padStart(2, "0") +
+      ".jpeg";
     leftPage.alt =
       "Freaky 1/2 Page " +
       secondPage;
@@ -381,7 +366,9 @@ function showSpread() {
       document.createElement("img");
     rightPage.className = "page";
     rightPage.src =
-      pagePath(firstPage);
+      "Fr_2_" +
+      String(firstPage).padStart(2, "0") +
+      ".jpeg";
     rightPage.alt =
       "Freaky 1/2 Page " +
       firstPage;
